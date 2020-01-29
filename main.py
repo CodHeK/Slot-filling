@@ -46,33 +46,33 @@ process = Process(model, n_classes, idx2la, w2idx) # For Training and Testing
 
 minLoss = 1000000
 
-# for i in range(n_epochs):
-#     print("Epoch " + str(i))
+for i in range(n_epochs):
+    print("Epoch " + str(i))
     
-#     print("Training ")
+    print("Training ")
 
-#     loss = process.train(train_set)
+    loss = process.train(train_set)
 
-#     print("Loss : " + str(loss))
-
-
-#     print("Validating ")
-
-#     model, predword_val, loss = process.validate(valid_set)
-
-#     if loss < minLoss:
-#         minLoss = loss
-#         process.save('trained_model')
-
-#     # Do Accuracy tests here using (predword_val, groundtruth_val, words_val) and save best model
+    print("Loss : " + str(loss))
 
 
-# print("Least Loss : " + str(minLoss))
+    print("Validating ")
+
+    model, predword_val, loss = process.validate(valid_set)
+
+    if loss < minLoss:
+        minLoss = loss
+        process.save('trained_model')
+
+    # Do Accuracy tests here using (predword_val, groundtruth_val, words_val) and save best model
 
 
-# process.load('trained_model')
+print("Least Loss : " + str(minLoss))
 
-# # TEST 
+
+process.load('trained_model')
+
+# TEST 
 
 sentance = 'I want to see all the flights from washington to berlin flying tomorrow'
 

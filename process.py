@@ -74,12 +74,13 @@ class Process:
             avgLoss += self.model.test_on_batch(sentance, label)
 
             pred = self.model.predict_on_batch(sentance)
+
             pred = np.argmax(pred,-1)[0]
             val_pred_label.append(pred)
 
         predword_val = [ list(map(lambda x: self.idx2la[x], y)) for y in val_pred_label ]
 
-        return (self.model, predword_val, avgLoss/idx)
+        return (self.model, predword_val, avgLoss/(idx+1))
 
     def test(self, sentance):
         sentance = sentance.split(" ")
@@ -94,11 +95,11 @@ class Process:
 
         sentance = np.asarray(sentance)
         sentance = sentance[np.newaxis,:]
-        
+ 
         pred = self.model.predict_on_batch(sentance)
         pred = np.argmax(pred,-1)[0]
 
-        pred_slots = [ list(map(lambda x: idx2la[x], y)) for y in pred ]
+        pred_slots = [ self.idx2la[idx] for idx in pred ]
 
         return pred_slots
 
