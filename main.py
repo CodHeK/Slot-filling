@@ -76,4 +76,6 @@ process.load('trained_model')
 
 sentance = 'I want to see all the flights from washington to berlin flying tomorrow'
 
-print(process.test(sentance))
+print(process.test(sentance)) 
+
+# PRINTS : ['O', 'O', 'O', 'O', 'O', 'O', 'O', 'O', 'B-fromloc.city_name', 'O', 'B-toloc.airport_code', 'O', 'B-depart_date.today_relative']
