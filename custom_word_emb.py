@@ -66,11 +66,11 @@ class WordEmbedding:
 	
 
 	def save(self, filename):
-		self.model.wv.save_word2vec_format(filename, binary=False)
+		self.model.wv.save_word2vec_format('embeddings/' + filename, binary=False)
 	
 	def buildEmbeddingLayer(self, filename, EMBEDDING_DIM=100):
 		embedding_index = {}
-		file = open(os.path.join('', filename), encoding='utf-8')
+		file = open(os.path.join('', 'embeddings/' + filename), encoding='utf-8')
 		for line in file:
 			values = line.split()
 			word = values[0]
@@ -111,12 +111,12 @@ class WordEmbedding:
 
 
 
-model = WordEmbedding('corpus.txt', config={ 'min_count': 1 })
+# model = WordEmbedding('corpus.txt', config={ 'min_count': 1 })
 
-embeddings = model.train()
+# embeddings = model.train()
 
-model.save('test_save.txt')
+# model.save('test_save.txt')
 
-embeddings_layer = model.buildEmbeddingLayer('test_save.txt')
+# embeddings_layer = model.buildEmbeddingLayer('test_save.txt')
 
-print(embeddings_layer)
+# print(embeddings_layer)
