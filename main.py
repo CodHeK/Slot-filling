@@ -40,7 +40,7 @@ model.add(TimeDistributed(Dense(n_classes, activation='softmax')))
 model.compile('rmsprop', 'categorical_crossentropy')
 
 ### Training
-n_epochs = 1
+n_epochs = 100
 
 process = Process(model, n_classes, idx2la, w2idx) # For Training and Testing
 
