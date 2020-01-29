@@ -5,10 +5,11 @@ from keras.layers.recurrent import SimpleRNN, GRU, LSTM
 from keras.layers.core import Dense, Dropout
 from keras.layers.wrappers import TimeDistributed
 from keras.layers import Conv1D, MaxPooling1D
-from keras.utils import to_categorical
+
 from metrics.accuracy import conlleval
+from process import Process
+
 import numpy as np
-import progressbar
 
 dataLoader = DataLoader()
 
@@ -41,85 +42,38 @@ model.compile('rmsprop', 'categorical_crossentropy')
 ### Training
 n_epochs = 1
 
-train_f_scores = []
-val_f_scores = []
-best_val_f1 = 0
+process = Process(model, n_classes, idx2la, w2idx) # For Training and Testing
 
-for i in range(n_epochs):
-    print("Epoch {}".format(i))
+minLoss = 1000000
+
+# for i in range(n_epochs):
+#     print("Epoch " + str(i))
     
-    print("Training =>")
-    train_pred_label = []
-    avgLoss = 0
+#     print("Training ")
 
-    bar = progressbar.ProgressBar(maxval=len(train_x))
-    for idx, sentance in bar(enumerate(train_x)):
-        label = train_label[idx]
+#     loss = process.train(train_set)
 
-        # one hot encode
-        label = to_categorical(label, num_classes=n_classes)
-
-        # pass as a batch
-        sentance = sentance[np.newaxis,:] # makes [1, 2] -> [[1, 2]]
-
-        label = label[np.newaxis, :] 
-        
-        if sentance.shape[1] > 1:
-            loss = model.test_on_batch(sentance, label)
-            avgLoss += loss
-
-        pred = model.predict_on_batch(sentance)
-        pred = np.argmax(pred,-1)[0]
-        train_pred_label.append(pred)
-
-    
-    avgLoss = avgLoss/idx
-    
-    predword_train = [ list(map(lambda x: idx2la[x], y)) for y in train_pred_label]
-    con_dict = conlleval(predword_train, groundtruth_train, words_train, 'r.txt')
-    train_f_scores.append(con_dict['f1'])
-    print('Loss = {}, Precision = {}, Recall = {}, F1 = {}'.format(avgLoss, con_dict['r'], con_dict['p'], con_dict['f1']))
-
-    print("Validating =>")
-    
-    val_pred_label = []
-    avgLoss = 0
-    
-    bar = progressbar.ProgressBar(maxval=len(val_x))
-    for idx, sentance in bar(enumerate(val_x)):
-        label = val_label[idx]
-
-        # one hot encode
-        label = to_categorical(label, num_classes=n_classes)
-
-        # pass as a batch
-        sentance = sentance[np.newaxis,:] # makes [1, 2] -> [[1, 2]]
-
-        label = label[np.newaxis, :] 
-        
-        if sentance.shape[1] > 1:
-            loss = model.test_on_batch(sentance, label)
-            avgLoss += loss
-        
-        pred = model.predict_on_batch(sentance)
-        pred = np.argmax(pred,-1)[0]
-        val_pred_label.append(pred)
-
-    avgLoss = avgLoss/idx
-    
-    predword_val = [ list(map(lambda x: idx2la[x], y)) for y in val_pred_label]
-    con_dict = conlleval(predword_val, groundtruth_val, words_val, 'r.txt')
-    val_f_scores.append(con_dict['f1'])
-    
-    print('Loss = {}, Precision = {}, Recall = {}, F1 = {}'.format(avgLoss, con_dict['r'], con_dict['p'], con_dict['f1']))
-
-    if con_dict['f1'] > best_val_f1:
-    	best_val_f1 = con_dict['f1']
-    	open('model_architecture.json','w').write(model.to_json())
-    	model.save_weights('best_model_weights.h5',overwrite=True)
-    	print("Best validation F1 score = {}".format(best_val_f1))
-    
-     
+#     print("Loss : " + str(loss))
 
 
+#     print("Validating ")
 
+#     model, predword_val, loss = process.validate(valid_set)
+
+#     if loss < minLoss:
+#         minLoss = loss
+#         process.save('trained_model')
+
+#     # Do Accuracy tests here using (predword_val, groundtruth_val, words_val) and save best model
+
+
+# print("Least Loss : " + str(minLoss))
+
+
+# process.load('trained_model')
+
+# # TEST 
+
+sentance = 'I want to see all the flights from washington to berlin flying tomorrow'
+
+print(process.test(sentance))
