@@ -21,3 +21,4 @@ python3 main.py --train
 ```
 python3 main.py --test
 ```
+You can directly test using the above command as the repo includes the `trained_model` as well :D
