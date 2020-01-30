@@ -1,10 +1,7 @@
 import numpy
-import random
-import os
-import stat
-import subprocess
-from os.path import isfile, join
+import os, stat
 from os import chmod
+import random
 
 def conlleval(p, g, w, filename):
     '''
@@ -26,57 +23,19 @@ def conlleval(p, g, w, filename):
             out += w + ' ' + wl + ' ' + wp + '\n'
         out += 'EOS O O\n\n'
 
-    f = open(filename,'w')
+    f = open('metrics/' + filename,'w')
     f.writelines(out)
     f.close()
     
-    return get_perf(filename)
+    return get_metrics(filename)
 
-def get_perf(filename):
+def get_metrics(filename):
     ''' run conlleval.pl perl script to obtain
     precision/recall and F1 score '''
 
-    _conlleval = 'conlleval.pl'
-
-    proc = subprocess.Popen(["perl", _conlleval], stdin=subprocess.PIPE, stdout=subprocess.PIPE)
-    stdout, _ = proc.communicate(open(filename,'rb').read())
-    global out
-    for line in stdout.decode("utf-8").split('\n'):
-        if 'accuracy' in line:
-            out = line.split()
-            break
-    
-    # out = ['accuracy:', '16.26%;', 'precision:', '0.00%;', 'recall:', '0.00%;', 'FB1:', '0.00']
-    
-    precision = float(out[3][:-2])
-    recall    = float(out[5][:-2])
-    f1score   = float(out[7])
-
-    return {'p':precision, 'r':recall, 'f1':f1score}
-
-def get_perfo(filename):
-    ''' 
-    work around for using a PERL script in python
-    dirty but still works.
-    '''
-    tempfile = str(random.randint(1,numpy.iinfo('i').max)) + '.txt'
-    if not isfile(PREFIX + 'conlleval.pl'):
-        os.system('wget https://www.comp.nus.edu.sg/%7Ekanmy/courses/practicalNLP_2008/packages/conlleval.pl')
-        #download('http://www-etud.iro.umontreal.ca/~mesnilgr/atis/conlleval.pl') 
-        chmod('conlleval.pl', stat.S_IRWXU) # give the execute permissions
-    if len(PREFIX) > 0:
-        chmod(PREFIX + 'conlleval.pl', stat.S_IRWXU) # give the execute permissions
-        cmd = PREFIX + 'conlleval.pl < %s | grep accuracy > %s'%(filename,tempfile)
-    else:
-        cmd = './conlleval.pl < %s | grep accuracy > %s'%(filename,tempfile)
-    print(cmd)
-    out = os.system(cmd)
-    out = open(tempfile).readlines()[0].split()
-    os.system('rm %s'%tempfile)
-    precision = float(out[6][:-2])
-    recall    = float(out[8][:-2])
-    f1score   = float(out[10])
-    return {'p':precision, 'r':recall, 'f1':f1score}
-
-if __name__ == '__main__':
-    print(get_perf('valid.txt'))
+    if os.path.exists('metrics/' + filename):
+        chmod('metrics/conlleval.pl', stat.S_IRWXU) # give the execute permissions
+        cmd = 'cd metrics && ./conlleval.pl < %s | grep accuracy' % filename
+        out = os.popen(cmd).read().split()
+        os.system('rm %s' % filename)  # delete file
+        return {'precision': float(out[3][:-2]), 'recall': float(out[5][:-2]), 'f1': float(out[7])}

@@ -29,11 +29,11 @@ def train():
     train_x, _, train_label = train_set
     val_x, _, val_label = valid_set
 
-    words_train = [ list(map(lambda x: idx2w[x], w)) for w in train_x]
-    groundtruth_train = [ list(map(lambda x: idx2la[x], y)) for y in train_label]
+    words_train = [ list(map(lambda x: idx2w[str(x)], w)) for w in train_x]
+    groundtruth_train = [ list(map(lambda x: idx2la[str(x)], y)) for y in train_label]
 
-    words_val = [ list(map(lambda x: idx2w[x], w)) for w in val_x]
-    groundtruth_val = [ list(map(lambda x: idx2la[x], y)) for y in val_label]
+    words_val = [ list(map(lambda x: idx2w[str(x)], w)) for w in val_x]
+    groundtruth_val = [ list(map(lambda x: idx2la[str(x)], y)) for y in val_label]
 
     print("Done processing word embeddings ...")
      
@@ -45,32 +45,39 @@ def train():
     model.add(TimeDistributed(Dense(n_classes, activation='softmax')))
     model.compile('rmsprop', 'categorical_crossentropy')
 
-    ### Training
-    n_epochs = 100
+    n_epochs = 5
 
-    process = Process(model) # For Training and Testing
+    process = Process(model)
 
-    minLoss = 1000000
+    max_f1 = 0
 
     for i in range(n_epochs):
         print("Epoch " + str(i))
+
+        partition = ''
+        for i in range(100):
+            partition += '-'
+        
+        print(partition)
         
         print("Training ")
 
         loss = process.train(train_set)
 
-        print("Loss : " + str(loss))
-
-
         print("Validating ")
 
-        model, predword_val, loss = process.validate(valid_set)
+        predword_val, avgLoss = process.validate(valid_set)
+    
+        # Accuracy tests here using (predword_val, groundtruth_val, words_val) and save best model
+        metrics = conlleval(predword_val, groundtruth_val, words_val, 'diff.txt')
+        
+        print('Loss = {}, Precision = {}, Recall = {}, F1 = {}'.format(avgLoss, metrics['precision'], metrics['recall'], metrics['f1']))
 
-        if loss < minLoss:
-            minLoss = loss
+        if metrics['f1'] > max_f1:
+            max_f1 = metrics['f1']
             process.save('trained_model')
 
-        # Do Accuracy tests here using (predword_val, groundtruth_val, words_val) and save best model
+    print('Best validation F1 score : ', str(max_f1))
 
 
 def loadEmbeddings():

@@ -20,7 +20,7 @@ class Process:
         with open(name + ".json", "w") as json_file:
             json_file.write(model_json)
 
-        self.model.save_weights(name + "_weights.h5")
+        self.model.save_weights(name + "_weights.h5", overwrite=True)
         print("Saved model to disk")
 
     def load(self, filename):
@@ -83,9 +83,9 @@ class Process:
             pred = np.argmax(pred,-1)[0]
             val_pred_label.append(pred)
 
-        predword_val = [ list(map(lambda x: self.embeddings['idx2la'][x], y)) for y in val_pred_label ]
+        predword_val = [ list(map(lambda x: self.embeddings['idx2la'][str(x)], y)) for y in val_pred_label ]
 
-        return (self.model, predword_val, avgLoss/(idx+1))
+        return (predword_val, avgLoss/idx)
 
     def test(self, sentance):
         sentance = sentance.split(" ")
