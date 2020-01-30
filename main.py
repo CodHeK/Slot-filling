@@ -1,4 +1,3 @@
-from data_loader import DataLoader
 from keras.models import Sequential
 from keras.layers.embeddings import Embedding
 from keras.layers.recurrent import SimpleRNN, GRU, LSTM
@@ -8,6 +7,7 @@ from keras.layers import Conv1D, MaxPooling1D
 
 from metrics.accuracy import conlleval
 from process import Process
+from data_loader import load
 
 import argparse, os.path, json
 
@@ -17,8 +17,7 @@ def train():
     with open('embeddings/word_embeddings.json', 'r') as f:
         embeddings = json.load(f)
 
-    dataLoader = DataLoader()
-    train_set, valid_set, _ = dataLoader.load('atis.pkl')
+    train_set, valid_set, _ = load('atis.pkl')
 
     w2idx, la2idx = embeddings['w2idx'], embeddings['la2idx']
     idx2w, idx2la = embeddings['idx2w'], embeddings['idx2la'] 
@@ -81,9 +80,7 @@ def train():
 
 
 def loadEmbeddings():
-    dataLoader = DataLoader()
-
-    _, _, dicts = dataLoader.load('atis.pkl')
+    _, _, dicts = load('atis.pkl')
     w2idx, la2idx = dicts['words2idx'], dicts['labels2idx']
 
     idx2w  = { w2idx[k]:k for k in w2idx }
@@ -108,7 +105,7 @@ def process_sentances(sentances):
         sentances.append(last_sentance)
 
     sentances = list(filter(lambda sentance : len(sentance) != 0, sentances))
-    
+
     return sentances
 
 def test():
