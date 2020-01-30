@@ -9,3 +9,15 @@ source build_env
 ```
 
 This will create a virtual environemnt named `env` and also install the requirements!
+
+### Training & validation
+
+```
+python3 main.py --train
+```
+
+### Testing
+
+```
+python3 main.py --test
+```
