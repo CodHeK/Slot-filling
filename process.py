@@ -1,14 +1,19 @@
 from keras.utils import to_categorical
 from keras.models import model_from_json
 import numpy as np
-import progressbar
+import progressbar, json
 
 class Process:
-    def __init__(self, model, n_classes, idx2la, w2idx):
+    def __init__(self, model=None):
         self.model = model
-        self.n_classes = n_classes
-        self.idx2la = idx2la
-        self.w2idx = w2idx
+        self.embeddings = self.getEmbeddings()
+        self.n_classes = len(self.embeddings['idx2la'])
+    
+    def getEmbeddings(self):
+        with open('embeddings/word_embeddings.json', 'r') as f:
+            embeddings = json.load(f)
+        
+        return embeddings
     
     def save(self, name):
         model_json = self.model.to_json()
@@ -78,20 +83,20 @@ class Process:
             pred = np.argmax(pred,-1)[0]
             val_pred_label.append(pred)
 
-        predword_val = [ list(map(lambda x: self.idx2la[x], y)) for y in val_pred_label ]
+        predword_val = [ list(map(lambda x: self.embeddings['idx2la'][x], y)) for y in val_pred_label ]
 
         return (self.model, predword_val, avgLoss/(idx+1))
 
     def test(self, sentance):
         sentance = sentance.split(" ")
 
-        # encode
+        # Encode in the input sentance
         for i in range(len(sentance)):
             word = sentance[i]
-            if word not in self.w2idx:
-                sentance[i] = self.w2idx['<UNK>']
+            if word not in self.embeddings['w2idx']:
+                sentance[i] = self.embeddings['w2idx']['<UNK>']
             else:
-                sentance[i] = self.w2idx[word]
+                sentance[i] = self.embeddings['w2idx'][word]
 
         sentance = np.asarray(sentance)
         sentance = sentance[np.newaxis,:]
@@ -99,7 +104,7 @@ class Process:
         pred = self.model.predict_on_batch(sentance)
         pred = np.argmax(pred,-1)[0]
 
-        pred_slots = [ self.idx2la[idx] for idx in pred ]
+        pred_slots = [ self.embeddings['idx2la'][str(idx)] for idx in pred ]
 
         return pred_slots
 
