@@ -37,5 +37,5 @@ def get_metrics(filename):
         chmod('metrics/conlleval.pl', stat.S_IRWXU) # give the execute permissions
         cmd = 'cd metrics && ./conlleval.pl < %s | grep accuracy' % filename
         out = os.popen(cmd).read().split()
-        os.system('rm %s' % filename)  # delete file
+        os.system('cd metrics && rm %s' % filename)  # delete file
         return {'precision': float(out[3][:-2]), 'recall': float(out[5][:-2]), 'f1': float(out[7])}

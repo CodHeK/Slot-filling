@@ -44,7 +44,7 @@ def train():
     model.add(TimeDistributed(Dense(n_classes, activation='softmax')))
     model.compile('rmsprop', 'categorical_crossentropy')
 
-    n_epochs = 5
+    n_epochs = 20
 
     process = Process(model)
 
@@ -119,7 +119,6 @@ def test():
 
     # Clean loaded sentances from file - removing '\n' from each sentance
     sentances = process_sentances(sentances)
-    print(sentances)
 
     for sentance in sentances:
         BIO = process.test(sentance)# Test on sentance
