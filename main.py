@@ -102,13 +102,13 @@ def loadEmbeddings():
     print("Word Embeddings Loaded ...")
 
 def process_sentances(sentances):
-    sentances = list(filter(lambda sentance : len(sentance) != 0, sentances))
-
     if len(sentances) > 1:
         last_sentance = sentances[-1]
         sentances = [ sentance[:-1] for sentance in sentances[:-1] ]
         sentances.append(last_sentance)
 
+    sentances = list(filter(lambda sentance : len(sentance) != 0, sentances))
+    
     return sentances
 
 def test():
@@ -117,11 +117,11 @@ def test():
     # Load trained model
     process.load('trained_model')
 
-    f = open('test_sentances.txt', 'r')
+    f = open('tests/test_sentances.txt', 'r')
     sentances = f.readlines()
     f.close()
 
-    f = open('slots.txt', 'w')
+    f = open('tests/slots.txt', 'w')
 
     # Clean loaded sentances from file - removing '\n' from each sentance
     sentances = process_sentances(sentances)

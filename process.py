@@ -17,20 +17,20 @@ class Process:
     
     def save(self, name):
         model_json = self.model.to_json()
-        with open(name + ".json", "w") as json_file:
+        with open('trained_model/' + name + ".json", "w") as json_file:
             json_file.write(model_json)
 
-        self.model.save_weights(name + "_weights.h5", overwrite=True)
+        self.model.save_weights('trained_model/' + name + "_weights.h5", overwrite=True)
         print("Saved model to disk")
 
     def load(self, filename):
-        saved_model_file = open(filename + '.json', 'r')
+        saved_model_file = open('trained_model/' + filename + '.json', 'r')
         saved_model_json = saved_model_file.read()
         saved_model_file.close()
 
         saved_model = model_from_json(saved_model_json)
 
-        saved_model.load_weights(filename + '_weights.h5')
+        saved_model.load_weights('trained_model/' + filename + '_weights.h5')
         print("Loaded model from disk")
 
         self.model = saved_model
