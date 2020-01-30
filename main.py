@@ -99,10 +99,7 @@ def loadEmbeddings():
     print("Word Embeddings Loaded ...")
 
 def process_sentances(sentances):
-    if len(sentances) > 1:
-        last_sentance = sentances[-1]
-        sentances = [ sentance[:-1] for sentance in sentances[:-1] ]
-        sentances.append(last_sentance)
+    sentances = [ sentance.strip('\n') for sentance in sentances ]
 
     sentances = list(filter(lambda sentance : len(sentance) != 0, sentances))
 
@@ -122,6 +119,7 @@ def test():
 
     # Clean loaded sentances from file - removing '\n' from each sentance
     sentances = process_sentances(sentances)
+    print(sentances)
 
     for sentance in sentances:
         BIO = process.test(sentance)# Test on sentance
