@@ -1,5 +1,10 @@
 import logging
-from .. import Config # need to import Config class in model_config.py
+import sys, os
+
+APP_PATH = str(os.path.dirname(os.path.realpath('../../logger.py')))
+sys.path.append(APP_PATH)
+
+from model_config import Config
 
 def log(message):
     LOG_FORMAT = '%(asctime)s - %(message)s'
