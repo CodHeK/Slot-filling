@@ -1,0 +1,16 @@
+Find direct round trip flights from Baltimore to Seattle
+
+direct - B-connect
+round - B-round_trip
+trip - I-round_trip
+----------------------------------------------------------------------------------------------------
+I want to see all the flights from washington to berlin flying tomorrow
+
+washington - B-fromloc.city_name
+berlin - B-toloc.city_name
+tomorrow - B-depart_date.today_relative
+----------------------------------------------------------------------------------------------------
+show flights from San Diego to seatlle tomorrow
+
+tomorrow - B-depart_date.today_relative
+----------------------------------------------------------------------------------------------------

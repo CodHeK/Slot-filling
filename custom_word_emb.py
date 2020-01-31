@@ -70,6 +70,7 @@ class WordEmbedding:
 	
 	def buildEmbeddingLayer(self, filename, EMBEDDING_DIM=100):
 		embedding_index = {}
+		
 		file = open(os.path.join('', 'embeddings/' + filename), encoding='utf-8')
 		for line in file:
 			values = line.split()

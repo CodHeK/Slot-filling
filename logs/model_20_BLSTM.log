@@ -1,0 +1,114 @@
+31-Jan-20 15:23:49 - MODEL PARAMETERS :
+LEARNING_RATE = 0.001
+EMBEDDING_SIZE = 100
+HIDDEN_UNITS = 100
+DROPOUT = 0.25
+N_EPOCHS = 20
+LOSS = categorical_crossentropy
+OPTIMIZER = RMSprop
+MODEL = BLSTM
+
+31-Jan-20 15:23:49 - None
+31-Jan-20 15:23:50 - Done processing word embeddings ...
+31-Jan-20 15:23:50 - Epoch 1
+31-Jan-20 15:23:50 - Training 
+31-Jan-20 15:25:04 - Validating 
+31-Jan-20 15:25:10 - Loss = 0.3302649999738846, Precision = 86.99, Recall = 84.17, F1 = 85.56
+31-Jan-20 15:25:10 - Saved model to disk
+31-Jan-20 15:25:10 - New model saved!
+31-Jan-20 15:25:10 - Epoch 2
+31-Jan-20 15:25:10 - Training 
+31-Jan-20 15:26:16 - Validating 
+31-Jan-20 15:26:21 - Loss = 0.25810536076384205, Precision = 90.46, Recall = 87.52, F1 = 88.96
+31-Jan-20 15:26:21 - Saved model to disk
+31-Jan-20 15:26:21 - New model saved!
+31-Jan-20 15:26:21 - Epoch 3
+31-Jan-20 15:26:21 - Training 
+31-Jan-20 15:27:31 - Validating 
+31-Jan-20 15:27:36 - Loss = 0.21977365257029174, Precision = 92.61, Recall = 90.94, F1 = 91.77
+31-Jan-20 15:27:36 - Saved model to disk
+31-Jan-20 15:27:36 - New model saved!
+31-Jan-20 15:27:36 - Epoch 4
+31-Jan-20 15:27:36 - Training 
+31-Jan-20 15:28:41 - Validating 
+31-Jan-20 15:28:47 - Loss = 0.22069345749739191, Precision = 93.59, Recall = 91.65, F1 = 92.61
+31-Jan-20 15:28:47 - Saved model to disk
+31-Jan-20 15:28:47 - New model saved!
+31-Jan-20 15:28:47 - Epoch 5
+31-Jan-20 15:28:47 - Training 
+31-Jan-20 15:29:54 - Validating 
+31-Jan-20 15:29:59 - Loss = 0.195444703030743, Precision = 94.08, Recall = 92.39, F1 = 93.22
+31-Jan-20 15:29:59 - Saved model to disk
+31-Jan-20 15:29:59 - New model saved!
+31-Jan-20 15:29:59 - Epoch 6
+31-Jan-20 15:29:59 - Training 
+31-Jan-20 15:31:02 - Validating 
+31-Jan-20 15:31:08 - Loss = 0.1925532865420914, Precision = 94.36, Recall = 93.2, F1 = 93.78
+31-Jan-20 15:31:08 - Saved model to disk
+31-Jan-20 15:31:08 - New model saved!
+31-Jan-20 15:31:08 - Epoch 7
+31-Jan-20 15:31:08 - Training 
+31-Jan-20 15:32:08 - Validating 
+31-Jan-20 15:32:13 - Loss = 0.196594662913707, Precision = 94.58, Recall = 93.44, F1 = 94.01
+31-Jan-20 15:32:13 - Saved model to disk
+31-Jan-20 15:32:13 - New model saved!
+31-Jan-20 15:32:13 - Epoch 8
+31-Jan-20 15:32:13 - Training 
+31-Jan-20 15:33:14 - Validating 
+31-Jan-20 15:33:19 - Loss = 0.19447381450709145, Precision = 94.44, Recall = 93.44, F1 = 93.94
+31-Jan-20 15:33:19 - Epoch 9
+31-Jan-20 15:33:19 - Training 
+31-Jan-20 15:34:25 - Validating 
+31-Jan-20 15:34:31 - Loss = 0.19954505529962732, Precision = 94.77, Recall = 93.97, F1 = 94.37
+31-Jan-20 15:34:31 - Saved model to disk
+31-Jan-20 15:34:31 - New model saved!
+31-Jan-20 15:34:31 - Epoch 10
+31-Jan-20 15:34:31 - Training 
+31-Jan-20 15:35:40 - Validating 
+31-Jan-20 15:35:46 - Loss = 0.20420637251227478, Precision = 94.93, Recall = 94.32, F1 = 94.63
+31-Jan-20 15:35:46 - Saved model to disk
+31-Jan-20 15:35:46 - New model saved!
+31-Jan-20 15:35:46 - Epoch 11
+31-Jan-20 15:35:46 - Training 
+31-Jan-20 15:36:54 - Validating 
+31-Jan-20 15:36:59 - Loss = 0.19572341573204372, Precision = 94.69, Recall = 94.22, F1 = 94.45
+31-Jan-20 15:36:59 - Epoch 12
+31-Jan-20 15:36:59 - Training 
+31-Jan-20 15:38:07 - Validating 
+31-Jan-20 15:38:14 - Loss = 0.2096880388819464, Precision = 95.03, Recall = 94.29, F1 = 94.66
+31-Jan-20 15:38:14 - Saved model to disk
+31-Jan-20 15:38:14 - New model saved!
+31-Jan-20 15:38:14 - Epoch 13
+31-Jan-20 15:38:14 - Training 
+31-Jan-20 15:39:24 - Validating 
+31-Jan-20 15:39:30 - Loss = 0.20191593947389583, Precision = 95.48, Recall = 94.61, F1 = 95.04
+31-Jan-20 15:39:30 - Saved model to disk
+31-Jan-20 15:39:30 - New model saved!
+31-Jan-20 15:39:30 - Epoch 14
+31-Jan-20 15:39:30 - Training 
+31-Jan-20 15:40:44 - Validating 
+31-Jan-20 15:40:51 - Loss = 0.2207537763753616, Precision = 94.88, Recall = 94.15, F1 = 94.52
+31-Jan-20 15:40:51 - Epoch 15
+31-Jan-20 15:40:51 - Training 
+31-Jan-20 15:42:02 - Validating 
+31-Jan-20 15:42:09 - Loss = 0.1979635672478501, Precision = 95.1, Recall = 94.4, F1 = 94.75
+31-Jan-20 15:42:09 - Epoch 16
+31-Jan-20 15:42:09 - Training 
+31-Jan-20 15:43:18 - Validating 
+31-Jan-20 15:43:24 - Loss = 0.21080669553754627, Precision = 95.14, Recall = 94.54, F1 = 94.84
+31-Jan-20 15:43:24 - Epoch 17
+31-Jan-20 15:43:24 - Training 
+31-Jan-20 15:44:35 - Validating 
+31-Jan-20 15:44:41 - Loss = 0.22784905379717024, Precision = 95.14, Recall = 94.5, F1 = 94.82
+31-Jan-20 15:44:41 - Epoch 18
+31-Jan-20 15:44:41 - Training 
+31-Jan-20 15:45:53 - Validating 
+31-Jan-20 15:46:00 - Loss = 0.20914414482950108, Precision = 95.07, Recall = 94.47, F1 = 94.77
+31-Jan-20 15:46:00 - Epoch 19
+31-Jan-20 15:46:00 - Training 
+31-Jan-20 15:47:11 - Validating 
+31-Jan-20 15:47:20 - Loss = 0.2289793626399125, Precision = 95.2, Recall = 94.36, F1 = 94.78
+31-Jan-20 15:47:20 - Epoch 20
+31-Jan-20 15:47:20 - Training 
+31-Jan-20 15:48:44 - Validating 
+31-Jan-20 15:48:50 - Loss = 0.216455583476081, Precision = 95.44, Recall = 94.47, F1 = 94.95

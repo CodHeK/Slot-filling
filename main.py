@@ -4,7 +4,7 @@ from keras.layers.embeddings import Embedding
 from keras.layers.recurrent import GRU
 from keras.layers.core import Dense, Dropout
 from keras.layers.wrappers import TimeDistributed
-from keras.layers import Conv1D
+from keras.layers import Conv1D, LSTM, Bidirectional
 from model_config import Config
 from utils.print_utils import partition, highlight
 from metrics.accuracy import conlleval
@@ -43,9 +43,9 @@ def train():
     model.add(Embedding(n_vocab, Config.EMBEDDING_SIZE))
     model.add(Conv1D(128, 5, padding="same", activation='relu'))
     model.add(Dropout(Config.DROPOUT))
-    model.add(GRU(Config.HIDDEN_UNITS, return_sequences=True))
+    model.add(Bidirectional(LSTM(Config.HIDDEN_UNITS, return_sequences=True)))
     model.add(TimeDistributed(Dense(n_classes, activation='softmax')))
-    rms_prop = eval('keras.optimizers.' + str(Config.OPTIMIZER) + '(learning_rate=0.01, rho=0.9)')
+    rms_prop = eval('keras.optimizers.' + str(Config.OPTIMIZER) + '(learning_rate=' + str(Config.LEARNING_RATE) + ', rho=0.9)')
     model.compile(rms_prop, Config.LOSS)
 
     process = Process(model)
@@ -54,6 +54,7 @@ def train():
 
     for i in range(Config.N_EPOCHS):
         log("Epoch " + str(i+1))
+        highlight('violet', 'Epoch ' + str(i+1))
 
         partition(80)
         
@@ -72,7 +73,7 @@ def train():
 
         if metrics['f1'] > max_f1:
             max_f1 = metrics['f1']
-            process.save('trained_model_' + str(Config.N_EPOCHS))
+            process.save('trained_model_' + str(Config.N_EPOCHS) + '_' + str(Config.MODEL))
             log("New model saved!")
 
     highlight('white', 'Best validation F1 score : ' + str(max_f1))
@@ -108,13 +109,13 @@ def test():
     process = Process()
 
     # Load trained model
-    process.load('trained_model_' + str(Config.N_EPOCHS))
+    process.load('trained_model_' + str(Config.N_EPOCHS) + '_' + str(Config.MODEL))
 
     f = open('tests/test_sentances.txt', 'r')
     sentances = f.readlines()
     f.close()
 
-    f = open('tests/slots.txt', 'w')
+    f = open('tests/slots_' + str(Config.N_EPOCHS) + '_' + str(Config.MODEL) + '.txt', 'w')
 
     # Clean loaded sentances from file - removing '\n' from each sentance
     sentances = process_sentances(sentances)
@@ -133,6 +134,17 @@ def test():
     f.close()
     highlight('green', 'Output can be found in `slots.txt` file!')
 
+def model_params():
+    log('MODEL PARAMETERS :' + '\n' +
+        'LEARNING_RATE = ' + str(Config.LEARNING_RATE) + '\n' + 
+        'EMBEDDING_SIZE = ' + str(Config.EMBEDDING_SIZE) + '\n' + 
+        'HIDDEN_UNITS = ' + str(Config.HIDDEN_UNITS) + '\n' + 
+        'DROPOUT = ' + str(Config.DROPOUT) + '\n' + 
+        'N_EPOCHS = ' + str(Config.N_EPOCHS) + '\n' +
+        'LOSS = ' + str(Config.LOSS) + '\n' +
+        'OPTIMIZER = ' + str(Config.OPTIMIZER) + '\n'
+        'MODEL = ' + str(Config.MODEL) + '\n')
+
 
 if __name__ == '__main__':
     # FLAGS
@@ -148,6 +160,7 @@ if __name__ == '__main__':
         loadEmbeddings()
 
     if args.train:
+        log(model_params())
         highlight('violet', 'Please open `logs/model.log` for all the logging information about the model')
         train()
     
