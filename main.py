@@ -1,15 +1,18 @@
+import keras
 from keras.models import Sequential
 from keras.layers.embeddings import Embedding
-from keras.layers.recurrent import SimpleRNN, GRU, LSTM
+from keras.layers.recurrent import GRU
 from keras.layers.core import Dense, Dropout
 from keras.layers.wrappers import TimeDistributed
-from keras.layers import Conv1D, MaxPooling1D
-
+from keras.layers import Conv1D
+from model_config import Config
+from utils.print_utils import partition, highlight
 from metrics.accuracy import conlleval
 from process import Process
 from data_loader import load
+from logs.logger import log
 
-import argparse, os.path, json
+import argparse, os.path, json, logging
 
 import numpy as np
 
@@ -34,49 +37,45 @@ def train():
     words_val = [ list(map(lambda x: idx2w[str(x)], w)) for w in val_x]
     groundtruth_val = [ list(map(lambda x: idx2la[str(x)], y)) for y in val_label]
 
-    print("Done processing word embeddings ...")
+    log("Done processing word embeddings ...")
      
     model = Sequential()
-    model.add(Embedding(n_vocab,100))
+    model.add(Embedding(n_vocab, Config.EMBEDDING_SIZE))
     model.add(Conv1D(128, 5, padding="same", activation='relu'))
-    model.add(Dropout(0.25))
-    model.add(GRU(100,return_sequences=True))
+    model.add(Dropout(Config.DROPOUT))
+    model.add(GRU(Config.HIDDEN_UNITS, return_sequences=True))
     model.add(TimeDistributed(Dense(n_classes, activation='softmax')))
-    model.compile('rmsprop', 'categorical_crossentropy')
-
-    n_epochs = 20
+    rms_prop = eval('keras.optimizers.' + str(Config.OPTIMIZER) + '(learning_rate=0.01, rho=0.9)')
+    model.compile(rms_prop, Config.LOSS)
 
     process = Process(model)
 
     max_f1 = 0
 
-    for i in range(n_epochs):
-        print("Epoch " + str(i))
+    for i in range(Config.N_EPOCHS):
+        log("Epoch " + str(i+1))
 
-        partition = ''
-        for i in range(100):
-            partition += '-'
+        partition(80)
         
-        print(partition)
-        
-        print("Training ")
+        log("Training ")
 
         loss = process.train(train_set)
 
-        print("Validating ")
+        log("Validating ")
 
         predword_val, avgLoss = process.validate(valid_set)
     
         # Accuracy tests here using (predword_val, groundtruth_val, words_val) and save best model
         metrics = conlleval(predword_val, groundtruth_val, words_val, 'diff.txt')
         
-        print('Loss = {}, Precision = {}, Recall = {}, F1 = {}'.format(avgLoss, metrics['precision'], metrics['recall'], metrics['f1']))
+        log('Loss = {}, Precision = {}, Recall = {}, F1 = {}'.format(avgLoss, metrics['precision'], metrics['recall'], metrics['f1']))
 
         if metrics['f1'] > max_f1:
             max_f1 = metrics['f1']
-            process.save('trained_model')
+            process.save('trained_model_' + str(Config.N_EPOCHS))
+            log("New model saved!")
 
-    print('Best validation F1 score : ', str(max_f1))
+    highlight('white', 'Best validation F1 score : ' + str(max_f1))
 
 
 def loadEmbeddings():
@@ -96,7 +95,7 @@ def loadEmbeddings():
     with open('embeddings/word_embeddings.json', 'w') as f:
         json.dump(embeddings, f)
     
-    print("Word Embeddings Loaded ...")
+    log("Word Embeddings Loaded ...")
 
 def process_sentances(sentances):
     sentances = [ sentance.strip('\n') for sentance in sentances ]
@@ -129,14 +128,10 @@ def test():
             if slot != 'O':
                 f.write(str(sentance.split(" ")[idx]) + " - " + str(slot) + "\n")
 
-        partition = ''
-        for i in range(100):
-            partition += '-'
-
-        f.write(str(partition) + "\n")
+        f.write(partition(80) + "\n")
 
     f.close()
-    print("Output can be found in `slots.txt` file!")
+    highlight('green', 'Output can be found in `slots.txt` file!')
 
 
 if __name__ == '__main__':
@@ -153,6 +148,7 @@ if __name__ == '__main__':
         loadEmbeddings()
 
     if args.train:
+        highlight('violet', 'Please open `logs/model.log` for all the logging information about the model')
         train()
     
     if args.test:

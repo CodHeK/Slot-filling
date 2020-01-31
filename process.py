@@ -1,6 +1,9 @@
 from keras.utils import to_categorical
 from keras.models import model_from_json
+from logs.logger import log
+from utils.print_utils import highlight
 import numpy as np
+
 import progressbar, json
 
 class Process:
@@ -21,7 +24,8 @@ class Process:
             json_file.write(model_json)
 
         self.model.save_weights('trained_model/' + name + "_weights.h5", overwrite=True)
-        print("Saved model to disk")
+        log("Saved model to disk")
+        highlight('green', 'Saved model to disk')
 
     def load(self, filename):
         saved_model_file = open('trained_model/' + filename + '.json', 'r')
@@ -31,7 +35,8 @@ class Process:
         saved_model = model_from_json(saved_model_json)
 
         saved_model.load_weights('trained_model/' + filename + '_weights.h5')
-        print("Loaded model from disk")
+        log("Loaded model from disk")
+        highlight('white', 'Loaded model from disk')
 
         self.model = saved_model
 

@@ -1,6 +1,4 @@
-I want to see all the flights from washington to berlin flying tomorrow
+i would like to find a flight from charlotte to Las Vegas that makes a stop in St. Louis
 
-washington - B-fromloc.city_name
-berlin - B-toloc.airport_code
-tomorrow - B-depart_date.today_relative
+charlotte - B-fromloc.city_name
 ----------------------------------------------------------------------------------------------------
