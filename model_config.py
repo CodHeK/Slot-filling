@@ -3,6 +3,6 @@ class Config:
     EMBEDDING_SIZE = 100
     HIDDEN_UNITS = 100
     DROPOUT = 0.25
-    N_EPOCHS = 1
+    N_EPOCHS = 30
     LOSS = 'categorical_crossentropy'
     OPTIMIZER = 'RMSprop'

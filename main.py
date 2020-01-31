@@ -108,7 +108,7 @@ def test():
     process = Process()
 
     # Load trained model
-    process.load('trained_model')
+    process.load('trained_model_' + str(Config.N_EPOCHS))
 
     f = open('tests/test_sentances.txt', 'r')
     sentances = f.readlines()
