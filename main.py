@@ -1,59 +1,72 @@
-import keras
 from keras.models import Sequential
 from keras.layers.embeddings import Embedding
 from keras.layers.recurrent import GRU
 from keras.layers.core import Dense, Dropout
 from keras.layers.wrappers import TimeDistributed
 from keras.layers import Conv1D, LSTM, Bidirectional
+from keras_contrib.layers import CRF
+from keras_contrib.metrics import crf_viterbi_accuracy
+from keras.initializers import he_normal
+import argparse, os.path, json, logging
+import numpy as np
+
 from model_config import Config
 from utils.print_utils import partition, highlight
 from metrics.accuracy import conlleval
 from process import Process
-from data_loader import load
 from logs.logger import log
+from embeddings.generate_embs import CreateEmbeddingsAndSets
 
-import argparse, os.path, json, logging
 
-import numpy as np
-
-def train():
-    with open('embeddings/word_embeddings.json', 'r') as f:
-        embeddings = json.load(f)
-
-    train_set, valid_set, _ = load('atis.pkl')
-
+def train(train_set, valid_set, embeddings):
     w2idx, la2idx = embeddings['w2idx'], embeddings['la2idx']
     idx2w, idx2la = embeddings['idx2w'], embeddings['idx2la'] 
 
     n_classes = len(idx2la)
     n_vocab = len(idx2w)
 
-    train_x, _, train_label = train_set
-    val_x, _, val_label = valid_set
+    train_x, train_label = train_set
+    valid_x, valid_label = valid_set
 
-    words_train = [ list(map(lambda x: idx2w[str(x)], w)) for w in train_x]
-    groundtruth_train = [ list(map(lambda x: idx2la[str(x)], y)) for y in train_label]
+    log("Processing word embeddings... ")
 
-    words_val = [ list(map(lambda x: idx2w[str(x)], w)) for w in val_x]
-    groundtruth_val = [ list(map(lambda x: idx2la[str(x)], y)) for y in val_label]
+    words_train = [ list(map(lambda x: idx2w[x], w)) for w in train_x]
+    groundtruth_train = [ list(map(lambda x: idx2la[x], y)) for y in train_label]
 
-    log("Done processing word embeddings ...")
-     
+    words_val = [ list(map(lambda x: idx2w[x], w)) for w in valid_x]
+    groundtruth_val = [ list(map(lambda x: idx2la[x], y)) for y in valid_label]
+
+    log("Done processing word embeddings!")
+    
+    ###############################################################
+    '''
+        MODEL 
+    '''
     model = Sequential()
     model.add(Embedding(n_vocab, Config.EMBEDDING_SIZE))
+
     model.add(Conv1D(128, 5, padding="same", activation='relu'))
-    model.add(Dropout(Config.DROPOUT))
-    model.add(Bidirectional(LSTM(Config.HIDDEN_UNITS, return_sequences=True)))
+
+    model.add(Bidirectional(LSTM(units=Config.HIDDEN_UNITS, 
+                                dropout=Config.DROPOUT,
+                                recurrent_dropout=Config.DROPOUT,
+                                kernel_initializer=he_normal(),  
+                                return_sequences=True)))
+
     model.add(TimeDistributed(Dense(n_classes, activation='softmax')))
-    rms_prop = eval('keras.optimizers.' + str(Config.OPTIMIZER) + '(learning_rate=' + str(Config.LEARNING_RATE) + ', rho=0.9)')
-    model.compile(rms_prop, Config.LOSS)
+
+    # model.add(CRF(n_classes, sparse_target=False, learn_mode='join'))
+
+    model.compile(Config.OPTIMIZER, Config.LOSS)
+
+    ###############################################################
 
     process = Process(model)
 
     max_f1 = 0
 
     for i in range(Config.N_EPOCHS):
-        log("Epoch " + str(i+1))
+        log("Epoch " + str(i+1), display=False)
         highlight('violet', 'Epoch ' + str(i+1))
 
         partition(80)
@@ -80,23 +93,15 @@ def train():
 
 
 def loadEmbeddings():
-    _, _, dicts = load('atis.pkl')
-    w2idx, la2idx = dicts['words2idx'], dicts['labels2idx']
+    train_set, valid_set, embeddings = CreateEmbeddingsAndSets()
 
-    idx2w  = { w2idx[k]:k for k in w2idx }
-    idx2la = { la2idx[k]:k for k in la2idx }
-
-    embeddings = {
-        "idx2w" : idx2w,
-        "idx2la" : idx2la,
-        "w2idx" : w2idx,
-        "la2idx" : la2idx 
-    }
-
-    with open('embeddings/word_embeddings.json', 'w') as f:
+    # Used in process.py for loading embeddings
+    with open('embeddings/' + Config.EMBEDDINGS_FILE, 'w') as f:
         json.dump(embeddings, f)
     
-    log("Word Embeddings Loaded ...")
+    log("Word Embeddings Dumped to JSON ...")
+
+    return (train_set, valid_set, embeddings)
 
 def process_sentances(sentances):
     sentances = [ sentance.strip('\n') for sentance in sentances ]
@@ -136,14 +141,15 @@ def test():
 
 def model_params():
     log('MODEL PARAMETERS :' + '\n' +
-        'LEARNING_RATE = ' + str(Config.LEARNING_RATE) + '\n' + 
         'EMBEDDING_SIZE = ' + str(Config.EMBEDDING_SIZE) + '\n' + 
         'HIDDEN_UNITS = ' + str(Config.HIDDEN_UNITS) + '\n' + 
         'DROPOUT = ' + str(Config.DROPOUT) + '\n' + 
         'N_EPOCHS = ' + str(Config.N_EPOCHS) + '\n' +
         'LOSS = ' + str(Config.LOSS) + '\n' +
         'OPTIMIZER = ' + str(Config.OPTIMIZER) + '\n'
-        'MODEL = ' + str(Config.MODEL) + '\n')
+        'MODEL = ' + str(Config.MODEL) + '\n'
+        'DATA_FILE = ' + str(Config.DATA_FILE) + '\n'
+        'EMBEDDINGS_FILE = ' + str(Config.EMBEDDINGS_FILE) + '\n')
 
 
 if __name__ == '__main__':
@@ -155,17 +161,15 @@ if __name__ == '__main__':
 
     args = parser.parse_args()
 
-    # Check if embeddings exists
-    if not os.path.isfile('embeddings/word_embeddings.json'):
-        loadEmbeddings()
-
     if args.train:
+        train_set, valid_set, embeddings = loadEmbeddings()
         log(model_params())
         highlight('violet', 'Please open `logs/model.log` for all the logging information about the model')
-        train()
+        train(train_set, valid_set, embeddings)
     
     if args.test:
         test()
 
             
             
+

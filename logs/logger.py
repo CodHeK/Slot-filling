@@ -6,7 +6,9 @@ sys.path.append(APP_PATH)
 
 from model_config import Config
 
-def log(message):
+def log(message, display=True):
+    if display:
+        print(message)
     LOG_FORMAT = '%(asctime)s - %(message)s'
     logging.basicConfig(filename='logs/model_' + str(Config.N_EPOCHS) + '_' + str(Config.MODEL) + '.log', 
                         filemode='w',

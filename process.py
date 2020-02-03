@@ -1,6 +1,7 @@
 from keras.utils import to_categorical
 from keras.models import model_from_json
 from logs.logger import log
+from model_config import Config
 from utils.print_utils import highlight
 import numpy as np
 
@@ -13,7 +14,7 @@ class Process:
         self.n_classes = len(self.embeddings['idx2la'])
     
     def getEmbeddings(self):
-        with open('embeddings/word_embeddings.json', 'r') as f:
+        with open('embeddings/' + Config.EMBEDDINGS_FILE, 'r') as f:
             embeddings = json.load(f)
         
         return embeddings
@@ -43,7 +44,7 @@ class Process:
         return saved_model
 
     def train(self, train_set):
-        train_x, _, train_label = train_set
+        train_x, train_label = train_set
         bar = progressbar.ProgressBar(maxval=len(train_x))
 
         avgLoss = 0
@@ -64,7 +65,7 @@ class Process:
         return avgLoss/idx
 
     def validate(self, valid_set):
-        val_x, _, val_label = valid_set
+        val_x, val_label = valid_set
         bar = progressbar.ProgressBar(maxval=len(val_x))
 
         val_pred_label = []
