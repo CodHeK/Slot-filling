@@ -1,5 +1,1 @@
-Find direct round trip flights from Baltimore to Seattle
-
-I want to see all the flights from washington to berlin flying tomorrow
-
-show flights from San Diego to seatlle tomorrow
+Show me all flights going from dallas to mexico today

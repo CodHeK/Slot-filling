@@ -1,14 +1,20 @@
-Find direct round trip flights from Baltimore to Seattle
+Separately, officials say a policeman was killed in Mosul when he tried to move a decapitated body that was rigged with explosives.
 
-round - B-round_trip
-trip - I-round_trip
+Mosul - B-geo
 ----------------------------------------------------------------------------------------------------
-I want to see all the flights from washington to berlin flying tomorrow
+Mexico's Institutional Revolutionary Party has selected Roberto Madrazo as its candidate for the 2006 presidential election.
 
-washington - B-fromloc.city_name
-tomorrow - B-depart_date.today_relative
+Revolutionary - B-org
+Party - I-org
+Roberto - B-org
+2006 - B-tim
 ----------------------------------------------------------------------------------------------------
-show flights from San Diego to seatlle tomorrow
+Mr. Madrazo easily defeated challenger Everado Moreno during Sunday's PRI primary election
 
-tomorrow - B-depart_date.today_relative
+Mr. - B-per
+Madrazo - I-per
+defeated - B-per
+challenger - I-per
+Everado - I-per
+Moreno - I-per
 ----------------------------------------------------------------------------------------------------

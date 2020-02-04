@@ -1,0 +1,4 @@
+Show me all flights going from dallas to mexico today
+
+dallas - B-fromloc.city_name
+----------------------------------------------------------------------------------------------------

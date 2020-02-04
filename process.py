@@ -2,6 +2,10 @@ from keras.utils import to_categorical
 from keras.models import model_from_json
 from logs.logger import log
 from model_config import Config
+from keras_contrib.layers import CRF
+from keras.models import load_model
+from keras_contrib.losses import crf_loss
+from keras_contrib.metrics import crf_viterbi_accuracy
 from utils.print_utils import highlight
 import numpy as np
 
@@ -20,23 +24,33 @@ class Process:
         return embeddings
     
     def save(self, name):
-        model_json = self.model.to_json()
-        with open('trained_model/' + name + ".json", "w") as json_file:
-            json_file.write(model_json)
+        # model_json = self.model.to_json()
+        # with open('trained_model/' + name + ".json", "w") as json_file:
+        #     json_file.write(model_json)
 
-        self.model.save_weights('trained_model/' + name + "_weights.h5", overwrite=True)
-        log("Saved model to disk")
+        # self.model.save_weights('trained_model/' + name + "_weights.h5", overwrite=True)
+
+        self.model.save('trained_model/' + name + '.h5')
+        
+        log("Saved model to disk", display=False)
         highlight('green', 'Saved model to disk')
 
     def load(self, filename):
-        saved_model_file = open('trained_model/' + filename + '.json', 'r')
-        saved_model_json = saved_model_file.read()
-        saved_model_file.close()
+        # saved_model_file = open('trained_model/' + filename + '.json', 'r')
+        # saved_model_json = saved_model_file.read()
+        # saved_model_file.close()
 
-        saved_model = model_from_json(saved_model_json)
+        # saved_model = model_from_json(saved_model_json)
 
-        saved_model.load_weights('trained_model/' + filename + '_weights.h5')
-        log("Loaded model from disk")
+        # saved_model.load_weights('trained_model/' + filename + '_weights.h5')
+
+        custom_objects={'CRF': CRF,
+                        'crf_loss': crf_loss,
+                        'crf_viterbi_accuracy': crf_viterbi_accuracy}
+
+        saved_model = load_model('trained_model/' + filename + '.h5', custom_objects=custom_objects)
+
+        log("Loaded model from disk", display=False)
         highlight('white', 'Loaded model from disk')
 
         self.model = saved_model
@@ -60,9 +74,7 @@ class Process:
 
             label = label[np.newaxis, :] 
     
-            avgLoss += self.model.train_on_batch(sentance, label)
-
-        return avgLoss/idx
+            self.model.train_on_batch(sentance, label)
 
     def validate(self, valid_set):
         val_x, val_label = valid_set
@@ -82,7 +94,7 @@ class Process:
 
             label = label[np.newaxis, :] 
     
-            avgLoss += self.model.test_on_batch(sentance, label)
+            self.model.test_on_batch(sentance, label)
 
             pred = self.model.predict_on_batch(sentance)
 
@@ -91,7 +103,7 @@ class Process:
 
         predword_val = [ list(map(lambda x: self.embeddings['idx2la'][str(x)], y)) for y in val_pred_label ]
 
-        return (predword_val, avgLoss/idx)
+        return predword_val
 
     def test(self, sentance):
         sentance = sentance.split(" ")

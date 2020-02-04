@@ -102,5 +102,5 @@ def CreateEmbeddingsAndSets():
     filename = Config.DATA_FILE
     sentances, words, tags = parse(filename)
 
-    return index(sentances, words, tags)
+    return index(sentances[:5000], words, tags)
 
