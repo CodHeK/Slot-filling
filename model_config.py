@@ -6,7 +6,7 @@ class Config:
     DROPOUT = 0.25
     N_EPOCHS = 20
     LOSS = crf_loss
-    OPTIMIZER = 'adam'
-    MODEL = 'BLSTM_CRF'
+    OPTIMIZER = 'rmsprop'
+    MODEL = 'GRU_CRF'
     DATA_FILE = 'atis.pkl'
     EMBEDDINGS_FILE = 'word_embeddings.json'

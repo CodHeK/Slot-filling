@@ -50,11 +50,13 @@ def train(train_set, valid_set, embeddings):
 
     model.add(Dropout(Config.DROPOUT))
 
-    model.add(Bidirectional(LSTM(units=Config.HIDDEN_UNITS, 
-                                dropout=Config.DROPOUT,
-                                recurrent_dropout=Config.DROPOUT,
-                                kernel_initializer=he_normal(),  
-                                return_sequences=True)))
+    # model.add(Bidirectional(LSTM(units=Config.HIDDEN_UNITS, 
+    #                             dropout=Config.DROPOUT,
+    #                             recurrent_dropout=Config.DROPOUT,
+    #                             kernel_initializer=he_normal(),  
+    #                             return_sequences=True)))
+
+    model.add(GRU(100, return_sequences=True))
 
     model.add(TimeDistributed(Dense(n_classes, activation='softmax')))
 

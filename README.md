@@ -42,14 +42,13 @@ python3 main.py --test
 Go to `tests/slots.txt` to find the output :
 
 ```
-Where is the stop for USAir flight number thirty-seven from Philadelphia to San Francisco?
+Where is the stop for USAir flight number 37 from Philadelphia to San Francisco?
 
-thirty - B-fromloc.city_name
+37 - B-airline_code
 philadelphia - B-fromloc.city_name
 san - B-toloc.city_name
 francisco - I-toloc.city_name
 ----------------------------------------------------------------------------------------------------
-
 
 ```
 

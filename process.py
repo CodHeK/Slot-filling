@@ -108,6 +108,14 @@ class Process:
         # Encode in the input sentance
         for i in range(len(sentance)):
             word = sentance[i]
+            # Convert 20 -> DIGITDIGIT
+            
+            if word.isdigit():
+                numlen = len(word)
+                word = ''
+                for _ in range(numlen):
+                    word += 'DIGIT'
+
             if word not in self.embeddings['w2idx']:
                 sentance[i] = self.embeddings['w2idx']['<UNK>']
             else:
