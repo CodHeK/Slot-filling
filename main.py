@@ -196,7 +196,7 @@ if __name__ == '__main__':
         ''' 
             Use this function if your dataset has the schema of type :
 
-            sentance_idx | word | tag
+            sentance_idx | word | tag (See Ex: '/data/ner_dataset.csv')
         '''
         # train_set, valid_set, embeddings = loadEmbeddings()
 
