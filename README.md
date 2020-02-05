@@ -1,7 +1,5 @@
-# Slot-filling
+# 1. Using the model:
 
-## 1. Using the model:
----
 ### Setup
 
 Make sure you have python3.x and pip3 installed after that just run 
@@ -83,9 +81,7 @@ class Config:
 
 Once, the model is put into training, logs are generated and saved in `/logs` folder according to the format - `model_<N_EPOCHS>_<MODEL>.log` as mentioned in your configuration file. If you need different log outputs modify `/logs/logger.py`.
 
-## 2. Using the API 
----
-
+# 2. Using the API 
 ```
 python3 app.py
 ```
