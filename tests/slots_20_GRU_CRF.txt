@@ -1,6 +1,6 @@
-Where is the stop for USAir flight number 37 from Philadelphia to San Francisco?
+Where is the stop for USAir flight number 37 from Philadelphia to San Francisco
 
-37 - B-airline_code
+37 - B-flight_number
 philadelphia - B-fromloc.city_name
 san - B-toloc.city_name
 francisco - I-toloc.city_name

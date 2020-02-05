@@ -8,4 +8,16 @@ fi
 # shellcheck source=/dev/null
 source "$VENV_NAME/bin/activate"
 
-pip3 install -r requirements.txt
+# pip3 install -r requirements.txt
+
+echo "Installing keras-contrib..."
+
+pip3 install git+https://www.github.com/keras-team/keras-contrib.git
+
+echo "Installing spaCy..."
+
+pip3 install -U spacy
+
+echo "Downloading spaCy english module..."
+
+python3 -m spacy download en_core_web_sm

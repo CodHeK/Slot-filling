@@ -31,9 +31,6 @@ def train(train_set, valid_set, embeddings):
 
     log("Processing word embeddings... ")
 
-    words_train = [ list(map(lambda x: idx2w[x], w)) for w in train_x]
-    groundtruth_train = [ list(map(lambda x: idx2la[x], y)) for y in train_label]
-
     words_val = [ list(map(lambda x: idx2w[x], w)) for w in valid_x]
     groundtruth_val = [ list(map(lambda x: idx2la[x], y)) for y in valid_label]
 
@@ -95,6 +92,7 @@ def train(train_set, valid_set, embeddings):
             log("New model saved!", display=False)
 
     highlight('white', 'Best validation F1 score : ' + str(max_f1))
+    log('Best validation F1 score : ' + str(max_f1), display=False)
 
 
 def loadEmbeddingsATIS():
@@ -141,37 +139,51 @@ def process_sentances(sentances):
 
     return sentances
 
-def test():
+def test(sentences=None, read_file=True):
     process = Process()
 
     # Load trained model
     process.load('trained_model_' + str(Config.N_EPOCHS) + '_' + str(Config.MODEL))
 
-    f = open('tests/test_sentances.txt', 'r')
-    sentances = f.readlines()
-    f.close()
+    if read_file:
+        f = open('tests/test_sentances.txt', 'r')
+        sentences = f.readlines()
+        f.close()
 
     f = open('tests/slots_' + str(Config.N_EPOCHS) + '_' + str(Config.MODEL) + '.txt', 'w')
 
     # Clean loaded sentances from file - removing '\n' from each sentance
-    sentances = process_sentances(sentances)
+    if read_file:
+        sentences = process_sentances(sentences)
+    
+    arr_slots = []
+    for sentence in sentences:
+        words, BIO = process.test(sentence) # Test on sentance
+        f.write(str(sentence) + "\n\n")
 
-    for sentance in sentances:
-        words, BIO = process.test(sentance) # Test on sentance
-        f.write(str(sentance) + "\n\n")
-
+        slots = {}
         # Print Slots to file
         for idx, slot in enumerate(BIO):
             if slot != 'O':
                 f.write(str(words[idx]) + " - " + str(slot) + "\n")
+                slots[str(words[idx])] = str(slot)
 
         f.write(partition(80) + "\n")
+
+        arr_slots.append(slots)
 
     f.close()
     highlight('green', 'Output can be found in `slots.txt` file!')
 
+    print(arr_slots)
+
+    if not read_file:
+        return arr_slots[0] # As we're sending only one sentance in API URL
+
 def model_params():
-    log('MODEL PARAMETERS :' + '\n' +
+    log(
+        '\n\n' +
+        'MODEL PARAMETERS :' + '\n\n' +
         'EMBEDDING_SIZE = ' + str(Config.EMBEDDING_SIZE) + '\n' + 
         'HIDDEN_UNITS = ' + str(Config.HIDDEN_UNITS) + '\n' + 
         'DROPOUT = ' + str(Config.DROPOUT) + '\n' + 
@@ -180,7 +192,10 @@ def model_params():
         'OPTIMIZER = ' + str(Config.OPTIMIZER) + '\n'
         'MODEL = ' + str(Config.MODEL) + '\n'
         'DATA_FILE = ' + str(Config.DATA_FILE) + '\n'
-        'EMBEDDINGS_FILE = ' + str(Config.EMBEDDINGS_FILE) + '\n')
+        'EMBEDDINGS_FILE = ' + str(Config.EMBEDDINGS_FILE) + '\n'
+        'TIMESTAMP = ' + str(Config.TIMESTAMP) + 
+        '\n\n'
+        )
 
 
 if __name__ == '__main__':

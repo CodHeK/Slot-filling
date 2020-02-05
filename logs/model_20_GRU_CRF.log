@@ -1,1 +1,3 @@
-05-Feb-20 11:35:06 - Loaded model from disk
+05-Feb-20 15:33:40 - Loaded model from disk
+05-Feb-20 15:33:41 - 127.0.0.1 - - [05/Feb/2020 15:33:41] "[37mGET /api/v1/slots/Where%20is%20the%20stop%20for%20USAir%20flight%20number%2037%20from%20Philadelphia%20to%20San%20Francisco HTTP/1.1[0m" 200 -
+05-Feb-20 15:33:42 - 127.0.0.1 - - [05/Feb/2020 15:33:42] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -

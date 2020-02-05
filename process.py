@@ -1,5 +1,4 @@
 from keras.utils import to_categorical
-from keras.models import model_from_json
 from logs.logger import log
 from model_config import Config
 from keras_contrib.layers import CRF
@@ -50,8 +49,6 @@ class Process:
         train_x, train_label = train_set
         bar = progressbar.ProgressBar(maxval=len(train_x))
 
-        avgLoss = 0
-
         for idx, sentance in bar(enumerate(train_x)):
             label = train_label[idx]
 
@@ -70,8 +67,7 @@ class Process:
         bar = progressbar.ProgressBar(maxval=len(val_x))
 
         val_pred_label = []
-        avgLoss = 0
-
+        
         for idx, sentance in bar(enumerate(val_x)):
             label = val_label[idx]
 
@@ -108,8 +104,8 @@ class Process:
         # Encode in the input sentance
         for i in range(len(sentance)):
             word = sentance[i]
-            # Convert 20 -> DIGITDIGIT
             
+            # Convert 20 -> DIGITDIGIT
             if word.isdigit():
                 numlen = len(word)
                 word = ''
