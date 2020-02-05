@@ -81,6 +81,8 @@ class Config:
 
 Once, the model is put into training, logs are generated and saved in `/logs` folder according to the format - `model_<N_EPOCHS>_<MODEL>.log` as mentioned in your configuration file. If you need different log outputs modify `/logs/logger.py`.
 
+---
+
 # 2. Using the API 
 ```
 python3 app.py
