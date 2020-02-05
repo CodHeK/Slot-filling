@@ -9,7 +9,7 @@ def main(sentence):
     slots = test([sentence], read_file=False)
     response = {
         'sentance': str(sentence),
-        'slots': slots
+        'slots': slots 
     }
     return jsonify(response)
 

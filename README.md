@@ -109,10 +109,15 @@ Response: (JSON format)
 {
   "sentance": "Where is the stop for USAir flight number 37 from Philadelphia to San Francisco", 
   "slots": {
-    "37": "B-flight_number", 
-    "francisco": "I-toloc.city_name", 
-    "philadelphia": "B-fromloc.city_name", 
-    "san": "B-toloc.city_name"
+    "flight_number": [
+      "37"
+    ], 
+    "fromloc.city_name": [
+      "philadelphia"
+    ], 
+    "toloc.city_name": [
+      "san francisco"
+    ]
   }
 }
 ```

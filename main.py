@@ -162,11 +162,41 @@ def test(sentences=None, read_file=True):
         f.write(str(sentence) + "\n\n")
 
         slots = {}
+        slot_type = None
+        value = ''
+        prev_slot_type = None
+
         # Print Slots to file
         for idx, slot in enumerate(BIO):
             if slot != 'O':
                 f.write(str(words[idx]) + " - " + str(slot) + "\n")
-                slots[str(words[idx])] = str(slot)
+
+                '''
+                    Grouping the slots
+
+                    san - B-toloc.city_name
+                    francisco - I-toloc.city_name
+                    ------------------------------
+                    Returns -> {'toloc.city_name': ['san francisco']}
+                '''
+                slot_type = slot.split("-")[1]
+                pos = slot.split("-")[0]
+
+                if pos == 'B':
+                    if slot_type not in slots:
+                        if prev_slot_type is not None:
+                            slots[prev_slot_type].append(value.strip())
+ 
+                        value = words[idx] + ' '
+                        slots[slot_type] = []
+                        prev_slot_type = slot_type
+                    else:
+                        slots[prev_slot_type].append(value.strip())
+                        value = words[idx] + ' '
+                else: # pos == 'I'
+                    value += words[idx] + ' '
+
+        slots[slot_type].append(value.strip())
 
         f.write(partition(80) + "\n")
 
@@ -174,8 +204,6 @@ def test(sentences=None, read_file=True):
 
     f.close()
     highlight('green', 'Output can be found in `slots.txt` file!')
-
-    print(arr_slots)
 
     if not read_file:
         return arr_slots[0] # As we're sending only one sentance in API URL
