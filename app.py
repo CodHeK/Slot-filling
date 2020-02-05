@@ -1,5 +1,6 @@
 from flask import Flask, jsonify
 from main import test
+from model_config import Config
 
 app = Flask(__name__)
 
@@ -13,4 +14,4 @@ def main(sentence):
     return jsonify(response)
 
 if __name__ == '__main__':
-    app.run(debug=True, port=5004)
+    app.run(debug=True, port=Config.PORT)

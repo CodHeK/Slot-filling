@@ -1,5 +1,7 @@
 # Slot-filling
 
+## 1. Using the model:
+---
 ### Setup
 
 Make sure you have python3.x and pip3 installed after that just run 
@@ -42,9 +44,9 @@ python3 main.py --test
 Go to `tests/slots.txt` to find the output :
 
 ```
-Where is the stop for USAir flight number 37 from Philadelphia to San Francisco?
+Where is the stop for USAir flight number 37 from Philadelphia to San Francisco
 
-37 - B-airline_code
+37 - B-flight_number
 philadelphia - B-fromloc.city_name
 san - B-toloc.city_name
 francisco - I-toloc.city_name
@@ -80,3 +82,40 @@ class Config:
 ### Logs
 
 Once, the model is put into training, logs are generated and saved in `/logs` folder according to the format - `model_<N_EPOCHS>_<MODEL>.log` as mentioned in your configuration file. If you need different log outputs modify `/logs/logger.py`.
+
+## 2. Using the API 
+---
+
+```
+python3 app.py
+```
+
+Configure you app PORT in the configuration file, `model_config.py`
+
+Go to your browser use the above example sentance:
+
+Sentence:
+`Where is the stop for USAir flight number 37 from Philadelphia to San Francisco`
+
+URL:
+`http://localhost:5004/api/v1/slots/Where%20is%20the%20stop%20for%20USAir%20flight%20number%2037%20from%20Philadelphia%20to%20San%20Francisco?` 
+
+API endpoint:
+
+`/api/v1/slots/<sentance>`
+
+Response: (JSON format)
+
+```
+{
+  "sentance": "Where is the stop for USAir flight number 37 from Philadelphia to San Francisco", 
+  "slots": {
+    "37": "B-flight_number", 
+    "francisco": "I-toloc.city_name", 
+    "philadelphia": "B-fromloc.city_name", 
+    "san": "B-toloc.city_name"
+  }
+}
+```
+
+
