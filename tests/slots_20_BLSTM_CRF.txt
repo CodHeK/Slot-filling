@@ -1,4 +1,7 @@
-Show me all flights going from dallas to mexico today
+Where is the stop for USAir flight number thirty-seven from Philadelphia to San Francisco?
 
-dallas - B-fromloc.city_name
+thirty - B-fromloc.city_name
+philadelphia - B-fromloc.city_name
+san - B-toloc.city_name
+francisco - I-toloc.city_name
 ----------------------------------------------------------------------------------------------------

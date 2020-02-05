@@ -155,13 +155,13 @@ def test():
     sentances = process_sentances(sentances)
 
     for sentance in sentances:
-        BIO = process.test(sentance)# Test on sentance
+        words, BIO = process.test(sentance) # Test on sentance
         f.write(str(sentance) + "\n\n")
 
         # Print Slots to file
         for idx, slot in enumerate(BIO):
             if slot != 'O':
-                f.write(str(sentance.split(" ")[idx]) + " - " + str(slot) + "\n")
+                f.write(str(words[idx]) + " - " + str(slot) + "\n")
 
         f.write(partition(80) + "\n")
 

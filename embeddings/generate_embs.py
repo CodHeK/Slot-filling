@@ -48,7 +48,7 @@ def parse(filename):
                 sentances.append(sentance)
             sentance = []
 
-        word, tag = line[1], line[-1]
+        word, tag = line[1].lower(), line[-1]
 
         # Generating a set of words & tags
         if word not in words:

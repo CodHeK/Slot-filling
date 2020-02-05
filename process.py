@@ -8,6 +8,7 @@ from keras_contrib.losses import crf_loss
 from keras_contrib.metrics import crf_viterbi_accuracy
 from utils.print_utils import highlight
 import numpy as np
+import spacy, copy
 
 import progressbar, json
 
@@ -24,29 +25,17 @@ class Process:
         return embeddings
     
     def save(self, name):
-        # model_json = self.model.to_json()
-        # with open('trained_model/' + name + ".json", "w") as json_file:
-        #     json_file.write(model_json)
-
-        # self.model.save_weights('trained_model/' + name + "_weights.h5", overwrite=True)
-
         self.model.save('trained_model/' + name + '.h5')
         
         log("Saved model to disk", display=False)
         highlight('green', 'Saved model to disk')
 
     def load(self, filename):
-        # saved_model_file = open('trained_model/' + filename + '.json', 'r')
-        # saved_model_json = saved_model_file.read()
-        # saved_model_file.close()
-
-        # saved_model = model_from_json(saved_model_json)
-
-        # saved_model.load_weights('trained_model/' + filename + '_weights.h5')
-
-        custom_objects={'CRF': CRF,
-                        'crf_loss': crf_loss,
-                        'crf_viterbi_accuracy': crf_viterbi_accuracy}
+        custom_objects = {
+                          'CRF': CRF,
+                          'crf_loss': crf_loss,
+                          'crf_viterbi_accuracy': crf_viterbi_accuracy
+                         }
 
         saved_model = load_model('trained_model/' + filename + '.h5', custom_objects=custom_objects)
 
@@ -106,7 +95,15 @@ class Process:
         return predword_val
 
     def test(self, sentance):
-        sentance = sentance.split(" ")
+        tokenizer = spacy.load('en_core_web_sm')
+
+        tokens = tokenizer(sentance)
+
+        sentance = []
+        for token in tokens:
+            sentance.append(token.text.lower())
+
+        words = copy.deepcopy(sentance)
 
         # Encode in the input sentance
         for i in range(len(sentance)):
@@ -118,11 +115,11 @@ class Process:
 
         sentance = np.asarray(sentance)
         sentance = sentance[np.newaxis,:]
- 
+
         pred = self.model.predict_on_batch(sentance)
         pred = np.argmax(pred,-1)[0]
 
         pred_slots = [ self.embeddings['idx2la'][str(idx)] for idx in pred ]
 
-        return pred_slots
+        return (words, pred_slots)
 
