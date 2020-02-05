@@ -16,7 +16,7 @@ This will create a virtual environemnt named `env` and also install the requirem
 python3 main.py --train
 ```
 
-Validation is perfomed on every epoch, and based on the `F1-Score` the weights of the best model is saved in the `/trained_model` folder following the format - `trained_model_<N_EPOCHS>_<MODEL>_weights.h5` and it's corresponding JSON as `trained_model_<N_EPOCHS>_<MODEL>.json`.
+Validation is perfomed on every epoch, and based on the `F1-Score` the weights of the best model is saved in the `/trained_model` folder following the format - `trained_model_<N_EPOCHS>_<MODEL>.h5`.
 
 ### Metrics
 
@@ -29,9 +29,7 @@ You can directly test using the above command as the repo includes the `trained_
 Go to `tests/text_sentances.txt` :
 
 ```
-I want to see all the flights from washington to berlin flying tomorrow
-
-
+Where is the stop for USAir flight number thirty-seven from Philadelphia to San Francisco?
 
 ```
 
@@ -44,22 +42,20 @@ python3 main.py --test
 Go to `tests/slots.txt` to find the output :
 
 ```
-I want to see all the flights from washington to berlin flying tomorrow
+Where is the stop for USAir flight number thirty-seven from Philadelphia to San Francisco?
 
-washington - B-fromloc.city_name
-berlin - B-toloc.airport_code
-tomorrow - B-depart_date.today_relative
+thirty - B-fromloc.city_name
+philadelphia - B-fromloc.city_name
+san - B-toloc.city_name
+francisco - I-toloc.city_name
 ----------------------------------------------------------------------------------------------------
 
 
 ```
 
-```
-NOTE:
+:warning: NOTE :
 
-Above example was the output when tested on the ATIS dataset and 
-might not work with the current fork of the code, as it is still in development.
-```
+This project is still in development and the results might not be very accurate at the moment.
 
 ### Configuration
 

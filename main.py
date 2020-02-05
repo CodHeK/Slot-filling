@@ -192,7 +192,9 @@ if __name__ == '__main__':
 
     if args.train:
         ''' 
-            Use this function if your dataset has the above mentioned schema
+            Use this function if your dataset has the schema of type :
+
+            sentance_idx | word | tag
         '''
         # train_set, valid_set, embeddings = loadEmbeddings()
 
