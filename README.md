@@ -66,13 +66,14 @@ Ex:
 class Config:
     EMBEDDING_SIZE = 100
     HIDDEN_UNITS = 100
-    DROPOUT = 0.5
+    DROPOUT = 0.25
     N_EPOCHS = 20
-    LOSS = 'categorical_crossentropy'
+    LOSS = crf_loss
     OPTIMIZER = 'rmsprop'
-    MODEL = 'BLSTM'
-    DATA_FILE = 'ner_dataset.csv'
+    MODEL = 'GRU_CRF'
+    DATA_FILE = 'atis.pkl'
     EMBEDDINGS_FILE = 'word_embeddings.json'
+    PORT = '5004'
 ```
 
 `DATA_FILE` is to be saved in the `/data` folder and `EMBEDDINGS_FILE` gets automatically saved as per the name mentioned in the `Config` in the `/embeddings` folder.
