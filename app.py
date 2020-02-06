@@ -38,5 +38,8 @@ def main(sentence):
     return sendResponse(response)
 
 if __name__ == '__main__':
+    '''
+        Loading the model only once, instead of loading it on every request
+    '''
     initApp()
     app.run(debug=True, port=Config.PORT, threaded=True)

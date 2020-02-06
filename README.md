@@ -10,6 +10,15 @@ source build_env
 
 This will create a virtual environemnt named `env` and also install the requirements!
 
+### Dataset Schema
+
+| sentance_idx | word | tag  |
+| ------------- |:-------------:| -----:|
+| Sentance: 1    | philadelphia | B-fromloc.city_name | 
+|    | to      |   O |
+|  | san      |   B-toloc.city_name  |
+|  | francisco      |   I-toloc.city_name  |
+
 ### Training & validation
 
 ```
@@ -21,6 +30,10 @@ Validation is perfomed on every epoch, and based on the `F1-Score` the weights o
 ### Metrics
 
 Validation script in the `/metrics` folder, we're using the already exsiting `conlleval.pl` pearl script for finding out the `Precision`, `Recall` and `F1-Score` after every epoch.
+
+:warning: NOTE :
+
+The metrics works only for BIO tagged datasets.
 
 ### Testing
 
