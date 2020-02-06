@@ -4,7 +4,7 @@ import os, sys
 APP_PATH = str(os.path.dirname(os.path.realpath('../../files.py')))
 sys.path.append(APP_PATH)
 
-from Slot_Filling.model_config import Config
+from model_config import Config
 
 def filesIn(path):
     files = []
@@ -17,7 +17,7 @@ def filesIn(path):
     return files
 
 def getBestSavedModel():
-    filenames = filesIn('/trained_model')
+    filenames = filesIn('trained_model')
 
     max_acc = 0
     best_model_filename = None
@@ -43,4 +43,4 @@ def clean():
         acc = suffix[:-3]
 
         if res == (str(Config.N_EPOCHS) + '_' + str(Config.MODEL)) and str(acc) != str(max_acc):
-            os.system('cd /trained_model && rm %s' % filename)
+            os.system('cd trained_model/ && rm %s' % filename)

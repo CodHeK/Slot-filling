@@ -215,3 +215,62 @@ Use tf.cast instead.
 06-Feb-20 20:22:09 -  * Detected change in '/Users/codhek/summ/Slot_Filling/utils/files.py', reloading
 06-Feb-20 20:22:09 -  * Restarting with stat
 06-Feb-20 20:22:18 - Loaded model from disk
+06-Feb-20 23:35:43 - Loaded model from disk
+06-Feb-20 23:37:04 - Loaded model from disk
+06-Feb-20 23:37:04 -  * Running on http://127.0.0.1:9009/ (Press CTRL+C to quit)
+06-Feb-20 23:37:04 -  * Restarting with stat
+06-Feb-20 23:37:10 - Loaded model from disk
+06-Feb-20 23:37:10 -  * Debugger is active!
+06-Feb-20 23:37:10 -  * Debugger PIN: 110-034-516
+06-Feb-20 23:37:42 - Slots compiled into groups...
+06-Feb-20 23:37:42 - 127.0.0.1 - - [06/Feb/2020 23:37:42] "[37mGET /api/v1/slots/Where%20is%20the%20stop%20for%20USAir%20flight%20number%2037%20from%20Philadelphia%20to%20San%20Francisco HTTP/1.1[0m" 200 -
+06-Feb-20 23:37:42 - 127.0.0.1 - - [06/Feb/2020 23:37:42] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+06-Feb-20 23:38:56 - Slots compiled into groups...
+06-Feb-20 23:38:56 - 127.0.0.1 - - [06/Feb/2020 23:38:56] "[37mGET /api/v1/slots/Where%20is%20the%20stop%20for%20USAir%20flight%20number%2037%20from%20Philadelphia%20to%20San%20Francisco%20flying%20next%20friday HTTP/1.1[0m" 200 -
+06-Feb-20 23:40:36 - Slots compiled into groups...
+06-Feb-20 23:40:36 - 127.0.0.1 - - [06/Feb/2020 23:40:36] "[37mGET /api/v1/slots/Where%20is%20the%20stop%20for%20USAir%20flight%20number%2037%20from%20Philadelphia%20to%20San%20Francisco%20flying%20next%20friday HTTP/1.1[0m" 200 -
+06-Feb-20 23:40:43 - Slots compiled into groups...
+06-Feb-20 23:40:43 - 127.0.0.1 - - [06/Feb/2020 23:40:43] "[37mGET /api/v1/slots/Where%20is%20the%20stop%20for%20USAir%20flight%20number%2037%20from%20Philadelphia%20to%20San%20Francisco%20flying%20next%20friday HTTP/1.1[0m" 200 -
+06-Feb-20 23:42:13 - Loaded model from disk
+06-Feb-20 23:42:13 -  * Running on http://127.0.0.1:9009/ (Press CTRL+C to quit)
+06-Feb-20 23:42:13 -  * Restarting with stat
+06-Feb-20 23:42:18 - Loaded model from disk
+06-Feb-20 23:42:18 -  * Debugger is active!
+06-Feb-20 23:42:18 -  * Debugger PIN: 110-034-516
+06-Feb-20 23:42:34 - Slots compiled into groups...
+06-Feb-20 23:42:34 - 127.0.0.1 - - [06/Feb/2020 23:42:34] "[37mGET /api/v1/slots/Where%20is%20the%20stop%20for%20USAir%20flight%20number%2037%20from%20Philadelphia%20to%20San%20Francisco%20flying%20next%20friday HTTP/1.1[0m" 200 -
+06-Feb-20 23:43:36 -  * Detected change in '/Users/codhek/summ/Slot_Filling/app.py', reloading
+06-Feb-20 23:43:36 -  * Restarting with stat
+06-Feb-20 23:43:45 - Loaded model from disk
+06-Feb-20 23:43:46 -  * Debugger is active!
+06-Feb-20 23:43:46 -  * Debugger PIN: 110-034-516
+06-Feb-20 23:43:48 -  * Detected change in '/Users/codhek/summ/Slot_Filling/app.py', reloading
+06-Feb-20 23:43:48 -  * Restarting with stat
+06-Feb-20 23:44:43 - Best model : trained_model_20_GRU_CRF_85.7.h5 picked for loading!
+06-Feb-20 23:44:44 - From /Users/codhek/summ/Slot_Filling/env/lib/python3.6/site-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+06-Feb-20 23:44:44 - From /Users/codhek/summ/Slot_Filling/env/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py:3733: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `rate` instead of `keep_prob`. Rate should be set to `rate = 1 - keep_prob`.
+06-Feb-20 23:44:45 - From /Users/codhek/summ/Slot_Filling/env/lib/python3.6/site-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+06-Feb-20 23:44:46 - Loaded model from disk
+06-Feb-20 23:44:46 -  * Running on http://127.0.0.1:9009/ (Press CTRL+C to quit)
+06-Feb-20 23:44:46 -  * Restarting with stat
+06-Feb-20 23:44:48 - Best model : trained_model_20_GRU_CRF_85.7.h5 picked for loading!
+06-Feb-20 23:44:48 - From /Users/codhek/summ/Slot_Filling/env/lib/python3.6/site-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+06-Feb-20 23:44:48 - From /Users/codhek/summ/Slot_Filling/env/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py:3733: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `rate` instead of `keep_prob`. Rate should be set to `rate = 1 - keep_prob`.
+06-Feb-20 23:44:49 - From /Users/codhek/summ/Slot_Filling/env/lib/python3.6/site-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+06-Feb-20 23:44:51 - Loaded model from disk
+06-Feb-20 23:44:51 -  * Debugger is active!
+06-Feb-20 23:44:51 -  * Debugger PIN: 110-034-516
+06-Feb-20 23:45:11 - Slots compiled into groups...
+06-Feb-20 23:45:11 - 127.0.0.1 - - [06/Feb/2020 23:45:11] "[37mGET /api/v1/slots/Where%20is%20the%20stop%20for%20USAir%20flight%20number%2037%20from%20Philadelphia%20to%20San%20Francisco%20flying%20next%20friday HTTP/1.1[0m" 200 -

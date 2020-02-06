@@ -4,6 +4,7 @@ from model_config import Config
 import tensorflow as tf
 from process import Process
 from utils.files import getBestSavedModel
+from logs.logger import log
 
 app = Flask(__name__)
 
@@ -12,9 +13,10 @@ def initApp():
 
     process = Process()
 
-    best_model_filename = getBestSavedModel()
-    
-    print(best_model_filename)
+    _, best_model_filename, _ = getBestSavedModel()
+
+    log('Best model : ' + str(best_model_filename) + ' picked for loading!')
+
     # Load trained model
     process.load(best_model_filename)
 
