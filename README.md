@@ -104,19 +104,21 @@ python3 app.py
 
 Configure you app `PORT` in the configuration file, `model_config.py`
 
+### Example :
+
 Go to your browser use the above example sentance:
 
-Sentence:
+**SENTENCE:**
 `Show me all the nonstop flights between Atlanta and Philadelphia`
 
-URL:
+**URL:**
 `http://localhost:8008/api/v1/slots/Show%20me%20all%20the%20nonstop%20flights%20between%20Atlanta%20and%20Philadelphia` 
 
-API endpoint:
+**API ENDPOINT:**
 
 `/api/v1/slots/<sentance>`
 
-Response: (JSON format)
+**RESPONSE:**  (JSON format)
 
 ```
 {
