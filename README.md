@@ -108,7 +108,7 @@ Configure you app `PORT` in the configuration file, `model_config.py`
 
 Go to your browser use the above example sentance:
 
-**SENTENCE:**
+**SENTENCE:**\
 `Where is the stop for USAir flight number 37 from Philadelphia to San Francisco flying next friday`
 
 **API ENDPOINT:**
