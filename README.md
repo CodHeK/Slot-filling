@@ -109,10 +109,7 @@ Configure you app `PORT` in the configuration file, `model_config.py`
 Go to your browser use the above example sentance:
 
 **SENTENCE:**
-`Show me all the nonstop flights between Atlanta and Philadelphia`
-
-**URL:**
-`http://localhost:8008/api/v1/slots/Show%20me%20all%20the%20nonstop%20flights%20between%20Atlanta%20and%20Philadelphia` 
+`Where is the stop for USAir flight number 37 from Philadelphia to San Francisco flying next friday`
 
 **API ENDPOINT:**
 
@@ -122,17 +119,23 @@ Go to your browser use the above example sentance:
 
 ```
 {
-  "response_time": "1.07s", 
-  "sentance": "Show me all the nonstop flights between Atlanta and Philadelphia", 
+  "response_time": "0.79s", 
+  "sentance": "Where is the stop for USAir flight number 37 from Philadelphia to San Francisco flying next friday", 
   "slots": {
-    "flight_stop": [
-      "nonstop"
+    "depart_date.date_relative": [
+      "next"
+    ], 
+    "depart_date.day_name": [
+      "friday"
+    ], 
+    "flight_number": [
+      "37"
     ], 
     "fromloc.city_name": [
-      "atlanta"
+      "philadelphia"
     ], 
     "toloc.city_name": [
-      "philadelphia"
+      "san francisco"
     ]
   }
 }

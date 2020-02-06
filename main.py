@@ -168,7 +168,6 @@ def test(process=None, sentences=None, read_file=True):
         value = ''
         prev_slot_type = None
 
-        # Print Slots to file
         for idx, slot in enumerate(BIO):
             if slot != 'O':
                 f.write(str(words[idx]) + " - " + str(slot) + "\n")
@@ -199,6 +198,8 @@ def test(process=None, sentences=None, read_file=True):
                     value += words[idx] + ' '
 
         slots[slot_type].append(value.strip())
+
+        log('Slots compiled into groups...')
 
         f.write(partition(80) + "\n")
 
@@ -240,6 +241,7 @@ if __name__ == '__main__':
     args = parser.parse_args()
 
     if args.train:
+        log('*** TRAINING ***' + '\n\n')
         ''' 
             Use this function if your dataset has the schema of type :
 
@@ -257,6 +259,7 @@ if __name__ == '__main__':
         train(train_set, valid_set, embeddings)
     
     if args.test:
+        log('*** TESTING ***' + '\n\n')
         test()
 
             

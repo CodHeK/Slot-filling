@@ -11,7 +11,7 @@ def log(message, display=True):
         print(message)
     LOG_FORMAT = '%(asctime)s - %(message)s'
     logging.basicConfig(filename='logs/model_' + str(Config.N_EPOCHS) + '_' + str(Config.MODEL) + '.log', 
-                        filemode='w',
+                        filemode='a',
                         level=logging.INFO,
                         format=LOG_FORMAT,
                         datefmt='%d-%b-%y %H:%M:%S')

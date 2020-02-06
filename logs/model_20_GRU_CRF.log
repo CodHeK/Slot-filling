@@ -1,3 +1,63 @@
 06-Feb-20 11:28:58 - Loaded model from disk
 06-Feb-20 11:28:58 -  * Debugger is active!
 06-Feb-20 11:28:58 -  * Debugger PIN: 110-034-516
+06-Feb-20 11:52:48 -  * Detected change in '/Users/codhek/summ/Slot_Filling/logs/logger.py', reloading
+06-Feb-20 11:52:49 -  * Restarting with stat
+06-Feb-20 11:53:01 - Loaded model from disk
+06-Feb-20 11:53:01 -  * Debugger is active!
+06-Feb-20 11:53:01 -  * Debugger PIN: 110-034-516
+06-Feb-20 12:12:12 - 127.0.0.1 - - [06/Feb/2020 12:12:12] "[37mGET /api/v1/slots/Where%20is%20the%20stop%20for%20USAir%20flight%20number%2037%20from%20Philadelphia%20to%20San%20Francisco HTTP/1.1[0m" 200 -
+06-Feb-20 13:53:36 - Loaded model from disk
+06-Feb-20 13:53:36 -  * Running on http://127.0.0.1:8010/ (Press CTRL+C to quit)
+06-Feb-20 13:53:36 -  * Restarting with stat
+06-Feb-20 13:53:42 - Loaded model from disk
+06-Feb-20 13:53:42 -  * Debugger is active!
+06-Feb-20 13:53:42 -  * Debugger PIN: 110-034-516
+06-Feb-20 13:53:43 - 127.0.0.1 - - [06/Feb/2020 13:53:43] "[37mGET /api/v1/slots/Where%20is%20the%20stop%20for%20USAir%20flight%20number%2037%20from%20Philadelphia%20to%20San%20Francisco HTTP/1.1[0m" 200 -
+06-Feb-20 13:53:47 - 127.0.0.1 - - [06/Feb/2020 13:53:47] "[37mGET /api/v1/slots/Where%20is%20the%20stop%20for%20USAir%20flight%20number%2037%20from%20Philadelphia%20to%20San%20Francisco HTTP/1.1[0m" 200 -
+06-Feb-20 13:53:51 - 127.0.0.1 - - [06/Feb/2020 13:53:51] "[37mGET /api/v1/slots/Where%20is%20the%20stop%20for%20USAir%20flight%20number%2037%20from%20Philadelphia%20to%20San%20Francisco HTTP/1.1[0m" 200 -
+06-Feb-20 13:54:03 -  * Detected change in '/Users/codhek/summ/Slot_Filling/main.py', reloading
+06-Feb-20 13:54:04 -  * Restarting with stat
+06-Feb-20 13:54:11 - Loaded model from disk
+06-Feb-20 13:54:11 -  * Debugger is active!
+06-Feb-20 13:54:11 -  * Debugger PIN: 110-034-516
+06-Feb-20 13:54:15 -  * Detected change in '/Users/codhek/summ/Slot_Filling/main.py', reloading
+06-Feb-20 13:54:16 -  * Restarting with stat
+06-Feb-20 13:54:21 - Loaded model from disk
+06-Feb-20 13:54:21 -  * Debugger is active!
+06-Feb-20 13:54:21 -  * Debugger PIN: 110-034-516
+06-Feb-20 14:01:13 - Loaded model from disk
+06-Feb-20 14:01:14 -  * Running on http://127.0.0.1:8010/ (Press CTRL+C to quit)
+06-Feb-20 14:01:14 -  * Restarting with stat
+06-Feb-20 14:01:24 - Loaded model from disk
+06-Feb-20 14:01:24 -  * Debugger is active!
+06-Feb-20 14:01:24 -  * Debugger PIN: 110-034-516
+06-Feb-20 14:01:47 - 127.0.0.1 - - [06/Feb/2020 14:01:47] "[37mGET /api/v1/slots/Show%20flights%20from%20seatlle%20to%20san%20diego%20tomorrow HTTP/1.1[0m" 200 -
+06-Feb-20 14:02:19 - 127.0.0.1 - - [06/Feb/2020 14:02:19] "[37mGET /api/v1/slots/Show%20flights%20from%20seattle%20to%20san%20diego%20tomorrow HTTP/1.1[0m" 200 -
+06-Feb-20 15:11:49 -  * Detected change in '/Users/codhek/summ/Slot_Filling/embeddings/generate_embs.py', reloading
+06-Feb-20 15:11:49 -  * Restarting with stat
+06-Feb-20 15:11:59 - Loaded model from disk
+06-Feb-20 15:11:59 -  * Debugger is active!
+06-Feb-20 15:11:59 -  * Debugger PIN: 110-034-516
+06-Feb-20 15:12:01 -  * Detected change in '/Users/codhek/summ/Slot_Filling/embeddings/generate_embs.py', reloading
+06-Feb-20 15:12:01 -  * Restarting with stat
+06-Feb-20 15:12:06 - Loaded model from disk
+06-Feb-20 15:12:07 -  * Debugger is active!
+06-Feb-20 15:12:07 -  * Debugger PIN: 110-034-516
+06-Feb-20 15:12:10 -  * Detected change in '/Users/codhek/summ/Slot_Filling/embeddings/generate_embs.py', reloading
+06-Feb-20 15:12:10 -  * Restarting with stat
+06-Feb-20 15:12:12 - Parsing dataset ...
+06-Feb-20 15:30:14 - Loaded model from disk
+06-Feb-20 15:30:14 -  * Running on http://127.0.0.1:8010/ (Press CTRL+C to quit)
+06-Feb-20 15:30:14 -  * Restarting with stat
+06-Feb-20 15:30:18 - Loaded model from disk
+06-Feb-20 15:30:18 -  * Debugger is active!
+06-Feb-20 15:30:18 -  * Debugger PIN: 110-034-516
+06-Feb-20 15:30:25 - Slots compiled into groups...
+06-Feb-20 15:30:25 - 127.0.0.1 - - [06/Feb/2020 15:30:25] "[37mGET /api/v1/slots/Show%20flights%20from%20seattle%20to%20san%20diego%20tomorrow HTTP/1.1[0m" 200 -
+06-Feb-20 15:30:38 - Slots compiled into groups...
+06-Feb-20 15:30:38 - 127.0.0.1 - - [06/Feb/2020 15:30:38] "[37mGET /api/v1/slots/Show%20flights%20from%20India%20to%20san%20diego%20tomorrow HTTP/1.1[0m" 200 -
+06-Feb-20 15:30:43 - Slots compiled into groups...
+06-Feb-20 15:30:43 - 127.0.0.1 - - [06/Feb/2020 15:30:43] "[37mGET /api/v1/slots/Show%20flights%20from%20seattle%20to%20san%20diego%20tomorrow HTTP/1.1[0m" 200 -
+06-Feb-20 15:33:03 - Slots compiled into groups...
+06-Feb-20 15:33:03 - 127.0.0.1 - - [06/Feb/2020 15:33:03] "[37mGET /api/v1/slots/Where%20is%20the%20stop%20for%20USAir%20flight%20number%2037%20from%20Philadelphia%20to%20San%20Francisco%20flying%20next%20friday HTTP/1.1[0m" 200 -
