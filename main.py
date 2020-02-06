@@ -14,6 +14,7 @@ import time
 
 from model_config import Config
 from utils.print_utils import partition, highlight
+from utils.files import getBestSavedModel, clean
 from metrics.accuracy import conlleval
 from process import Process
 from logs.logger import log
@@ -46,15 +47,25 @@ def train(train_set, valid_set, embeddings):
 
     model.add(Conv1D(128, 5, padding="same", activation='relu'))
 
-    model.add(Dropout(Config.DROPOUT))
+    # model.add(Dropout(Config.DROPOUT))
 
-    # model.add(Bidirectional(LSTM(units=Config.HIDDEN_UNITS, 
+    # model.add(Bidirectional(LSTM(units=Config.EMBEDDING_SIZE, 
     #                             dropout=Config.DROPOUT,
     #                             recurrent_dropout=Config.DROPOUT,
     #                             kernel_initializer=he_normal(),  
     #                             return_sequences=True)))
+    
+    # model.add(LSTM(units=Config.EMBEDDING_SIZE * 2, 
+    #             return_sequences=True, 
+    #             dropout=Config.DROPOUT, 
+    #             recurrent_dropout=Config.DROPOUT,
+    #             kernel_initializer=he_normal()))
 
-    model.add(GRU(100, return_sequences=True))
+    model.add(GRU(units=Config.EMBEDDING_SIZE, 
+                  dropout=Config.DROPOUT, 
+                  recurrent_dropout=Config.DROPOUT,
+                  kernel_initializer=he_normal(),
+                  return_sequences=True))
 
     model.add(TimeDistributed(Dense(n_classes, activation='softmax')))
 
@@ -89,11 +100,15 @@ def train(train_set, valid_set, embeddings):
 
         if metrics['f1'] > max_f1:
             max_f1 = metrics['f1']
-            process.save('trained_model_' + str(Config.N_EPOCHS) + '_' + str(Config.MODEL))
+            process.save('trained_model_' + str(Config.N_EPOCHS) + '_' + str(Config.MODEL) + '_' + str(max_f1))
             log("New model saved!", display=False)
 
     highlight('white', 'Best validation F1 score : ' + str(max_f1))
     log('Best validation F1 score : ' + str(max_f1), display=False)
+
+    log('Cleaning /trained_model folder...')
+    clean()
+    log('Removed all other saved models, kept the best model only!')
 
 
 def loadEmbeddingsATIS():
@@ -142,12 +157,13 @@ def process_sentances(sentances):
 
 def test(process=None, sentences=None, read_file=True):
     start = time.time()
+    best_model_filename = getBestSavedModel()
 
     if read_file:
         process = Process()
 
         # Load trained model
-        process.load('trained_model_' + str(Config.N_EPOCHS) + '_' + str(Config.MODEL))
+        process.load(best_model_filename)
 
         f = open('tests/test_sentances.txt', 'r')
         sentences = f.readlines()
@@ -217,8 +233,7 @@ def model_params():
     log(
         '\n\n' +
         'MODEL PARAMETERS :' + '\n\n' +
-        'EMBEDDING_SIZE = ' + str(Config.EMBEDDING_SIZE) + '\n' + 
-        'HIDDEN_UNITS = ' + str(Config.HIDDEN_UNITS) + '\n' + 
+        'EMBEDDING_SIZE = ' + str(Config.EMBEDDING_SIZE) + '\n' +  
         'DROPOUT = ' + str(Config.DROPOUT) + '\n' + 
         'N_EPOCHS = ' + str(Config.N_EPOCHS) + '\n' +
         'LOSS = ' + str(Config.LOSS) + '\n' +
@@ -226,7 +241,7 @@ def model_params():
         'MODEL = ' + str(Config.MODEL) + '\n'
         'DATA_FILE = ' + str(Config.DATA_FILE) + '\n'
         'EMBEDDINGS_FILE = ' + str(Config.EMBEDDINGS_FILE) + '\n'
-        'TIMESTAMP = ' + str(Config.TIMESTAMP) + 
+        'PORT = ' + str(Config.PORT) + 
         '\n\n'
         )
 
@@ -241,7 +256,8 @@ if __name__ == '__main__':
     args = parser.parse_args()
 
     if args.train:
-        log('*** TRAINING ***' + '\n\n')
+        log('*** TRAINING ***' + '\n')
+
         ''' 
             Use this function if your dataset has the schema of type :
 
@@ -259,7 +275,8 @@ if __name__ == '__main__':
         train(train_set, valid_set, embeddings)
     
     if args.test:
-        log('*** TESTING ***' + '\n\n')
+        log('*** TESTING ***' + '\n')
+
         test()
 
             

@@ -3,6 +3,7 @@ from main import test
 from model_config import Config
 import tensorflow as tf
 from process import Process
+from utils.files import getBestSavedModel
 
 app = Flask(__name__)
 
@@ -11,8 +12,11 @@ def initApp():
 
     process = Process()
 
+    best_model_filename = getBestSavedModel()
+    
+    print(best_model_filename)
     # Load trained model
-    process.load('trained_model_' + str(Config.N_EPOCHS) + '_' + str(Config.MODEL))
+    process.load(best_model_filename)
 
     graph = tf.get_default_graph()
 

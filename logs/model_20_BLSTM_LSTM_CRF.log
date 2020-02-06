@@ -1,0 +1,156 @@
+06-Feb-20 15:49:52 - *** TRAINING ***
+
+
+06-Feb-20 15:49:52 - Word Embeddings Loaded ...
+06-Feb-20 15:50:19 - *** TRAINING ***
+
+
+06-Feb-20 15:50:19 - Word Embeddings Loaded ...
+06-Feb-20 15:50:19 - 
+
+MODEL PARAMETERS :
+
+EMBEDDING_SIZE = 100
+DROPOUT = 0.25
+N_EPOCHS = 20
+LOSS = <function crf_loss at 0x12c5ce048>
+OPTIMIZER = rmsprop
+MODEL = BLSTM_LSTM_CRF
+DATA_FILE = atis.pkl
+EMBEDDINGS_FILE = word_embeddings.json
+PORT = 8010
+
+
+06-Feb-20 15:50:19 - None
+06-Feb-20 15:50:19 - Processing word embeddings... 
+06-Feb-20 15:50:19 - Done processing word embeddings!
+06-Feb-20 15:50:19 - From /Users/codhek/summ/Slot_Filling/env/lib/python3.6/site-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+06-Feb-20 15:50:19 - From /Users/codhek/summ/Slot_Filling/env/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py:3733: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `rate` instead of `keep_prob`. Rate should be set to `rate = 1 - keep_prob`.
+06-Feb-20 15:50:54 - *** TRAINING ***
+
+
+06-Feb-20 15:50:54 - Word Embeddings Loaded ...
+06-Feb-20 15:50:54 - 
+
+MODEL PARAMETERS :
+
+EMBEDDING_SIZE = 100
+DROPOUT = 0.25
+N_EPOCHS = 20
+LOSS = <function crf_loss at 0x12c5b8048>
+OPTIMIZER = rmsprop
+MODEL = BLSTM_LSTM_CRF
+DATA_FILE = atis.pkl
+EMBEDDINGS_FILE = word_embeddings.json
+PORT = 8010
+
+
+06-Feb-20 15:50:54 - None
+06-Feb-20 15:50:54 - Processing word embeddings... 
+06-Feb-20 15:50:54 - Done processing word embeddings!
+06-Feb-20 15:50:54 - From /Users/codhek/summ/Slot_Filling/env/lib/python3.6/site-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+06-Feb-20 15:50:54 - From /Users/codhek/summ/Slot_Filling/env/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py:3733: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `rate` instead of `keep_prob`. Rate should be set to `rate = 1 - keep_prob`.
+06-Feb-20 15:50:56 - Epoch 1
+06-Feb-20 15:50:56 - Training 
+06-Feb-20 15:50:56 - From /Users/codhek/summ/Slot_Filling/env/lib/python3.6/site-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+06-Feb-20 15:54:38 - Validating 
+06-Feb-20 15:54:51 - Precision = 0.0, Recall = 0.0, F1 = 0.0
+06-Feb-20 15:54:51 - Epoch 2
+06-Feb-20 15:54:51 - Training 
+06-Feb-20 15:58:17 - Validating 
+06-Feb-20 15:58:30 - Precision = 47.4, Recall = 33.42, F1 = 39.2
+06-Feb-20 15:58:31 - Saved model to disk
+06-Feb-20 15:58:31 - New model saved!
+06-Feb-20 15:58:31 - Epoch 3
+06-Feb-20 15:58:31 - Training 
+06-Feb-20 16:02:13 - Validating 
+06-Feb-20 16:02:26 - Precision = 59.64, Recall = 53.33, F1 = 56.31
+06-Feb-20 16:02:26 - Saved model to disk
+06-Feb-20 16:02:26 - New model saved!
+06-Feb-20 16:02:26 - Epoch 4
+06-Feb-20 16:02:26 - Training 
+06-Feb-20 16:05:55 - Validating 
+06-Feb-20 16:06:07 - Precision = 71.17, Recall = 65.6, F1 = 68.27
+06-Feb-20 16:06:07 - Saved model to disk
+06-Feb-20 16:06:07 - New model saved!
+06-Feb-20 16:06:07 - Epoch 5
+06-Feb-20 16:06:07 - Training 
+06-Feb-20 16:09:35 - Validating 
+06-Feb-20 16:09:48 - Precision = 76.05, Recall = 69.83, F1 = 72.8
+06-Feb-20 16:09:48 - Saved model to disk
+06-Feb-20 16:09:48 - New model saved!
+06-Feb-20 16:09:48 - Epoch 6
+06-Feb-20 16:09:48 - Training 
+06-Feb-20 16:13:17 - Validating 
+06-Feb-20 16:13:30 - Precision = 77.49, Recall = 72.93, F1 = 75.14
+06-Feb-20 16:13:30 - Saved model to disk
+06-Feb-20 16:13:30 - New model saved!
+06-Feb-20 16:13:30 - Epoch 7
+06-Feb-20 16:13:30 - Training 
+06-Feb-20 16:16:57 - Validating 
+06-Feb-20 16:17:10 - Precision = 80.1, Recall = 75.89, F1 = 77.94
+06-Feb-20 16:17:10 - Saved model to disk
+06-Feb-20 16:17:10 - New model saved!
+06-Feb-20 16:17:10 - Epoch 8
+06-Feb-20 16:17:10 - Training 
+06-Feb-20 16:20:38 - Validating 
+06-Feb-20 16:20:51 - Precision = 76.92, Recall = 74.37, F1 = 75.63
+06-Feb-20 16:20:51 - Epoch 9
+06-Feb-20 16:20:51 - Training 
+06-Feb-20 16:24:19 - Validating 
+06-Feb-20 16:24:32 - Precision = 71.56, Recall = 71.59, F1 = 71.58
+06-Feb-20 16:24:32 - Epoch 10
+06-Feb-20 16:24:32 - Training 
+06-Feb-20 16:27:59 - Validating 
+06-Feb-20 16:28:12 - Precision = 70.54, Recall = 71.84, F1 = 71.18
+06-Feb-20 16:28:12 - Epoch 11
+06-Feb-20 16:28:12 - Training 
+06-Feb-20 16:31:41 - Validating 
+06-Feb-20 16:31:54 - Precision = 71.53, Recall = 72.44, F1 = 71.98
+06-Feb-20 16:31:54 - Epoch 12
+06-Feb-20 16:31:54 - Training 
+06-Feb-20 16:35:24 - Validating 
+06-Feb-20 16:35:36 - Precision = 71.54, Recall = 73.46, F1 = 72.49
+06-Feb-20 16:35:36 - Epoch 13
+06-Feb-20 16:35:36 - Training 
+06-Feb-20 16:39:06 - Validating 
+06-Feb-20 16:39:19 - Precision = 72.39, Recall = 74.48, F1 = 73.42
+06-Feb-20 16:39:19 - Epoch 14
+06-Feb-20 16:39:19 - Training 
+06-Feb-20 16:42:51 - Validating 
+06-Feb-20 16:43:04 - Precision = 72.67, Recall = 74.06, F1 = 73.36
+06-Feb-20 16:43:04 - Epoch 15
+06-Feb-20 16:43:04 - Training 
+06-Feb-20 16:46:38 - Validating 
+06-Feb-20 16:46:51 - Precision = 72.2, Recall = 73.88, F1 = 73.03
+06-Feb-20 16:46:51 - Epoch 16
+06-Feb-20 16:46:51 - Training 
+06-Feb-20 16:51:12 - Validating 
+06-Feb-20 16:51:24 - Precision = 71.13, Recall = 73.63, F1 = 72.3606-Feb-20 16:53:35 - Loaded model from disk
+06-Feb-20 16:53:35 -  * Running on http://127.0.0.1:8010/ (Press CTRL+C to quit)
+06-Feb-20 16:53:35 -  * Restarting with stat
+06-Feb-20 16:53:48 - Loaded model from disk
+06-Feb-20 16:53:48 -  * Debugger is active!
+06-Feb-20 16:53:48 -  * Debugger PIN: 110-034-516
+06-Feb-20 16:53:49 - Slots compiled into groups...
+06-Feb-20 16:53:49 - 127.0.0.1 - - [06/Feb/2020 16:53:49] "[37mGET /api/v1/slots/Where%20is%20the%20stop%20for%20USAir%20flight%20number%2037%20from%20Philadelphia%20to%20San%20Francisco%20flying%20next%20friday HTTP/1.1[0m" 200 -
+06-Feb-20 16:53:58 - Slots compiled into groups...
+06-Feb-20 16:53:58 - 127.0.0.1 - - [06/Feb/2020 16:53:58] "[37mGET /api/v1/slots/Where%20is%20the%20stop%20for%20USAir%20flight%20number%2037%20from%20Philadelphia%20to%20San%20Francisco%20flying%20next%20friday HTTP/1.1[0m" 200 -
+06-Feb-20 16:54:53 -  * Detected change in '/Users/codhek/summ/Slot_Filling/main.py', reloading
+06-Feb-20 16:54:54 -  * Restarting with stat
+06-Feb-20 16:55:09 - Loaded model from disk
+06-Feb-20 16:55:09 -  * Debugger is active!
+06-Feb-20 16:55:09 -  * Debugger PIN: 110-034-516
+06-Feb-20 16:55:17 -  * Detected change in '/Users/codhek/summ/Slot_Filling/main.py', reloading
+06-Feb-20 16:55:18 -  * Restarting with stat
+

@@ -36,7 +36,7 @@ class Process:
                           'crf_viterbi_accuracy': crf_viterbi_accuracy
                          }
 
-        saved_model = load_model('trained_model/' + filename + '.h5', custom_objects=custom_objects)
+        saved_model = load_model('trained_model/' + filename, custom_objects=custom_objects)
 
         log("Loaded model from disk", display=False)
         highlight('white', 'Loaded model from disk')
