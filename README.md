@@ -89,15 +89,15 @@ Once, the model is put into training, logs are generated and saved in `/logs` fo
 python3 app.py
 ```
 
-Configure you app PORT in the configuration file, `model_config.py`
+Configure you app `PORT` in the configuration file, `model_config.py`
 
 Go to your browser use the above example sentance:
 
 Sentence:
-`Where is the stop for USAir flight number 37 from Philadelphia to San Francisco`
+`Show me all the nonstop flights between Atlanta and Philadelphia`
 
 URL:
-`http://localhost:5004/api/v1/slots/Where%20is%20the%20stop%20for%20USAir%20flight%20number%2037%20from%20Philadelphia%20to%20San%20Francisco?` 
+`http://localhost:8008/api/v1/slots/Show%20me%20all%20the%20nonstop%20flights%20between%20Atlanta%20and%20Philadelphia` 
 
 API endpoint:
 
@@ -107,16 +107,17 @@ Response: (JSON format)
 
 ```
 {
-  "sentance": "Where is the stop for USAir flight number 37 from Philadelphia to San Francisco", 
+  "response_time": "5.13s", 
+  "sentance": "Show me all the nonstop flights between Atlanta and Philadelphia", 
   "slots": {
-    "flight_number": [
-      "37"
+    "flight_stop": [
+      "nonstop"
     ], 
     "fromloc.city_name": [
-      "philadelphia"
+      "atlanta"
     ], 
     "toloc.city_name": [
-      "san francisco"
+      "philadelphia"
     ]
   }
 }

@@ -6,10 +6,11 @@ app = Flask(__name__)
 
 @app.route('/api/v1/slots/<sentence>', methods=['GET'])
 def main(sentence):
-    slots = test([sentence], read_file=False)
+    response_time, slots = test([sentence], read_file=False)
     response = {
         'sentance': str(sentence),
-        'slots': slots 
+        'slots': slots,
+        'response_time': str(response_time)[:4] + 's'
     }
     return jsonify(response)
 

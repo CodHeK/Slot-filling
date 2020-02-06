@@ -10,4 +10,4 @@ class Config:
     MODEL = 'GRU_CRF'
     DATA_FILE = 'atis.pkl'
     EMBEDDINGS_FILE = 'word_embeddings.json'
-    PORT = '5004'
+    PORT = '8008'

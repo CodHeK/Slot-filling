@@ -10,6 +10,7 @@ from keras.initializers import he_normal
 from data_loader import load
 import argparse, os.path, json, logging
 import numpy as np
+import time
 
 from model_config import Config
 from utils.print_utils import partition, highlight
@@ -140,6 +141,8 @@ def process_sentances(sentances):
     return sentances
 
 def test(sentences=None, read_file=True):
+    start = time.time()
+
     process = Process()
 
     # Load trained model
@@ -201,12 +204,14 @@ def test(sentences=None, read_file=True):
         f.write(partition(80) + "\n")
 
         arr_slots.append(slots)
+        end = time.time()
 
     f.close()
     highlight('green', 'Output can be found in `slots.txt` file!')
 
+    response_time = end - start
     if not read_file:
-        return arr_slots[0] # As we're sending only one sentance in API URL
+        return (response_time, arr_slots[0]) # As we're sending only one sentance in API URL
 
 def model_params():
     log(
