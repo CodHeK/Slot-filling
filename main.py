@@ -140,25 +140,24 @@ def process_sentances(sentances):
 
     return sentances
 
-def test(sentences=None, read_file=True):
+def test(process=None, sentences=None, read_file=True):
     start = time.time()
 
-    process = Process()
-
-    # Load trained model
-    process.load('trained_model_' + str(Config.N_EPOCHS) + '_' + str(Config.MODEL))
-
     if read_file:
+        process = Process()
+
+        # Load trained model
+        process.load('trained_model_' + str(Config.N_EPOCHS) + '_' + str(Config.MODEL))
+
         f = open('tests/test_sentances.txt', 'r')
         sentences = f.readlines()
         f.close()
 
+        # Clean loaded sentances from file - removing '\n' from each sentance
+        sentences = process_sentances(sentences)
+
     f = open('tests/slots_' + str(Config.N_EPOCHS) + '_' + str(Config.MODEL) + '.txt', 'w')
 
-    # Clean loaded sentances from file - removing '\n' from each sentance
-    if read_file:
-        sentences = process_sentances(sentences)
-    
     arr_slots = []
     for sentence in sentences:
         words, BIO = process.test(sentence) # Test on sentance

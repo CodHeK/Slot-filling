@@ -107,7 +107,7 @@ Response: (JSON format)
 
 ```
 {
-  "response_time": "5.13s", 
+  "response_time": "1.07s", 
   "sentance": "Show me all the nonstop flights between Atlanta and Philadelphia", 
   "slots": {
     "flight_stop": [

@@ -1,3 +1,6 @@
-06-Feb-20 10:26:25 - Loaded model from disk
-06-Feb-20 10:26:27 - 127.0.0.1 - - [06/Feb/2020 10:26:27] "[37mGET /api/v1/slots/Show%20me%20all%20the%20nonstop%20flights%20between%20Atlanta%20and%20Philadelphia HTTP/1.1[0m" 200 -
-06-Feb-20 10:26:27 - 127.0.0.1 - - [06/Feb/2020 10:26:27] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+06-Feb-20 11:20:09 - Loaded model from disk
+06-Feb-20 11:20:09 -  * Debugger is active!
+06-Feb-20 11:20:09 -  * Debugger PIN: 110-034-516
+06-Feb-20 11:20:34 - 127.0.0.1 - - [06/Feb/2020 11:20:34] "[37mGET /api/v1/slots/Where%20is%20the%20stop%20for%20USAir%20flight%20number%20thirty-seven%20from%20Philadelphia%20to%20San%20Francisco HTTP/1.1[0m" 200 -
+06-Feb-20 11:21:13 - 127.0.0.1 - - [06/Feb/2020 11:21:13] "[37mGET /api/v1/slots/Show%20me%20all%20the%20nonstop%20flights%20between%20Atlanta%20and%20Philadelphia HTTP/1.1[0m" 200 -
+06-Feb-20 11:21:23 - 127.0.0.1 - - [06/Feb/2020 11:21:23] "[37mGET /api/v1/slots/Show%20me%20all%20the%20nonstop%20flights%20between%20Atlanta%20and%20Philadelphia HTTP/1.1[0m" 200 -
