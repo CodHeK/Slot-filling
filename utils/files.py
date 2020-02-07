@@ -13,7 +13,6 @@ def filesIn(path):
         for filename in filenames:
             files.append(filename)
 
-
     return files
 
 def getBestSavedModel():
@@ -36,6 +35,19 @@ def clean():
     filenames, best_filename, max_acc = getBestSavedModel()
 
     for filename in filenames:
+        ''' 
+        Example:
+
+            filename = 'trained_model_20_GRU_CRF_84.4.h5'
+
+            prefix = 'trained_model'
+
+            res = '20_GRU_CRF' == (Config.N_EPOCHS + Config.MODEL)
+
+            suffix = '84.4.h5'
+
+            acc = '84.4'
+        '''
         prefix = 'trained_model'
         suffix = filename.split("_")[-1]
         filename_len = len(filename)
