@@ -17,7 +17,6 @@ Ex:
 ```
 class Config:
     EMBEDDING_SIZE = 100
-    HIDDEN_UNITS = 100
     DROPOUT = 0.25
     N_EPOCHS = 20
     LOSS = crf_loss
@@ -28,7 +27,7 @@ class Config:
     PORT = '5004'
 ```
 
-`DATA_FILE` is to be saved in the `/data` folder and `EMBEDDINGS_FILE` gets automatically saved as per the name mentioned in the `Config` in the `/embeddings` folder.
+`DATA_FILE` is to be saved in the `/data` folder and `EMBEDDINGS_FILE` gets automatically saved as per the name mentioned in the `Config` in the `/embeddings` folder. In both cases,  make sure you mention only file name not the path to the file.
 
 This will create a virtual environemnt named `env` and also install the requirements!
 
