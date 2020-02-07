@@ -25,7 +25,9 @@ This will create a virtual environemnt named `env` and also install the requirem
 python3 main.py --train
 ```
 
-Validation is perfomed on every epoch, and based on the `F1-Score` the weights of the best model is saved in the `/trained_model` folder following the format - `trained_model_<N_EPOCHS>_<MODEL>.h5`.
+Validation is perfomed on every epoch, and based on the `F1-Score` the weights of the best model is saved in the `/trained_model` folder following the format - `trained_model_<N_EPOCHS>_<MODEL>_<F1_score>.h5`.
+
+After training is done, the model with the best F1-Score is automatically kept in the `/trained_model` folder.
 
 ### Metrics
 
