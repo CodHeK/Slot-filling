@@ -29,7 +29,7 @@ class Config:
     PORT = '5004'
 ```
 
-`DATA_FILE` is to be saved in the `/data` folder and `EMBEDDINGS_FILE` gets automatically saved as per the name mentioned in the `Config` in the `/embeddings` folder. In both cases,  make sure you mention only file name not the path to the file.
+`DATA_FILE` is to be saved in the `/data` folder and `EMBEDDINGS_FILE` gets automatically saved as per the name mentioned in the `Config` in the `/embeddings` folder. **In both cases,  make sure you mention only file name NOT the path to the file.**
 
 ### Dataset Schema
 
@@ -54,9 +54,9 @@ After training is done, the model with the best F1-Score is automatically kept i
 
 Validation script in the `/metrics` folder, we're using the already exsiting `conlleval.pl` pearl script for finding out the `Precision`, `Recall` and `F1-Score` after every epoch.
 
-:warning: NOTE :
+**:warning: NOTE :**
 
-The metrics works only for BIO tagged datasets.
+**The metrics works only for BIO tagged datasets.**
 
 ### Testing
 
@@ -88,9 +88,9 @@ francisco - I-toloc.city_name
 
 ```
 
-:warning: NOTE :
+**:warning: NOTE :**
 
-This project is still in development and the results might not be very accurate at the moment.
+**This project is still in development and the results might not be very accurate at the moment.**
 
 ### Logs
 
@@ -142,6 +142,6 @@ Go to your browser use the above example sentance:
 }
 ```
 
-:warning: NOTE :
+**:warning: NOTE :**
 
-Make sure your don't change `tensorflow==1.13.1` and `keras==2.2.5` versions, the model breaks for a different combination, but you're free to test other versions! :stuck_out_tongue:
+**Make sure your don't change `tensorflow==1.13.1` and `keras==2.2.5` versions, the model breaks for a different combination, but you're free to test other versions! :stuck_out_tongue:**
