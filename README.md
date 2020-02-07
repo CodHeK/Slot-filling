@@ -8,6 +8,8 @@ Make sure you have python3.x and pip3 installed after that just run
 source build_env
 ```
 
+This will create a virtual environemnt named `env` and also install the requirements!
+
 ### Configuration
 
 Your model can be easily configured in the file `model_config.py` 
@@ -28,8 +30,6 @@ class Config:
 ```
 
 `DATA_FILE` is to be saved in the `/data` folder and `EMBEDDINGS_FILE` gets automatically saved as per the name mentioned in the `Config` in the `/embeddings` folder. In both cases,  make sure you mention only file name not the path to the file.
-
-This will create a virtual environemnt named `env` and also install the requirements!
 
 ### Dataset Schema
 
