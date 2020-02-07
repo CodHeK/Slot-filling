@@ -8,6 +8,28 @@ Make sure you have python3.x and pip3 installed after that just run
 source build_env
 ```
 
+### Configuration
+
+Your model can be easily configured in the file `model_config.py` 
+
+Ex:
+
+```
+class Config:
+    EMBEDDING_SIZE = 100
+    HIDDEN_UNITS = 100
+    DROPOUT = 0.25
+    N_EPOCHS = 20
+    LOSS = crf_loss
+    OPTIMIZER = 'rmsprop'
+    MODEL = 'GRU_CRF'
+    DATA_FILE = 'atis.pkl'
+    EMBEDDINGS_FILE = 'word_embeddings.json'
+    PORT = '5004'
+```
+
+`DATA_FILE` is to be saved in the `/data` folder and `EMBEDDINGS_FILE` gets automatically saved as per the name mentioned in the `Config` in the `/embeddings` folder.
+
 This will create a virtual environemnt named `env` and also install the requirements!
 
 ### Dataset Schema
@@ -71,28 +93,6 @@ francisco - I-toloc.city_name
 
 This project is still in development and the results might not be very accurate at the moment.
 
-### Configuration
-
-Your model can be easily configured in the file `model_config.py` 
-
-Ex:
-
-```
-class Config:
-    EMBEDDING_SIZE = 100
-    HIDDEN_UNITS = 100
-    DROPOUT = 0.25
-    N_EPOCHS = 20
-    LOSS = crf_loss
-    OPTIMIZER = 'rmsprop'
-    MODEL = 'GRU_CRF'
-    DATA_FILE = 'atis.pkl'
-    EMBEDDINGS_FILE = 'word_embeddings.json'
-    PORT = '5004'
-```
-
-`DATA_FILE` is to be saved in the `/data` folder and `EMBEDDINGS_FILE` gets automatically saved as per the name mentioned in the `Config` in the `/embeddings` folder.
-
 ### Logs
 
 Once, the model is put into training, logs are generated and saved in `/logs` folder according to the format - `model_<N_EPOCHS>_<MODEL>.log` as mentioned in your configuration file. If you need different log outputs modify `/logs/logger.py`.
@@ -143,4 +143,6 @@ Go to your browser use the above example sentance:
 }
 ```
 
+:warning: NOTE :
 
+Make sure your don't change `tensorflow==1.13.1` and `keras==2.2.5` versions, the model breaks for a different combination, but you're free to test other versions! :stuck_out_tongue:

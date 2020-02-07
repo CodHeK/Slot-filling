@@ -1,14 +1,17 @@
 #!/usr/bin/env bash
-VENV_NAME=${1:-env}
+VENV_NAME=${1:-venv}
 
 if [ ! -d "$VENV_NAME" ]
 then
+    python3 -m venv "$VENV_NAME"
+else
+    rm -r "$VENV_NAME"
     python3 -m venv "$VENV_NAME"
 fi
 # shellcheck source=/dev/null
 source "$VENV_NAME/bin/activate"
 
-# pip3 install -r requirements.txt
+pip3 install -r requirements.txt
 
 echo "Installing keras-contrib..."
 

@@ -274,3 +274,33 @@ Use tf.cast instead.
 06-Feb-20 23:44:51 -  * Debugger PIN: 110-034-516
 06-Feb-20 23:45:11 - Slots compiled into groups...
 06-Feb-20 23:45:11 - 127.0.0.1 - - [06/Feb/2020 23:45:11] "[37mGET /api/v1/slots/Where%20is%20the%20stop%20for%20USAir%20flight%20number%2037%20from%20Philadelphia%20to%20San%20Francisco%20flying%20next%20friday HTTP/1.1[0m" 200 -
+07-Feb-20 11:35:22 - Best model : trained_model_20_GRU_CRF_85.7.h5 picked for loading!
+07-Feb-20 11:35:22 - From /Users/codhek/summ/Slot_Filling/venv/lib/python3.6/site-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+07-Feb-20 11:35:22 - From /Users/codhek/summ/Slot_Filling/venv/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py:3733: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `rate` instead of `keep_prob`. Rate should be set to `rate = 1 - keep_prob`.
+07-Feb-20 11:35:24 - From /Users/codhek/summ/Slot_Filling/venv/lib/python3.6/site-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+07-Feb-20 11:35:27 - Loaded model from disk
+07-Feb-20 11:35:27 -  * Running on http://127.0.0.1:9009/ (Press CTRL+C to quit)
+07-Feb-20 11:35:27 -  * Restarting with stat
+07-Feb-20 11:35:29 - Best model : trained_model_20_GRU_CRF_85.7.h5 picked for loading!
+07-Feb-20 11:35:29 - From /Users/codhek/summ/Slot_Filling/venv/lib/python3.6/site-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+07-Feb-20 11:35:29 - From /Users/codhek/summ/Slot_Filling/venv/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py:3733: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `rate` instead of `keep_prob`. Rate should be set to `rate = 1 - keep_prob`.
+07-Feb-20 11:35:31 - From /Users/codhek/summ/Slot_Filling/venv/lib/python3.6/site-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+07-Feb-20 11:35:34 - Loaded model from disk
+07-Feb-20 11:35:34 -  * Debugger is active!
+07-Feb-20 11:35:34 -  * Debugger PIN: 246-305-563
+07-Feb-20 11:36:35 - Slots compiled into groups...
+07-Feb-20 11:36:35 - 127.0.0.1 - - [07/Feb/2020 11:36:35] "[37mGET /api/v1/slots/Where%20is%20the%20stop%20for%20USAir%20flight%20number%2037%20from%20Philadelphia%20to%20San%20Francisco%20flying%20next%20friday HTTP/1.1[0m" 200 -
+07-Feb-20 11:36:41 - Slots compiled into groups...
+07-Feb-20 11:36:41 - 127.0.0.1 - - [07/Feb/2020 11:36:41] "[37mGET /api/v1/slots/Where%20is%20the%20stop%20for%20USAir%20flight%20number%2037%20from%20Philadelphia%20to%20San%20Francisco%20flying%20next%20friday HTTP/1.1[0m" 200 -
