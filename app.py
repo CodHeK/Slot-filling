@@ -1,4 +1,4 @@
-from flask import Flask, jsonify
+from flask import Flask, jsonify, request
 from main import test
 from model_config import Config
 import tensorflow as tf
@@ -31,13 +31,15 @@ def sendResponse(responseObj):
     response.headers.add('Access-Control-Allow-Credentials', True)
     return response
 
-@app.route('/api/v1/slots/<sentence>', methods=['GET'])
-def main(sentence):
+
+@app.route('/api/v1/slots/', methods=['GET'])
+def main():
+    sentence = str(request.args.get('sentence'))
     with graph.as_default():
         response_time, slots = test(process, [sentence], read_file=False)
 
     response = {
-        'sentance': str(sentence),
+        'sentence': sentence,
         'slots': slots,
         'response_time': str(response_time)[:4] + 's'
     }
