@@ -1,0 +1,78 @@
+html, body {
+    font-family: 'Lato', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 86%;
+}
+
+.input-response-output-display {
+    display: flex;
+    flex-direction: column;
+    width: 55%;
+    height: 100%;
+}
+
+.input {
+    height: 20%;
+    width: 100%;
+}
+
+.api-response {
+    height: 100%;
+    width: 100%;
+    margin: 2em;
+    border: 1px solid black;
+    overflow-x: auto;
+    border-radius: 10px;
+}
+
+.slots-display {
+    width: 45%;
+    height: auto;
+    margin: 2em 3em;
+    border-radius: 10px;
+    border: 1px solid black;
+}
+
+.input-bar {
+    margin: 2em;
+    border-radius: 10px;
+    width: 100%;
+    height: 55;
+    border: 1px solid black;
+    font-size: 17px;
+    padding: 1em;
+}
+
+.title {
+    margin-left: 2em;
+    font-size: 16px;
+}
+
+.row {
+    width: 100%;
+    height: 120px;
+}
+
+.key {
+    width: 100%;
+    height: 50px;
+    margin-left: 2.2em;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.value {
+    width: 100%;
+    height: 50px;
+    margin-left: 1.8em;
+    margin-top: 0.3em;
+    text-transform: uppercase;
+    font-size: 15px;
+}

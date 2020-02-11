@@ -460,3 +460,698 @@ Use tf.cast instead.
 11-Feb-20 10:52:58 - 127.0.0.1 - - [11/Feb/2020 10:52:58] "[37mGET /api/v1/slots/?sentence=Where%20is%20the%20stop%20for%20USAir%20flight%20number%2037%20from%20Philadelphia%20to%20San%20Francisco%20flying%20next%20friday HTTP/1.1[0m" 200 -
 11-Feb-20 10:53:31 - Slots compiled into groups...
 11-Feb-20 10:53:31 - 127.0.0.1 - - [11/Feb/2020 10:53:31] "[37mGET /api/v1/slots/?sentence=Where%20is%20the%20stop%20for%20USAir%20flight%20number%2037%20from%20Philadelphia%20to%20San%20Francisco%20flying%20next%20friday HTTP/1.1[0m" 200 -
+11-Feb-20 13:42:41 -  * Detected change in '/Users/codhek/summ/Slot_Filling/app.py', reloading
+11-Feb-20 13:42:42 -  * Restarting with stat
+11-Feb-20 13:42:48 - Best model : trained_model_20_GRU_CRF_85.7.h5 picked for loading!
+11-Feb-20 13:42:48 - From /Users/codhek/summ/Slot_Filling/env/lib/python3.6/site-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+11-Feb-20 13:42:48 - From /Users/codhek/summ/Slot_Filling/env/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py:3733: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `rate` instead of `keep_prob`. Rate should be set to `rate = 1 - keep_prob`.
+11-Feb-20 13:42:49 - Best model : trained_model_20_GRU_CRF_85.7.h5 picked for loading!
+11-Feb-20 13:42:49 - From /Users/codhek/summ/Slot_Filling/env/lib/python3.6/site-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+11-Feb-20 13:42:49 - From /Users/codhek/summ/Slot_Filling/env/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py:3733: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `rate` instead of `keep_prob`. Rate should be set to `rate = 1 - keep_prob`.
+11-Feb-20 13:42:50 - From /Users/codhek/summ/Slot_Filling/env/lib/python3.6/site-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+11-Feb-20 13:42:50 - From /Users/codhek/summ/Slot_Filling/env/lib/python3.6/site-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+11-Feb-20 13:42:51 - Loaded model from disk
+11-Feb-20 13:42:51 -  * Debugger is active!
+11-Feb-20 13:42:51 -  * Debugger PIN: 110-034-516
+11-Feb-20 13:42:52 - Loaded model from disk
+11-Feb-20 13:43:01 -  * Detected change in '/Users/codhek/summ/Slot_Filling/model_config.py', reloading
+11-Feb-20 13:43:02 -  * Restarting with stat
+11-Feb-20 13:43:04 - Best model : trained_model_20_GRU_CRF_85.7.h5 picked for loading!
+11-Feb-20 13:43:04 - From /Users/codhek/summ/Slot_Filling/env/lib/python3.6/site-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+11-Feb-20 13:43:05 - From /Users/codhek/summ/Slot_Filling/env/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py:3733: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `rate` instead of `keep_prob`. Rate should be set to `rate = 1 - keep_prob`.
+11-Feb-20 13:43:06 - From /Users/codhek/summ/Slot_Filling/env/lib/python3.6/site-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+11-Feb-20 13:43:08 - Loaded model from disk
+11-Feb-20 13:43:08 -  * Debugger is active!
+11-Feb-20 13:43:08 -  * Debugger PIN: 110-034-516
+11-Feb-20 13:43:14 - Slots compiled into groups...
+11-Feb-20 13:43:14 - 127.0.0.1 - - [11/Feb/2020 13:43:14] "[37mGET /api/v1/slots/?sentence=Where%20is%20the%20stop%20for%20USAir%20flight%20number%2037%20from%20Philadelphia%20to%20San%20Francisco%20flying%20next%20friday HTTP/1.1[0m" 200 -
+11-Feb-20 13:44:17 - Slots compiled into groups...
+11-Feb-20 13:44:17 - 127.0.0.1 - - [11/Feb/2020 13:44:17] "[37mGET /api/v1/slots/?sentence=can%20you%20list%20flights%20from%20washington%20dc%20to%20san%20francisco HTTP/1.1[0m" 200 -
+11-Feb-20 13:45:58 - Slots compiled into groups...
+11-Feb-20 13:45:58 - 127.0.0.1 - - [11/Feb/2020 13:45:58] "[37mGET /api/v1/slots/?sentence=i%20would%20like%20to%20fly%20from%20boston%20to%20sf%20on%20thursday HTTP/1.1[0m" 200 -
+11-Feb-20 15:41:11 -  * Detected change in '/Users/codhek/summ/Slot_Filling/app.py', reloading
+11-Feb-20 15:41:11 -  * Restarting with stat
+11-Feb-20 15:41:15 - Best model : trained_model_20_GRU_CRF_85.7.h5 picked for loading!
+11-Feb-20 15:41:15 - From /Users/codhek/summ/Slot_Filling/env/lib/python3.6/site-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+11-Feb-20 15:41:16 - From /Users/codhek/summ/Slot_Filling/env/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py:3733: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `rate` instead of `keep_prob`. Rate should be set to `rate = 1 - keep_prob`.
+11-Feb-20 15:41:17 - From /Users/codhek/summ/Slot_Filling/env/lib/python3.6/site-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+11-Feb-20 15:41:19 - Loaded model from disk
+11-Feb-20 15:41:19 -  * Debugger is active!
+11-Feb-20 15:41:19 -  * Debugger PIN: 110-034-516
+11-Feb-20 15:41:32 -  * Detected change in '/Users/codhek/summ/Slot_Filling/app.py', reloading
+11-Feb-20 15:41:33 -  * Restarting with stat
+11-Feb-20 15:41:35 - Best model : trained_model_20_GRU_CRF_85.7.h5 picked for loading!
+11-Feb-20 15:41:35 - From /Users/codhek/summ/Slot_Filling/env/lib/python3.6/site-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+11-Feb-20 15:41:35 - From /Users/codhek/summ/Slot_Filling/env/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py:3733: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `rate` instead of `keep_prob`. Rate should be set to `rate = 1 - keep_prob`.
+11-Feb-20 15:41:36 - From /Users/codhek/summ/Slot_Filling/env/lib/python3.6/site-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+11-Feb-20 15:41:38 - Loaded model from disk
+11-Feb-20 15:41:38 -  * Debugger is active!
+11-Feb-20 15:41:38 -  * Debugger PIN: 110-034-516
+11-Feb-20 15:41:39 -  * Detected change in '/Users/codhek/summ/Slot_Filling/app.py', reloading
+11-Feb-20 15:41:39 -  * Restarting with stat
+11-Feb-20 15:41:42 - Best model : trained_model_20_GRU_CRF_85.7.h5 picked for loading!
+11-Feb-20 15:41:42 - From /Users/codhek/summ/Slot_Filling/env/lib/python3.6/site-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+11-Feb-20 15:41:42 - From /Users/codhek/summ/Slot_Filling/env/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py:3733: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `rate` instead of `keep_prob`. Rate should be set to `rate = 1 - keep_prob`.
+11-Feb-20 15:41:44 - From /Users/codhek/summ/Slot_Filling/env/lib/python3.6/site-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+11-Feb-20 15:41:45 - Loaded model from disk
+11-Feb-20 15:41:45 -  * Debugger is active!
+11-Feb-20 15:41:45 -  * Debugger PIN: 110-034-516
+11-Feb-20 15:41:52 -  * Detected change in '/Users/codhek/summ/Slot_Filling/app.py', reloading
+11-Feb-20 15:41:52 -  * Restarting with stat
+11-Feb-20 15:41:55 - Best model : trained_model_20_GRU_CRF_85.7.h5 picked for loading!
+11-Feb-20 15:41:55 - From /Users/codhek/summ/Slot_Filling/env/lib/python3.6/site-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+11-Feb-20 15:41:55 - From /Users/codhek/summ/Slot_Filling/env/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py:3733: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `rate` instead of `keep_prob`. Rate should be set to `rate = 1 - keep_prob`.
+11-Feb-20 15:41:56 - From /Users/codhek/summ/Slot_Filling/env/lib/python3.6/site-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+11-Feb-20 15:41:58 - Loaded model from disk
+11-Feb-20 15:41:58 -  * Debugger is active!
+11-Feb-20 15:41:58 -  * Debugger PIN: 110-034-516
+11-Feb-20 15:42:14 -  * Detected change in '/Users/codhek/summ/Slot_Filling/app.py', reloading
+11-Feb-20 15:42:15 -  * Restarting with stat
+11-Feb-20 15:44:52 - Best model : trained_model_20_GRU_CRF_85.7.h5 picked for loading!
+11-Feb-20 15:44:52 - From /Users/codhek/summ/Slot_Filling/env/lib/python3.6/site-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+11-Feb-20 15:44:52 - From /Users/codhek/summ/Slot_Filling/env/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py:3733: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `rate` instead of `keep_prob`. Rate should be set to `rate = 1 - keep_prob`.
+11-Feb-20 15:44:53 - From /Users/codhek/summ/Slot_Filling/env/lib/python3.6/site-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+11-Feb-20 15:44:55 - Loaded model from disk
+11-Feb-20 15:44:55 -  * Running on http://127.0.0.1:9009/ (Press CTRL+C to quit)
+11-Feb-20 15:44:55 -  * Restarting with stat
+11-Feb-20 15:44:59 - Best model : trained_model_20_GRU_CRF_85.7.h5 picked for loading!
+11-Feb-20 15:44:59 - From /Users/codhek/summ/Slot_Filling/env/lib/python3.6/site-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+11-Feb-20 15:44:59 - From /Users/codhek/summ/Slot_Filling/env/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py:3733: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `rate` instead of `keep_prob`. Rate should be set to `rate = 1 - keep_prob`.
+11-Feb-20 15:45:01 - From /Users/codhek/summ/Slot_Filling/env/lib/python3.6/site-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+11-Feb-20 15:45:03 - Loaded model from disk
+11-Feb-20 15:45:03 -  * Debugger is active!
+11-Feb-20 15:45:03 -  * Debugger PIN: 110-034-516
+11-Feb-20 15:45:05 - 127.0.0.1 - - [11/Feb/2020 15:45:05] "[1m[35mGET /demo HTTP/1.1[0m" 500 -
+11-Feb-20 15:45:05 - 127.0.0.1 - - [11/Feb/2020 15:45:05] "[37mGET /demo?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+11-Feb-20 15:45:05 - 127.0.0.1 - - [11/Feb/2020 15:45:05] "[37mGET /demo?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+11-Feb-20 15:45:05 - 127.0.0.1 - - [11/Feb/2020 15:45:05] "[37mGET /demo?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+11-Feb-20 15:45:06 - 127.0.0.1 - - [11/Feb/2020 15:45:06] "[37mGET /demo?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+11-Feb-20 15:45:06 - 127.0.0.1 - - [11/Feb/2020 15:45:06] "[37mGET /demo?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+11-Feb-20 15:45:06 - 127.0.0.1 - - [11/Feb/2020 15:45:06] "[37mGET /demo?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+11-Feb-20 15:45:15 -  * Detected change in '/Users/codhek/summ/Slot_Filling/app.py', reloading
+11-Feb-20 15:45:16 -  * Restarting with stat
+11-Feb-20 15:45:35 - Best model : trained_model_20_GRU_CRF_85.7.h5 picked for loading!
+11-Feb-20 15:45:36 - From /Users/codhek/summ/Slot_Filling/env/lib/python3.6/site-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+11-Feb-20 15:45:36 - From /Users/codhek/summ/Slot_Filling/env/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py:3733: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `rate` instead of `keep_prob`. Rate should be set to `rate = 1 - keep_prob`.
+11-Feb-20 15:45:37 - From /Users/codhek/summ/Slot_Filling/env/lib/python3.6/site-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+11-Feb-20 15:45:39 - Loaded model from disk
+11-Feb-20 15:45:39 -  * Running on http://127.0.0.1:9009/ (Press CTRL+C to quit)
+11-Feb-20 15:45:39 -  * Restarting with stat
+11-Feb-20 15:45:42 - Best model : trained_model_20_GRU_CRF_85.7.h5 picked for loading!
+11-Feb-20 15:45:43 - From /Users/codhek/summ/Slot_Filling/env/lib/python3.6/site-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+11-Feb-20 15:45:43 - From /Users/codhek/summ/Slot_Filling/env/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py:3733: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `rate` instead of `keep_prob`. Rate should be set to `rate = 1 - keep_prob`.
+11-Feb-20 15:45:44 - From /Users/codhek/summ/Slot_Filling/env/lib/python3.6/site-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+11-Feb-20 15:45:46 - Loaded model from disk
+11-Feb-20 15:45:46 -  * Debugger is active!
+11-Feb-20 15:45:46 -  * Debugger PIN: 110-034-516
+11-Feb-20 15:45:46 - 127.0.0.1 - - [11/Feb/2020 15:45:46] "[1m[35mGET /demo HTTP/1.1[0m" 500 -
+11-Feb-20 15:45:46 - 127.0.0.1 - - [11/Feb/2020 15:45:46] "[37mGET /demo?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+11-Feb-20 15:45:46 - 127.0.0.1 - - [11/Feb/2020 15:45:46] "[37mGET /demo?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+11-Feb-20 15:45:46 - 127.0.0.1 - - [11/Feb/2020 15:45:46] "[37mGET /demo?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+11-Feb-20 15:45:46 - 127.0.0.1 - - [11/Feb/2020 15:45:46] "[37mGET /demo?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+11-Feb-20 15:45:47 - 127.0.0.1 - - [11/Feb/2020 15:45:47] "[37mGET /demo?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+11-Feb-20 15:45:47 - 127.0.0.1 - - [11/Feb/2020 15:45:47] "[37mGET /demo?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+11-Feb-20 15:46:25 -  * Detected change in '/Users/codhek/summ/Slot_Filling/app.py', reloading
+11-Feb-20 15:46:25 -  * Restarting with stat
+11-Feb-20 15:46:28 - Best model : trained_model_20_GRU_CRF_85.7.h5 picked for loading!
+11-Feb-20 15:46:28 - From /Users/codhek/summ/Slot_Filling/env/lib/python3.6/site-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+11-Feb-20 15:46:28 - From /Users/codhek/summ/Slot_Filling/env/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py:3733: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `rate` instead of `keep_prob`. Rate should be set to `rate = 1 - keep_prob`.
+11-Feb-20 15:46:30 - From /Users/codhek/summ/Slot_Filling/env/lib/python3.6/site-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+11-Feb-20 15:46:32 - Loaded model from disk
+11-Feb-20 15:46:32 -  * Debugger is active!
+11-Feb-20 15:46:32 -  * Debugger PIN: 110-034-516
+11-Feb-20 15:46:39 - 127.0.0.1 - - [11/Feb/2020 15:46:39] "[1m[35mGET /demo HTTP/1.1[0m" 500 -
+11-Feb-20 15:46:39 - 127.0.0.1 - - [11/Feb/2020 15:46:39] "[37mGET /demo?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+11-Feb-20 15:46:39 - 127.0.0.1 - - [11/Feb/2020 15:46:39] "[37mGET /demo?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+11-Feb-20 15:46:39 - 127.0.0.1 - - [11/Feb/2020 15:46:39] "[37mGET /demo?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+11-Feb-20 15:46:39 - 127.0.0.1 - - [11/Feb/2020 15:46:39] "[37mGET /demo?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+11-Feb-20 15:46:39 - 127.0.0.1 - - [11/Feb/2020 15:46:39] "[37mGET /demo?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+11-Feb-20 15:46:39 - 127.0.0.1 - - [11/Feb/2020 15:46:39] "[37mGET /demo?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+11-Feb-20 15:46:41 - 127.0.0.1 - - [11/Feb/2020 15:46:41] "[1m[35mGET /demo HTTP/1.1[0m" 500 -
+11-Feb-20 15:46:41 - 127.0.0.1 - - [11/Feb/2020 15:46:41] "[37mGET /demo?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+11-Feb-20 15:46:41 - 127.0.0.1 - - [11/Feb/2020 15:46:41] "[37mGET /demo?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+11-Feb-20 15:46:41 - 127.0.0.1 - - [11/Feb/2020 15:46:41] "[37mGET /demo?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+11-Feb-20 15:46:41 - 127.0.0.1 - - [11/Feb/2020 15:46:41] "[37mGET /demo?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+11-Feb-20 15:46:41 - 127.0.0.1 - - [11/Feb/2020 15:46:41] "[37mGET /demo?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+11-Feb-20 15:46:41 - 127.0.0.1 - - [11/Feb/2020 15:46:41] "[37mGET /demo?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+11-Feb-20 15:46:43 - 127.0.0.1 - - [11/Feb/2020 15:46:43] "[1m[35mGET /demo HTTP/1.1[0m" 500 -
+11-Feb-20 15:46:43 - 127.0.0.1 - - [11/Feb/2020 15:46:43] "[37mGET /demo?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+11-Feb-20 15:46:43 - 127.0.0.1 - - [11/Feb/2020 15:46:43] "[37mGET /demo?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+11-Feb-20 15:46:43 - 127.0.0.1 - - [11/Feb/2020 15:46:43] "[37mGET /demo?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+11-Feb-20 15:46:43 - 127.0.0.1 - - [11/Feb/2020 15:46:43] "[37mGET /demo?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+11-Feb-20 15:46:43 - 127.0.0.1 - - [11/Feb/2020 15:46:43] "[37mGET /demo?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+11-Feb-20 15:46:43 - 127.0.0.1 - - [11/Feb/2020 15:46:43] "[37mGET /demo?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+11-Feb-20 15:46:52 - Best model : trained_model_20_GRU_CRF_85.7.h5 picked for loading!
+11-Feb-20 15:46:52 - From /Users/codhek/summ/Slot_Filling/env/lib/python3.6/site-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+11-Feb-20 15:46:52 - From /Users/codhek/summ/Slot_Filling/env/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py:3733: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `rate` instead of `keep_prob`. Rate should be set to `rate = 1 - keep_prob`.
+11-Feb-20 15:46:53 - From /Users/codhek/summ/Slot_Filling/env/lib/python3.6/site-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+11-Feb-20 15:46:56 - Loaded model from disk
+11-Feb-20 15:46:56 -  * Running on http://127.0.0.1:9009/ (Press CTRL+C to quit)
+11-Feb-20 15:46:56 -  * Restarting with stat
+11-Feb-20 15:46:58 - Best model : trained_model_20_GRU_CRF_85.7.h5 picked for loading!
+11-Feb-20 15:46:59 - From /Users/codhek/summ/Slot_Filling/env/lib/python3.6/site-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+11-Feb-20 15:46:59 - From /Users/codhek/summ/Slot_Filling/env/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py:3733: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `rate` instead of `keep_prob`. Rate should be set to `rate = 1 - keep_prob`.
+11-Feb-20 15:47:00 - From /Users/codhek/summ/Slot_Filling/env/lib/python3.6/site-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+11-Feb-20 15:47:02 - Loaded model from disk
+11-Feb-20 15:47:02 -  * Debugger is active!
+11-Feb-20 15:47:02 -  * Debugger PIN: 110-034-516
+11-Feb-20 15:47:02 - 127.0.0.1 - - [11/Feb/2020 15:47:02] "[37mGET /demo HTTP/1.1[0m" 200 -
+11-Feb-20 15:47:55 - 127.0.0.1 - - [11/Feb/2020 15:47:55] "[37mGET /demo HTTP/1.1[0m" 200 -
+11-Feb-20 15:54:27 - 127.0.0.1 - - [11/Feb/2020 15:54:27] "[37mGET /demo HTTP/1.1[0m" 200 -
+11-Feb-20 15:54:49 - 127.0.0.1 - - [11/Feb/2020 15:54:49] "[37mGET /demo HTTP/1.1[0m" 200 -
+11-Feb-20 15:55:02 - 127.0.0.1 - - [11/Feb/2020 15:55:02] "[37mGET /demo HTTP/1.1[0m" 200 -
+11-Feb-20 15:55:03 - 127.0.0.1 - - [11/Feb/2020 15:55:03] "[37mGET /demo HTTP/1.1[0m" 200 -
+11-Feb-20 15:55:26 - 127.0.0.1 - - [11/Feb/2020 15:55:26] "[37mGET /demo HTTP/1.1[0m" 200 -
+11-Feb-20 15:55:27 - 127.0.0.1 - - [11/Feb/2020 15:55:27] "[37mGET /demo HTTP/1.1[0m" 200 -
+11-Feb-20 15:55:27 - 127.0.0.1 - - [11/Feb/2020 15:55:27] "[37mGET /demo HTTP/1.1[0m" 200 -
+11-Feb-20 15:55:27 - 127.0.0.1 - - [11/Feb/2020 15:55:27] "[37mGET /demo HTTP/1.1[0m" 200 -
+11-Feb-20 15:55:35 - 127.0.0.1 - - [11/Feb/2020 15:55:35] "[37mGET /demo HTTP/1.1[0m" 200 -
+11-Feb-20 15:56:36 - 127.0.0.1 - - [11/Feb/2020 15:56:36] "[37mGET /demo HTTP/1.1[0m" 200 -
+11-Feb-20 15:58:11 - 127.0.0.1 - - [11/Feb/2020 15:58:11] "[37mGET /demo HTTP/1.1[0m" 200 -
+11-Feb-20 15:58:20 - 127.0.0.1 - - [11/Feb/2020 15:58:20] "[37mGET /demo HTTP/1.1[0m" 200 -
+11-Feb-20 15:58:31 - 127.0.0.1 - - [11/Feb/2020 15:58:31] "[37mGET /demo HTTP/1.1[0m" 200 -
+11-Feb-20 15:58:54 - 127.0.0.1 - - [11/Feb/2020 15:58:54] "[37mGET /demo HTTP/1.1[0m" 200 -
+11-Feb-20 15:59:00 - 127.0.0.1 - - [11/Feb/2020 15:59:00] "[37mGET /demo HTTP/1.1[0m" 200 -
+11-Feb-20 15:59:04 - 127.0.0.1 - - [11/Feb/2020 15:59:04] "[37mGET /demo HTTP/1.1[0m" 200 -
+11-Feb-20 15:59:39 - 127.0.0.1 - - [11/Feb/2020 15:59:39] "[37mGET /demo HTTP/1.1[0m" 200 -
+11-Feb-20 15:59:49 - 127.0.0.1 - - [11/Feb/2020 15:59:49] "[37mGET /demo HTTP/1.1[0m" 200 -
+11-Feb-20 16:00:18 - 127.0.0.1 - - [11/Feb/2020 16:00:18] "[37mGET /demo HTTP/1.1[0m" 200 -
+11-Feb-20 16:01:04 - 127.0.0.1 - - [11/Feb/2020 16:01:04] "[37mGET /demo HTTP/1.1[0m" 200 -
+11-Feb-20 16:01:04 - 127.0.0.1 - - [11/Feb/2020 16:01:04] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+11-Feb-20 16:01:32 - 127.0.0.1 - - [11/Feb/2020 16:01:32] "[37mGET /demo HTTP/1.1[0m" 200 -
+11-Feb-20 16:01:32 - 127.0.0.1 - - [11/Feb/2020 16:01:32] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+11-Feb-20 16:02:04 - 127.0.0.1 - - [11/Feb/2020 16:02:04] "[37mGET /demo HTTP/1.1[0m" 200 -
+11-Feb-20 16:02:45 - 127.0.0.1 - - [11/Feb/2020 16:02:45] "[37mGET /demo HTTP/1.1[0m" 200 -
+11-Feb-20 16:04:36 - 127.0.0.1 - - [11/Feb/2020 16:04:36] "[37mGET /demo HTTP/1.1[0m" 200 -
+11-Feb-20 16:05:47 - 127.0.0.1 - - [11/Feb/2020 16:05:47] "[37mGET /demo HTTP/1.1[0m" 200 -
+11-Feb-20 16:05:47 - 127.0.0.1 - - [11/Feb/2020 16:05:47] "[33mGET /index.css HTTP/1.1[0m" 404 -
+11-Feb-20 16:05:56 - 127.0.0.1 - - [11/Feb/2020 16:05:56] "[37mGET /demo HTTP/1.1[0m" 200 -
+11-Feb-20 16:05:56 - 127.0.0.1 - - [11/Feb/2020 16:05:56] "[33mGET /index.css HTTP/1.1[0m" 404 -
+11-Feb-20 16:05:56 - 127.0.0.1 - - [11/Feb/2020 16:05:56] "[37mGET /demo HTTP/1.1[0m" 200 -
+11-Feb-20 16:05:56 - 127.0.0.1 - - [11/Feb/2020 16:05:56] "[33mGET /index.css HTTP/1.1[0m" 404 -
+11-Feb-20 16:06:15 - 127.0.0.1 - - [11/Feb/2020 16:06:15] "[33mGET /index.css HTTP/1.1[0m" 404 -
+11-Feb-20 16:06:38 - 127.0.0.1 - - [11/Feb/2020 16:06:38] "[37mGET /demo HTTP/1.1[0m" 200 -
+11-Feb-20 16:06:38 - 127.0.0.1 - - [11/Feb/2020 16:06:38] "[33mGET /index.css HTTP/1.1[0m" 404 -
+11-Feb-20 16:06:38 - 127.0.0.1 - - [11/Feb/2020 16:06:38] "[37mGET /demo HTTP/1.1[0m" 200 -
+11-Feb-20 16:06:38 - 127.0.0.1 - - [11/Feb/2020 16:06:38] "[33mGET /index.css HTTP/1.1[0m" 404 -
+11-Feb-20 16:06:38 - 127.0.0.1 - - [11/Feb/2020 16:06:38] "[37mGET /demo HTTP/1.1[0m" 200 -
+11-Feb-20 16:06:39 - 127.0.0.1 - - [11/Feb/2020 16:06:39] "[33mGET /index.css HTTP/1.1[0m" 404 -
+11-Feb-20 16:06:39 - 127.0.0.1 - - [11/Feb/2020 16:06:39] "[37mGET /demo HTTP/1.1[0m" 200 -
+11-Feb-20 16:06:39 - 127.0.0.1 - - [11/Feb/2020 16:06:39] "[33mGET /index.css HTTP/1.1[0m" 404 -
+11-Feb-20 16:06:44 - 127.0.0.1 - - [11/Feb/2020 16:06:44] "[33mGET /index.css HTTP/1.1[0m" 404 -
+11-Feb-20 16:06:57 - 127.0.0.1 - - [11/Feb/2020 16:06:57] "[37mGET /demo HTTP/1.1[0m" 200 -
+11-Feb-20 16:06:57 - 127.0.0.1 - - [11/Feb/2020 16:06:57] "[33mGET /index.css HTTP/1.1[0m" 404 -
+11-Feb-20 16:06:57 - 127.0.0.1 - - [11/Feb/2020 16:06:57] "[37mGET /demo HTTP/1.1[0m" 200 -
+11-Feb-20 16:06:58 - 127.0.0.1 - - [11/Feb/2020 16:06:58] "[33mGET /index.css HTTP/1.1[0m" 404 -
+11-Feb-20 16:06:58 - 127.0.0.1 - - [11/Feb/2020 16:06:58] "[37mGET /demo HTTP/1.1[0m" 200 -
+11-Feb-20 16:06:58 - 127.0.0.1 - - [11/Feb/2020 16:06:58] "[33mGET /index.css HTTP/1.1[0m" 404 -
+11-Feb-20 16:06:58 - 127.0.0.1 - - [11/Feb/2020 16:06:58] "[37mGET /demo HTTP/1.1[0m" 200 -
+11-Feb-20 16:06:58 - 127.0.0.1 - - [11/Feb/2020 16:06:58] "[33mGET /index.css HTTP/1.1[0m" 404 -
+11-Feb-20 16:07:12 - 127.0.0.1 - - [11/Feb/2020 16:07:12] "[37mGET /demo HTTP/1.1[0m" 200 -
+11-Feb-20 16:07:12 - 127.0.0.1 - - [11/Feb/2020 16:07:12] "[37mGET /demo HTTP/1.1[0m" 200 -
+11-Feb-20 16:07:13 - 127.0.0.1 - - [11/Feb/2020 16:07:13] "[37mGET /demo HTTP/1.1[0m" 200 -
+11-Feb-20 16:07:57 - Best model : trained_model_20_GRU_CRF_85.7.h5 picked for loading!
+11-Feb-20 16:07:57 - From /Users/codhek/summ/Slot_Filling/env/lib/python3.6/site-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+11-Feb-20 16:07:57 - From /Users/codhek/summ/Slot_Filling/env/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py:3733: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `rate` instead of `keep_prob`. Rate should be set to `rate = 1 - keep_prob`.
+11-Feb-20 16:08:00 - From /Users/codhek/summ/Slot_Filling/env/lib/python3.6/site-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+11-Feb-20 16:08:02 - Loaded model from disk
+11-Feb-20 16:08:02 -  * Running on http://127.0.0.1:9009/ (Press CTRL+C to quit)
+11-Feb-20 16:08:02 -  * Restarting with stat
+11-Feb-20 16:08:05 - Best model : trained_model_20_GRU_CRF_85.7.h5 picked for loading!
+11-Feb-20 16:08:05 - From /Users/codhek/summ/Slot_Filling/env/lib/python3.6/site-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+11-Feb-20 16:08:05 - From /Users/codhek/summ/Slot_Filling/env/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py:3733: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `rate` instead of `keep_prob`. Rate should be set to `rate = 1 - keep_prob`.
+11-Feb-20 16:08:07 - From /Users/codhek/summ/Slot_Filling/env/lib/python3.6/site-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+11-Feb-20 16:08:09 - Loaded model from disk
+11-Feb-20 16:08:09 -  * Debugger is active!
+11-Feb-20 16:08:09 -  * Debugger PIN: 110-034-516
+11-Feb-20 16:08:09 - 127.0.0.1 - - [11/Feb/2020 16:08:09] "[37mGET /demo HTTP/1.1[0m" 200 -
+11-Feb-20 16:08:09 - 127.0.0.1 - - [11/Feb/2020 16:08:09] "[37mGET /demo HTTP/1.1[0m" 200 -
+11-Feb-20 16:08:09 - 127.0.0.1 - - [11/Feb/2020 16:08:09] "[33mGET /index.css HTTP/1.1[0m" 404 -
+11-Feb-20 16:08:14 - 127.0.0.1 - - [11/Feb/2020 16:08:14] "[33mGET /index.css HTTP/1.1[0m" 404 -
+11-Feb-20 16:08:41 - 127.0.0.1 - - [11/Feb/2020 16:08:41] "[37mGET /demo HTTP/1.1[0m" 200 -
+11-Feb-20 16:08:41 - 127.0.0.1 - - [11/Feb/2020 16:08:41] "[33mGET /styles/index.css HTTP/1.1[0m" 404 -
+11-Feb-20 16:08:42 - 127.0.0.1 - - [11/Feb/2020 16:08:42] "[37mGET /demo HTTP/1.1[0m" 200 -
+11-Feb-20 16:08:43 - 127.0.0.1 - - [11/Feb/2020 16:08:43] "[33mGET /styles/index.css HTTP/1.1[0m" 404 -
+11-Feb-20 16:10:13 - 127.0.0.1 - - [11/Feb/2020 16:10:13] "[37mGET /demo HTTP/1.1[0m" 200 -
+11-Feb-20 16:10:13 - 127.0.0.1 - - [11/Feb/2020 16:10:13] "[37mGET /static/index.css HTTP/1.1[0m" 200 -
+11-Feb-20 16:10:25 - 127.0.0.1 - - [11/Feb/2020 16:10:25] "[37mGET /demo HTTP/1.1[0m" 200 -
+11-Feb-20 16:10:26 - 127.0.0.1 - - [11/Feb/2020 16:10:26] "[37mGET /demo HTTP/1.1[0m" 200 -
+11-Feb-20 16:10:26 - 127.0.0.1 - - [11/Feb/2020 16:10:26] "[37mGET /demo HTTP/1.1[0m" 200 -
+11-Feb-20 16:10:27 - 127.0.0.1 - - [11/Feb/2020 16:10:27] "[37mGET /demo HTTP/1.1[0m" 200 -
+11-Feb-20 16:10:34 - 127.0.0.1 - - [11/Feb/2020 16:10:34] "[37mGET /demo HTTP/1.1[0m" 200 -
+11-Feb-20 16:10:35 - 127.0.0.1 - - [11/Feb/2020 16:10:35] "[37mGET /demo HTTP/1.1[0m" 200 -
+11-Feb-20 16:10:38 - 127.0.0.1 - - [11/Feb/2020 16:10:38] "[37mGET /demo HTTP/1.1[0m" 200 -
+11-Feb-20 16:10:39 - 127.0.0.1 - - [11/Feb/2020 16:10:39] "[37mGET /demo HTTP/1.1[0m" 200 -
+11-Feb-20 16:10:39 - 127.0.0.1 - - [11/Feb/2020 16:10:39] "[37mGET /demo HTTP/1.1[0m" 200 -
+11-Feb-20 16:10:48 - 127.0.0.1 - - [11/Feb/2020 16:10:48] "[37mGET /demo HTTP/1.1[0m" 200 -
+11-Feb-20 16:10:48 - 127.0.0.1 - - [11/Feb/2020 16:10:48] "[37mGET /demo HTTP/1.1[0m" 200 -
+11-Feb-20 16:10:48 - 127.0.0.1 - - [11/Feb/2020 16:10:48] "[37mGET /demo HTTP/1.1[0m" 200 -
+11-Feb-20 16:10:48 - 127.0.0.1 - - [11/Feb/2020 16:10:48] "[37mGET /demo HTTP/1.1[0m" 200 -
+11-Feb-20 16:12:09 -  * Detected change in '/Users/codhek/summ/Slot_Filling/app.py', reloading
+11-Feb-20 16:12:10 -  * Restarting with stat
+11-Feb-20 16:12:13 - Best model : trained_model_20_GRU_CRF_85.7.h5 picked for loading!
+11-Feb-20 16:12:13 - From /Users/codhek/summ/Slot_Filling/env/lib/python3.6/site-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+11-Feb-20 16:12:13 - From /Users/codhek/summ/Slot_Filling/env/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py:3733: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `rate` instead of `keep_prob`. Rate should be set to `rate = 1 - keep_prob`.
+11-Feb-20 16:12:15 - From /Users/codhek/summ/Slot_Filling/env/lib/python3.6/site-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+11-Feb-20 16:12:17 - Loaded model from disk
+11-Feb-20 16:12:17 - 127.0.0.1 - - [11/Feb/2020 16:12:17] "[37mGET /demo HTTP/1.1[0m" 200 -
+11-Feb-20 16:12:18 - 127.0.0.1 - - [11/Feb/2020 16:12:18] "[37mGET /demo HTTP/1.1[0m" 200 -
+11-Feb-20 16:14:06 - Best model : trained_model_20_GRU_CRF_85.7.h5 picked for loading!
+11-Feb-20 16:14:06 - From /Users/codhek/summ/Slot_Filling/env/lib/python3.6/site-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+11-Feb-20 16:14:06 - From /Users/codhek/summ/Slot_Filling/env/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py:3733: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `rate` instead of `keep_prob`. Rate should be set to `rate = 1 - keep_prob`.
+11-Feb-20 16:14:07 - From /Users/codhek/summ/Slot_Filling/env/lib/python3.6/site-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+11-Feb-20 16:14:09 - Loaded model from disk
+11-Feb-20 16:14:09 -  * Running on http://127.0.0.1:9009/ (Press CTRL+C to quit)
+11-Feb-20 16:14:09 -  * Restarting with stat
+11-Feb-20 16:14:11 - Best model : trained_model_20_GRU_CRF_85.7.h5 picked for loading!
+11-Feb-20 16:14:11 - From /Users/codhek/summ/Slot_Filling/env/lib/python3.6/site-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+11-Feb-20 16:14:11 - From /Users/codhek/summ/Slot_Filling/env/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py:3733: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `rate` instead of `keep_prob`. Rate should be set to `rate = 1 - keep_prob`.
+11-Feb-20 16:14:13 - From /Users/codhek/summ/Slot_Filling/env/lib/python3.6/site-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+11-Feb-20 16:14:15 - Loaded model from disk
+11-Feb-20 16:14:15 -  * Debugger is active!
+11-Feb-20 16:14:15 -  * Debugger PIN: 110-034-516
+11-Feb-20 16:14:15 - 127.0.0.1 - - [11/Feb/2020 16:14:15] "[37mGET /demo HTTP/1.1[0m" 200 -
+11-Feb-20 16:14:17 - 127.0.0.1 - - [11/Feb/2020 16:14:17] "[37mGET /demo HTTP/1.1[0m" 200 -
+11-Feb-20 16:14:19 - 127.0.0.1 - - [11/Feb/2020 16:14:19] "[37mGET /demo HTTP/1.1[0m" 200 -
+11-Feb-20 16:16:04 - Best model : trained_model_20_GRU_CRF_85.7.h5 picked for loading!
+11-Feb-20 16:16:04 - From /Users/codhek/summ/Slot_Filling/env/lib/python3.6/site-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+11-Feb-20 16:16:04 - From /Users/codhek/summ/Slot_Filling/env/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py:3733: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `rate` instead of `keep_prob`. Rate should be set to `rate = 1 - keep_prob`.
+11-Feb-20 16:16:06 - From /Users/codhek/summ/Slot_Filling/env/lib/python3.6/site-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+11-Feb-20 16:16:08 - Loaded model from disk
+11-Feb-20 16:16:08 -  * Running on http://127.0.0.1:9009/ (Press CTRL+C to quit)
+11-Feb-20 16:16:08 -  * Restarting with stat
+11-Feb-20 16:16:10 - Best model : trained_model_20_GRU_CRF_85.7.h5 picked for loading!
+11-Feb-20 16:16:10 - From /Users/codhek/summ/Slot_Filling/env/lib/python3.6/site-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+11-Feb-20 16:16:11 - From /Users/codhek/summ/Slot_Filling/env/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py:3733: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `rate` instead of `keep_prob`. Rate should be set to `rate = 1 - keep_prob`.
+11-Feb-20 16:16:12 - From /Users/codhek/summ/Slot_Filling/env/lib/python3.6/site-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+11-Feb-20 16:16:14 - Loaded model from disk
+11-Feb-20 16:16:14 -  * Debugger is active!
+11-Feb-20 16:16:14 -  * Debugger PIN: 110-034-516
+11-Feb-20 16:16:14 - 127.0.0.1 - - [11/Feb/2020 16:16:14] "[37mGET /demo HTTP/1.1[0m" 200 -
+11-Feb-20 16:16:14 - 127.0.0.1 - - [11/Feb/2020 16:16:14] "[37mGET /demo HTTP/1.1[0m" 200 -
+11-Feb-20 16:16:18 - 127.0.0.1 - - [11/Feb/2020 16:16:18] "[37mGET /demo HTTP/1.1[0m" 200 -
+11-Feb-20 16:16:18 - 127.0.0.1 - - [11/Feb/2020 16:16:18] "[37mGET /static/index.css HTTP/1.1[0m" 200 -
+11-Feb-20 16:16:18 - 127.0.0.1 - - [11/Feb/2020 16:16:18] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+11-Feb-20 16:16:19 - 127.0.0.1 - - [11/Feb/2020 16:16:19] "[37mGET /demo HTTP/1.1[0m" 200 -
+11-Feb-20 16:16:19 - 127.0.0.1 - - [11/Feb/2020 16:16:19] "[37mGET /static/index.css HTTP/1.1[0m" 200 -
+11-Feb-20 16:16:19 - 127.0.0.1 - - [11/Feb/2020 16:16:19] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+11-Feb-20 16:16:31 - 127.0.0.1 - - [11/Feb/2020 16:16:31] "[37mGET /demo HTTP/1.1[0m" 200 -
+11-Feb-20 16:16:32 - 127.0.0.1 - - [11/Feb/2020 16:16:32] "[37mGET /demo HTTP/1.1[0m" 200 -
+11-Feb-20 16:16:32 - 127.0.0.1 - - [11/Feb/2020 16:16:32] "[37mGET /demo HTTP/1.1[0m" 200 -
+11-Feb-20 16:21:07 - Best model : trained_model_20_GRU_CRF_85.7.h5 picked for loading!
+11-Feb-20 16:21:07 - From /Users/codhek/summ/Slot_Filling/env/lib/python3.6/site-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+11-Feb-20 16:21:07 - From /Users/codhek/summ/Slot_Filling/env/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py:3733: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `rate` instead of `keep_prob`. Rate should be set to `rate = 1 - keep_prob`.
+11-Feb-20 16:21:08 - From /Users/codhek/summ/Slot_Filling/env/lib/python3.6/site-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+11-Feb-20 16:21:10 - Loaded model from disk
+11-Feb-20 16:21:10 -  * Running on http://127.0.0.1:9009/ (Press CTRL+C to quit)
+11-Feb-20 16:21:10 -  * Restarting with stat
+11-Feb-20 16:21:12 - Best model : trained_model_20_GRU_CRF_85.7.h5 picked for loading!
+11-Feb-20 16:21:12 - From /Users/codhek/summ/Slot_Filling/env/lib/python3.6/site-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+11-Feb-20 16:21:12 - From /Users/codhek/summ/Slot_Filling/env/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py:3733: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `rate` instead of `keep_prob`. Rate should be set to `rate = 1 - keep_prob`.
+11-Feb-20 16:21:14 - From /Users/codhek/summ/Slot_Filling/env/lib/python3.6/site-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+11-Feb-20 16:21:16 - Loaded model from disk
+11-Feb-20 16:21:16 -  * Debugger is active!
+11-Feb-20 16:21:16 -  * Debugger PIN: 110-034-516
+11-Feb-20 16:21:17 - 127.0.0.1 - - [11/Feb/2020 16:21:17] "[37mGET /demo HTTP/1.1[0m" 200 -
+11-Feb-20 16:21:18 - 127.0.0.1 - - [11/Feb/2020 16:21:18] "[37mGET /demo HTTP/1.1[0m" 200 -
+11-Feb-20 16:21:18 - 127.0.0.1 - - [11/Feb/2020 16:21:18] "[37mGET /demo HTTP/1.1[0m" 200 -
+11-Feb-20 16:21:18 - 127.0.0.1 - - [11/Feb/2020 16:21:18] "[37mGET /demo HTTP/1.1[0m" 200 -
+11-Feb-20 16:21:18 - 127.0.0.1 - - [11/Feb/2020 16:21:18] "[37mGET /demo HTTP/1.1[0m" 200 -
+11-Feb-20 16:21:24 - 127.0.0.1 - - [11/Feb/2020 16:21:24] "[37mGET /demo HTTP/1.1[0m" 200 -
+11-Feb-20 16:21:24 - 127.0.0.1 - - [11/Feb/2020 16:21:24] "[37mGET /static/index.css HTTP/1.1[0m" 200 -
+11-Feb-20 16:21:24 - 127.0.0.1 - - [11/Feb/2020 16:21:24] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+11-Feb-20 16:22:37 - Best model : trained_model_20_GRU_CRF_85.7.h5 picked for loading!
+11-Feb-20 16:22:37 - From /Users/codhek/summ/Slot_Filling/env/lib/python3.6/site-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+11-Feb-20 16:22:38 - From /Users/codhek/summ/Slot_Filling/env/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py:3733: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `rate` instead of `keep_prob`. Rate should be set to `rate = 1 - keep_prob`.
+11-Feb-20 16:22:40 - From /Users/codhek/summ/Slot_Filling/env/lib/python3.6/site-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+11-Feb-20 16:22:42 - Loaded model from disk
+11-Feb-20 16:22:42 -  * Running on http://127.0.0.1:9009/ (Press CTRL+C to quit)
+11-Feb-20 16:22:42 -  * Restarting with stat
+11-Feb-20 16:22:46 - Best model : trained_model_20_GRU_CRF_85.7.h5 picked for loading!
+11-Feb-20 16:22:46 - From /Users/codhek/summ/Slot_Filling/env/lib/python3.6/site-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+11-Feb-20 16:22:46 - From /Users/codhek/summ/Slot_Filling/env/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py:3733: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `rate` instead of `keep_prob`. Rate should be set to `rate = 1 - keep_prob`.
+11-Feb-20 16:22:47 - From /Users/codhek/summ/Slot_Filling/env/lib/python3.6/site-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+11-Feb-20 16:22:50 - Loaded model from disk
+11-Feb-20 16:22:50 -  * Debugger is active!
+11-Feb-20 16:22:50 -  * Debugger PIN: 110-034-516
+11-Feb-20 16:22:50 - 127.0.0.1 - - [11/Feb/2020 16:22:50] "[37mGET /demo HTTP/1.1[0m" 200 -
+11-Feb-20 16:22:50 - 127.0.0.1 - - [11/Feb/2020 16:22:50] "[37mGET /static/index.css HTTP/1.1[0m" 200 -
+11-Feb-20 16:22:50 - 127.0.0.1 - - [11/Feb/2020 16:22:50] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+11-Feb-20 16:25:16 - 127.0.0.1 - - [11/Feb/2020 16:25:16] "[37mGET /demo HTTP/1.1[0m" 200 -
+11-Feb-20 16:25:16 - 127.0.0.1 - - [11/Feb/2020 16:25:16] "[37mGET /static/index.css HTTP/1.1[0m" 200 -
+11-Feb-20 16:25:16 - 127.0.0.1 - - [11/Feb/2020 16:25:16] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+11-Feb-20 16:25:34 - Slots compiled into groups...
+11-Feb-20 16:25:34 - 127.0.0.1 - - [11/Feb/2020 16:25:34] "[37mGET /api/v1/slots/?sentence=Where%20is%20the%20stop%20for%20USAir%20flight%20number%2037%20from%20Philadelphia%20to%20San%20Francisco%20flying%20next%20friday HTTP/1.1[0m" 200 -
+11-Feb-20 16:27:37 - 127.0.0.1 - - [11/Feb/2020 16:27:37] "[37mGET /demo HTTP/1.1[0m" 200 -
+11-Feb-20 16:27:37 - 127.0.0.1 - - [11/Feb/2020 16:27:37] "[37mGET /static/index.css HTTP/1.1[0m" 200 -
+11-Feb-20 16:27:37 - 127.0.0.1 - - [11/Feb/2020 16:27:37] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+11-Feb-20 16:27:41 - Slots compiled into groups...
+11-Feb-20 16:27:41 - 127.0.0.1 - - [11/Feb/2020 16:27:41] "[37mGET /api/v1/slots/?sentence=Where%20is%20the%20stop%20for%20USAir%20flight%20number%2037%20from%20Philadelphia%20to%20San%20Francisco%20flying%20next%20friday HTTP/1.1[0m" 200 -
+11-Feb-20 16:29:02 - 127.0.0.1 - - [11/Feb/2020 16:29:02] "[37mGET /demo HTTP/1.1[0m" 200 -
+11-Feb-20 16:29:02 - 127.0.0.1 - - [11/Feb/2020 16:29:02] "[37mGET /static/index.css HTTP/1.1[0m" 200 -
+11-Feb-20 16:29:02 - 127.0.0.1 - - [11/Feb/2020 16:29:02] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+11-Feb-20 16:29:10 - Slots compiled into groups...
+11-Feb-20 16:29:10 - 127.0.0.1 - - [11/Feb/2020 16:29:10] "[37mGET /api/v1/slots/?sentence=Where%20is%20the%20stop%20for%20USAir%20flight%20number%2037%20from%20Philadelphia%20to%20San%20Francisco%20flying%20next%20friday HTTP/1.1[0m" 200 -
+11-Feb-20 16:29:31 - Slots compiled into groups...
+11-Feb-20 16:29:31 - 127.0.0.1 - - [11/Feb/2020 16:29:31] "[37mGET /api/v1/slots/?sentence=Where%20is%20the%20stop%20for%20USAir%20flight%20number%2037%20from%20Philadelphia%20to%20San%20Francisco%20flying%20next%20friday HTTP/1.1[0m" 200 -
+11-Feb-20 16:29:56 - 127.0.0.1 - - [11/Feb/2020 16:29:56] "[37mGET /demo HTTP/1.1[0m" 200 -
+11-Feb-20 16:29:56 - 127.0.0.1 - - [11/Feb/2020 16:29:56] "[37mGET /static/index.css HTTP/1.1[0m" 200 -
+11-Feb-20 16:29:57 - 127.0.0.1 - - [11/Feb/2020 16:29:57] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+11-Feb-20 16:30:02 - 127.0.0.1 - - [11/Feb/2020 16:30:02] "[32mGET /api/v1/slots?sentence=http://localhost:9009/api/v1/slots?sentence=Where%2520is%2520the%2520stop%2520for%2520USAir%2520flight%2520number%252037%2520from%2520Philadelphia%2520to%2520San%2520Francisco%2520flying%2520next%2520friday HTTP/1.1[0m" 308 -
+11-Feb-20 16:30:03 - Slots compiled into groups...
+11-Feb-20 16:30:03 - 127.0.0.1 - - [11/Feb/2020 16:30:03] "[37mGET /api/v1/slots/?sentence=http://localhost:9009/api/v1/slots?sentence=Where%2520is%2520the%2520stop%2520for%2520USAir%2520flight%2520number%252037%2520from%2520Philadelphia%2520to%2520San%2520Francisco%2520flying%2520next%2520friday HTTP/1.1[0m" 200 -
+11-Feb-20 16:30:56 - 127.0.0.1 - - [11/Feb/2020 16:30:56] "[37mGET /demo HTTP/1.1[0m" 200 -
+11-Feb-20 16:30:56 - 127.0.0.1 - - [11/Feb/2020 16:30:56] "[37mGET /static/index.css HTTP/1.1[0m" 200 -
+11-Feb-20 16:30:56 - 127.0.0.1 - - [11/Feb/2020 16:30:56] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+11-Feb-20 16:31:02 - Slots compiled into groups...
+11-Feb-20 16:31:02 - 127.0.0.1 - - [11/Feb/2020 16:31:02] "[37mGET /api/v1/slots/?sentence=Where%20is%20the%20stop%20for%20USAir%20flight%20number%2037%20from%20Philadelphia%20to%20San%20Francisco%20flying%20next%20friday HTTP/1.1[0m" 200 -
+11-Feb-20 16:35:42 - 127.0.0.1 - - [11/Feb/2020 16:35:42] "[37mGET /demo HTTP/1.1[0m" 200 -
+11-Feb-20 16:35:42 - 127.0.0.1 - - [11/Feb/2020 16:35:42] "[37mGET /static/index.css HTTP/1.1[0m" 200 -
+11-Feb-20 16:35:42 - 127.0.0.1 - - [11/Feb/2020 16:35:42] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+11-Feb-20 16:35:48 - Slots compiled into groups...
+11-Feb-20 16:35:48 - 127.0.0.1 - - [11/Feb/2020 16:35:48] "[37mGET /api/v1/slots/?sentence=Where%20is%20the%20stop%20for%20USAir%20flight%20number%2037%20from%20Philadelphia%20to%20San%20Francisco%20flying%20next%20friday HTTP/1.1[0m" 200 -
+11-Feb-20 16:36:21 - 127.0.0.1 - - [11/Feb/2020 16:36:21] "[37mGET /demo HTTP/1.1[0m" 200 -
+11-Feb-20 16:36:21 - 127.0.0.1 - - [11/Feb/2020 16:36:21] "[37mGET /static/index.css HTTP/1.1[0m" 200 -
+11-Feb-20 16:36:21 - 127.0.0.1 - - [11/Feb/2020 16:36:21] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+11-Feb-20 16:36:24 - Slots compiled into groups...
+11-Feb-20 16:36:24 - 127.0.0.1 - - [11/Feb/2020 16:36:24] "[37mGET /api/v1/slots/?sentence=Where%20is%20the%20stop%20for%20USAir%20flight%20number%2037%20from%20Philadelphia%20to%20San%20Francisco%20flying%20next%20friday HTTP/1.1[0m" 200 -
+11-Feb-20 16:37:13 - 127.0.0.1 - - [11/Feb/2020 16:37:13] "[37mGET /demo HTTP/1.1[0m" 200 -
+11-Feb-20 16:37:14 - 127.0.0.1 - - [11/Feb/2020 16:37:14] "[37mGET /static/index.css HTTP/1.1[0m" 200 -
+11-Feb-20 16:37:14 - 127.0.0.1 - - [11/Feb/2020 16:37:14] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+11-Feb-20 16:37:16 - Slots compiled into groups...
+11-Feb-20 16:37:16 - 127.0.0.1 - - [11/Feb/2020 16:37:16] "[37mGET /api/v1/slots/?sentence=Where%20is%20the%20stop%20for%20USAir%20flight%20number%2037%20from%20Philadelphia%20to%20San%20Francisco%20flying%20next%20friday HTTP/1.1[0m" 200 -
+11-Feb-20 16:44:07 - 127.0.0.1 - - [11/Feb/2020 16:44:07] "[37mGET /demo HTTP/1.1[0m" 200 -
+11-Feb-20 16:44:07 - 127.0.0.1 - - [11/Feb/2020 16:44:07] "[37mGET /static/index.css HTTP/1.1[0m" 200 -
+11-Feb-20 16:44:07 - 127.0.0.1 - - [11/Feb/2020 16:44:07] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+11-Feb-20 16:44:32 - 127.0.0.1 - - [11/Feb/2020 16:44:32] "[37mGET /demo HTTP/1.1[0m" 200 -
+11-Feb-20 16:44:32 - 127.0.0.1 - - [11/Feb/2020 16:44:32] "[37mGET /static/index.css HTTP/1.1[0m" 200 -
+11-Feb-20 16:44:32 - 127.0.0.1 - - [11/Feb/2020 16:44:32] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+11-Feb-20 16:51:16 - 127.0.0.1 - - [11/Feb/2020 16:51:16] "[37mGET /demo HTTP/1.1[0m" 200 -
+11-Feb-20 16:51:16 - 127.0.0.1 - - [11/Feb/2020 16:51:16] "[37mGET /static/index.css HTTP/1.1[0m" 200 -
+11-Feb-20 16:51:16 - 127.0.0.1 - - [11/Feb/2020 16:51:16] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+11-Feb-20 16:51:20 - Slots compiled into groups...
+11-Feb-20 16:51:20 - 127.0.0.1 - - [11/Feb/2020 16:51:20] "[37mGET /api/v1/slots/?sentence=Where%20is%20the%20stop%20for%20USAir%20flight%20number%2037%20from%20Philadelphia%20to%20San%20Francisco%20flying%20next%20friday HTTP/1.1[0m" 200 -
+11-Feb-20 16:51:36 - 127.0.0.1 - - [11/Feb/2020 16:51:36] "[37mGET /demo HTTP/1.1[0m" 200 -
+11-Feb-20 16:51:36 - 127.0.0.1 - - [11/Feb/2020 16:51:36] "[37mGET /static/index.css HTTP/1.1[0m" 200 -
+11-Feb-20 16:51:36 - 127.0.0.1 - - [11/Feb/2020 16:51:36] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+11-Feb-20 16:51:39 - Slots compiled into groups...
+11-Feb-20 16:51:39 - 127.0.0.1 - - [11/Feb/2020 16:51:39] "[37mGET /api/v1/slots/?sentence=Where%20is%20the%20stop%20for%20USAir%20flight%20number%2037%20from%20Philadelphia%20to%20San%20Francisco%20flying%20next%20friday HTTP/1.1[0m" 200 -
+11-Feb-20 16:52:19 - 127.0.0.1 - - [11/Feb/2020 16:52:19] "[37mGET /demo HTTP/1.1[0m" 200 -
+11-Feb-20 16:52:19 - 127.0.0.1 - - [11/Feb/2020 16:52:19] "[37mGET /static/index.css HTTP/1.1[0m" 200 -
+11-Feb-20 16:52:19 - 127.0.0.1 - - [11/Feb/2020 16:52:19] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+11-Feb-20 16:52:22 - Slots compiled into groups...
+11-Feb-20 16:52:22 - 127.0.0.1 - - [11/Feb/2020 16:52:22] "[37mGET /api/v1/slots/?sentence=Where%20is%20the%20stop%20for%20USAir%20flight%20number%2037%20from%20Philadelphia%20to%20San%20Francisco%20flying%20next%20friday HTTP/1.1[0m" 200 -
+11-Feb-20 16:52:31 - 127.0.0.1 - - [11/Feb/2020 16:52:31] "[37mGET /demo HTTP/1.1[0m" 200 -
+11-Feb-20 16:52:31 - 127.0.0.1 - - [11/Feb/2020 16:52:31] "[37mGET /static/index.css HTTP/1.1[0m" 200 -
+11-Feb-20 16:52:31 - 127.0.0.1 - - [11/Feb/2020 16:52:31] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+11-Feb-20 16:52:35 - Slots compiled into groups...
+11-Feb-20 16:52:35 - 127.0.0.1 - - [11/Feb/2020 16:52:35] "[37mGET /api/v1/slots/?sentence=Where%20is%20the%20stop%20for%20USAir%20flight%20number%2037%20from%20Philadelphia%20to%20San%20Francisco%20flying%20next%20friday HTTP/1.1[0m" 200 -
+11-Feb-20 16:53:17 - 127.0.0.1 - - [11/Feb/2020 16:53:17] "[37mGET /demo HTTP/1.1[0m" 200 -
+11-Feb-20 16:53:17 - 127.0.0.1 - - [11/Feb/2020 16:53:17] "[37mGET /static/index.css HTTP/1.1[0m" 200 -
+11-Feb-20 16:53:18 - 127.0.0.1 - - [11/Feb/2020 16:53:18] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+11-Feb-20 16:53:36 - 127.0.0.1 - - [11/Feb/2020 16:53:36] "[37mGET /demo HTTP/1.1[0m" 200 -
+11-Feb-20 16:53:36 - 127.0.0.1 - - [11/Feb/2020 16:53:36] "[37mGET /static/index.css HTTP/1.1[0m" 200 -
+11-Feb-20 16:53:37 - 127.0.0.1 - - [11/Feb/2020 16:53:37] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+11-Feb-20 16:53:52 - Slots compiled into groups...
+11-Feb-20 16:53:52 - 127.0.0.1 - - [11/Feb/2020 16:53:52] "[37mGET /api/v1/slots/?sentence=Where%20is%20the%20stop%20for%20USAir%20flight%20number%2037%20from%20Philadelphia%20to%20San%20Francisco%20flying%20next%20friday HTTP/1.1[0m" 200 -
+11-Feb-20 16:54:38 - 127.0.0.1 - - [11/Feb/2020 16:54:38] "[37mGET /demo HTTP/1.1[0m" 200 -
+11-Feb-20 16:54:38 - 127.0.0.1 - - [11/Feb/2020 16:54:38] "[37mGET /static/index.css HTTP/1.1[0m" 200 -
+11-Feb-20 16:54:38 - 127.0.0.1 - - [11/Feb/2020 16:54:38] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+11-Feb-20 16:54:45 - Slots compiled into groups...
+11-Feb-20 16:54:45 - 127.0.0.1 - - [11/Feb/2020 16:54:45] "[37mGET /api/v1/slots/?sentence=Where%20is%20the%20stop%20for%20USAir%20flight%20number%2037%20from%20Philadelphia%20to%20San%20Francisco%20flying%20next%20friday HTTP/1.1[0m" 200 -
+11-Feb-20 16:54:49 - Slots compiled into groups...
+11-Feb-20 16:54:49 - 127.0.0.1 - - [11/Feb/2020 16:54:49] "[37mGET /api/v1/slots/?sentence=Where%20is%20the%20stop%20for%20USAir%20flight%20number%2037%20from%20Philadelphia%20to%20San%20Francisco%20flying%20next%20friday HTTP/1.1[0m" 200 -
+11-Feb-20 16:55:07 - 127.0.0.1 - - [11/Feb/2020 16:55:07] "[37mGET /demo HTTP/1.1[0m" 200 -
+11-Feb-20 16:55:07 - 127.0.0.1 - - [11/Feb/2020 16:55:07] "[37mGET /static/index.css HTTP/1.1[0m" 200 -
+11-Feb-20 16:55:07 - 127.0.0.1 - - [11/Feb/2020 16:55:07] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+11-Feb-20 16:55:09 - Slots compiled into groups...
+11-Feb-20 16:55:09 - 127.0.0.1 - - [11/Feb/2020 16:55:09] "[37mGET /api/v1/slots/?sentence=Where%20is%20the%20stop%20for%20USAir%20flight%20number%2037%20from%20Philadelphia%20to%20San%20Francisco%20flying%20next%20friday HTTP/1.1[0m" 200 -
+11-Feb-20 16:55:48 - 127.0.0.1 - - [11/Feb/2020 16:55:48] "[37mGET /demo HTTP/1.1[0m" 200 -
+11-Feb-20 16:55:48 - 127.0.0.1 - - [11/Feb/2020 16:55:48] "[37mGET /static/index.css HTTP/1.1[0m" 200 -
+11-Feb-20 16:55:48 - 127.0.0.1 - - [11/Feb/2020 16:55:48] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+11-Feb-20 16:55:50 - Slots compiled into groups...
+11-Feb-20 16:55:50 - 127.0.0.1 - - [11/Feb/2020 16:55:50] "[37mGET /api/v1/slots/?sentence=Where%20is%20the%20stop%20for%20USAir%20flight%20number%2037%20from%20Philadelphia%20to%20San%20Francisco%20flying%20next%20friday HTTP/1.1[0m" 200 -
+11-Feb-20 16:56:43 - 127.0.0.1 - - [11/Feb/2020 16:56:43] "[37mGET /demo HTTP/1.1[0m" 200 -
+11-Feb-20 16:56:43 - 127.0.0.1 - - [11/Feb/2020 16:56:43] "[37mGET /static/index.css HTTP/1.1[0m" 200 -
+11-Feb-20 16:56:43 - 127.0.0.1 - - [11/Feb/2020 16:56:43] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+11-Feb-20 16:56:45 - Slots compiled into groups...
+11-Feb-20 16:56:45 - 127.0.0.1 - - [11/Feb/2020 16:56:45] "[37mGET /api/v1/slots/?sentence=Where%20is%20the%20stop%20for%20USAir%20flight%20number%2037%20from%20Philadelphia%20to%20San%20Francisco%20flying%20next%20friday HTTP/1.1[0m" 200 -
+11-Feb-20 16:57:55 - 127.0.0.1 - - [11/Feb/2020 16:57:55] "[37mGET /demo HTTP/1.1[0m" 200 -
+11-Feb-20 16:57:55 - 127.0.0.1 - - [11/Feb/2020 16:57:55] "[37mGET /static/index.css HTTP/1.1[0m" 200 -
+11-Feb-20 16:57:55 - 127.0.0.1 - - [11/Feb/2020 16:57:55] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+11-Feb-20 16:57:57 - Slots compiled into groups...
+11-Feb-20 16:57:57 - 127.0.0.1 - - [11/Feb/2020 16:57:57] "[37mGET /api/v1/slots/?sentence=Where%20is%20the%20stop%20for%20USAir%20flight%20number%2037%20from%20Philadelphia%20to%20San%20Francisco%20flying%20next%20friday HTTP/1.1[0m" 200 -
+11-Feb-20 16:58:55 - 127.0.0.1 - - [11/Feb/2020 16:58:55] "[37mGET /demo HTTP/1.1[0m" 200 -
+11-Feb-20 16:58:55 - 127.0.0.1 - - [11/Feb/2020 16:58:55] "[37mGET /static/index.css HTTP/1.1[0m" 200 -
+11-Feb-20 16:59:01 - 127.0.0.1 - - [11/Feb/2020 16:59:01] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+11-Feb-20 16:59:26 - 127.0.0.1 - - [11/Feb/2020 16:59:26] "[37mGET /demo HTTP/1.1[0m" 200 -
+11-Feb-20 16:59:26 - 127.0.0.1 - - [11/Feb/2020 16:59:26] "[37mGET /static/index.css HTTP/1.1[0m" 200 -
+11-Feb-20 16:59:32 - 127.0.0.1 - - [11/Feb/2020 16:59:32] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+11-Feb-20 16:59:33 - 127.0.0.1 - - [11/Feb/2020 16:59:33] "[37mGET /demo HTTP/1.1[0m" 200 -
+11-Feb-20 16:59:33 - 127.0.0.1 - - [11/Feb/2020 16:59:33] "[37mGET /static/index.css HTTP/1.1[0m" 200 -
+11-Feb-20 16:59:45 - 127.0.0.1 - - [11/Feb/2020 16:59:45] "[37mGET /demo HTTP/1.1[0m" 200 -
+11-Feb-20 16:59:45 - 127.0.0.1 - - [11/Feb/2020 16:59:45] "[37mGET /static/index.css HTTP/1.1[0m" 200 -
+11-Feb-20 16:59:51 - 127.0.0.1 - - [11/Feb/2020 16:59:51] "[37mGET /demo HTTP/1.1[0m" 200 -
+11-Feb-20 16:59:51 - 127.0.0.1 - - [11/Feb/2020 16:59:51] "[37mGET /static/index.css HTTP/1.1[0m" 200 -
+11-Feb-20 16:59:54 - 127.0.0.1 - - [11/Feb/2020 16:59:54] "[32mGET /api/v1/slots?sentence=Where%20is%20the%20stop%20for%20USAir%20flight%20number%2037%20from%20Philadelphia%20to%20San%20Francisco%20flying%20next%20friday HTTP/1.1[0m" 308 -
+11-Feb-20 16:59:55 - 127.0.0.1 - - [11/Feb/2020 16:59:55] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+11-Feb-20 16:59:55 - Slots compiled into groups...
+11-Feb-20 16:59:55 - 127.0.0.1 - - [11/Feb/2020 16:59:55] "[37mGET /api/v1/slots/?sentence=Where%20is%20the%20stop%20for%20USAir%20flight%20number%2037%20from%20Philadelphia%20to%20San%20Francisco%20flying%20next%20friday HTTP/1.1[0m" 200 -
+11-Feb-20 17:02:09 - 127.0.0.1 - - [11/Feb/2020 17:02:09] "[37mGET /demo HTTP/1.1[0m" 200 -
+11-Feb-20 17:02:09 - 127.0.0.1 - - [11/Feb/2020 17:02:09] "[37mGET /static/index.css HTTP/1.1[0m" 200 -
+11-Feb-20 17:02:09 - 127.0.0.1 - - [11/Feb/2020 17:02:09] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+11-Feb-20 17:02:38 - 127.0.0.1 - - [11/Feb/2020 17:02:38] "[37mGET /demo HTTP/1.1[0m" 200 -
+11-Feb-20 17:02:38 - 127.0.0.1 - - [11/Feb/2020 17:02:38] "[37mGET /static/index.css HTTP/1.1[0m" 200 -
+11-Feb-20 17:02:38 - 127.0.0.1 - - [11/Feb/2020 17:02:38] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+11-Feb-20 17:03:07 - 127.0.0.1 - - [11/Feb/2020 17:03:07] "[37mGET /demo HTTP/1.1[0m" 200 -
+11-Feb-20 17:03:07 - 127.0.0.1 - - [11/Feb/2020 17:03:07] "[37mGET /static/index.css HTTP/1.1[0m" 200 -
+11-Feb-20 17:03:07 - 127.0.0.1 - - [11/Feb/2020 17:03:07] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+11-Feb-20 17:03:10 - Slots compiled into groups...
+11-Feb-20 17:03:10 - 127.0.0.1 - - [11/Feb/2020 17:03:10] "[37mGET /api/v1/slots/?sentence=Where%20is%20the%20stop%20for%20USAir%20flight%20number%2037%20from%20Philadelphia%20to%20San%20Francisco%20flying%20next%20friday HTTP/1.1[0m" 200 -
+11-Feb-20 17:03:23 - 127.0.0.1 - - [11/Feb/2020 17:03:23] "[37mGET /demo HTTP/1.1[0m" 200 -
+11-Feb-20 17:03:23 - 127.0.0.1 - - [11/Feb/2020 17:03:23] "[37mGET /static/index.css HTTP/1.1[0m" 200 -
+11-Feb-20 17:03:23 - 127.0.0.1 - - [11/Feb/2020 17:03:23] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+11-Feb-20 17:03:25 - Slots compiled into groups...
+11-Feb-20 17:03:25 - 127.0.0.1 - - [11/Feb/2020 17:03:25] "[37mGET /api/v1/slots/?sentence=Where%20is%20the%20stop%20for%20USAir%20flight%20number%2037%20from%20Philadelphia%20to%20San%20Francisco%20flying%20next%20friday HTTP/1.1[0m" 200 -
+11-Feb-20 17:16:46 - 127.0.0.1 - - [11/Feb/2020 17:16:46] "[37mGET /demo HTTP/1.1[0m" 200 -
+11-Feb-20 17:16:46 - 127.0.0.1 - - [11/Feb/2020 17:16:46] "[37mGET /static/index.css HTTP/1.1[0m" 200 -
+11-Feb-20 17:16:46 - 127.0.0.1 - - [11/Feb/2020 17:16:46] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+11-Feb-20 17:16:53 - Slots compiled into groups...
+11-Feb-20 17:16:53 - 127.0.0.1 - - [11/Feb/2020 17:16:53] "[37mGET /api/v1/slots/?sentence=Where%20is%20the%20stop%20for%20USAir%20flight%20number%2037%20from%20Philadelphia%20to%20San%20Francisco%20flying%20next%20friday HTTP/1.1[0m" 200 -
+11-Feb-20 17:17:30 - 127.0.0.1 - - [11/Feb/2020 17:17:30] "[37mGET /demo HTTP/1.1[0m" 200 -
+11-Feb-20 17:17:30 - 127.0.0.1 - - [11/Feb/2020 17:17:30] "[37mGET /static/index.css HTTP/1.1[0m" 200 -
+11-Feb-20 17:17:30 - 127.0.0.1 - - [11/Feb/2020 17:17:30] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+11-Feb-20 17:17:33 - Slots compiled into groups...
+11-Feb-20 17:17:33 - 127.0.0.1 - - [11/Feb/2020 17:17:33] "[37mGET /api/v1/slots/?sentence=Where%20is%20the%20stop%20for%20USAir%20flight%20number%2037%20from%20Philadelphia%20to%20San%20Francisco%20flying%20next%20friday HTTP/1.1[0m" 200 -
+11-Feb-20 17:18:28 - 127.0.0.1 - - [11/Feb/2020 17:18:28] "[37mGET /demo HTTP/1.1[0m" 200 -
+11-Feb-20 17:18:28 - 127.0.0.1 - - [11/Feb/2020 17:18:28] "[37mGET /static/index.css HTTP/1.1[0m" 200 -
+11-Feb-20 17:18:28 - 127.0.0.1 - - [11/Feb/2020 17:18:28] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+11-Feb-20 17:18:33 - Slots compiled into groups...
+11-Feb-20 17:18:33 - 127.0.0.1 - - [11/Feb/2020 17:18:33] "[37mGET /api/v1/slots/?sentence=Where%20is%20the%20stop%20for%20USAir%20flight%20number%2037%20from%20Philadelphia%20to%20San%20Francisco%20flying%20next%20friday HTTP/1.1[0m" 200 -
+11-Feb-20 17:18:49 - 127.0.0.1 - - [11/Feb/2020 17:18:49] "[37mGET /demo HTTP/1.1[0m" 200 -
+11-Feb-20 17:18:49 - 127.0.0.1 - - [11/Feb/2020 17:18:49] "[37mGET /static/index.css HTTP/1.1[0m" 200 -
+11-Feb-20 17:18:49 - 127.0.0.1 - - [11/Feb/2020 17:18:49] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+11-Feb-20 17:18:51 - Slots compiled into groups...
+11-Feb-20 17:18:51 - 127.0.0.1 - - [11/Feb/2020 17:18:51] "[37mGET /api/v1/slots/?sentence=Where%20is%20the%20stop%20for%20USAir%20flight%20number%2037%20from%20Philadelphia%20to%20San%20Francisco%20flying%20next%20friday HTTP/1.1[0m" 200 -
+11-Feb-20 17:19:21 - 127.0.0.1 - - [11/Feb/2020 17:19:21] "[37mGET /demo HTTP/1.1[0m" 200 -
+11-Feb-20 17:19:21 - 127.0.0.1 - - [11/Feb/2020 17:19:21] "[37mGET /static/index.css HTTP/1.1[0m" 200 -
+11-Feb-20 17:19:21 - 127.0.0.1 - - [11/Feb/2020 17:19:21] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+11-Feb-20 17:19:23 - Slots compiled into groups...
+11-Feb-20 17:19:23 - 127.0.0.1 - - [11/Feb/2020 17:19:23] "[37mGET /api/v1/slots/?sentence=Where%20is%20the%20stop%20for%20USAir%20flight%20number%2037%20from%20Philadelphia%20to%20San%20Francisco%20flying%20next%20friday HTTP/1.1[0m" 200 -
+11-Feb-20 17:19:35 - 127.0.0.1 - - [11/Feb/2020 17:19:35] "[37mGET /demo HTTP/1.1[0m" 200 -
+11-Feb-20 17:19:35 - 127.0.0.1 - - [11/Feb/2020 17:19:35] "[37mGET /static/index.css HTTP/1.1[0m" 200 -
+11-Feb-20 17:19:35 - 127.0.0.1 - - [11/Feb/2020 17:19:35] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+11-Feb-20 17:19:37 - Slots compiled into groups...
+11-Feb-20 17:19:37 - 127.0.0.1 - - [11/Feb/2020 17:19:37] "[37mGET /api/v1/slots/?sentence=Where%20is%20the%20stop%20for%20USAir%20flight%20number%2037%20from%20Philadelphia%20to%20San%20Francisco%20flying%20next%20friday HTTP/1.1[0m" 200 -
+11-Feb-20 17:21:12 - 127.0.0.1 - - [11/Feb/2020 17:21:12] "[37mGET /demo HTTP/1.1[0m" 200 -
+11-Feb-20 17:21:12 - 127.0.0.1 - - [11/Feb/2020 17:21:12] "[37mGET /static/index.css HTTP/1.1[0m" 200 -
+11-Feb-20 17:21:12 - 127.0.0.1 - - [11/Feb/2020 17:21:12] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+11-Feb-20 17:21:14 - Slots compiled into groups...
+11-Feb-20 17:21:14 - 127.0.0.1 - - [11/Feb/2020 17:21:14] "[37mGET /api/v1/slots/?sentence=Where%20is%20the%20stop%20for%20USAir%20flight%20number%2037%20from%20Philadelphia%20to%20San%20Francisco%20flying%20next%20friday HTTP/1.1[0m" 200 -
+11-Feb-20 17:23:12 - 127.0.0.1 - - [11/Feb/2020 17:23:12] "[37mGET /demo HTTP/1.1[0m" 200 -
+11-Feb-20 17:23:12 - 127.0.0.1 - - [11/Feb/2020 17:23:12] "[37mGET /static/index.css HTTP/1.1[0m" 200 -
+11-Feb-20 17:23:12 - 127.0.0.1 - - [11/Feb/2020 17:23:12] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+11-Feb-20 17:23:13 - 127.0.0.1 - - [11/Feb/2020 17:23:13] "[32mGET /api/v1/slots?sentence=text-transform:%20uppercase; HTTP/1.1[0m" 308 -
+11-Feb-20 17:23:14 - Slots compiled into groups...
+11-Feb-20 17:23:14 - 127.0.0.1 - - [11/Feb/2020 17:23:14] "[37mGET /api/v1/slots/?sentence=text-transform:%20uppercase; HTTP/1.1[0m" 200 -
+11-Feb-20 17:23:21 - Slots compiled into groups...
+11-Feb-20 17:23:21 - 127.0.0.1 - - [11/Feb/2020 17:23:21] "[37mGET /api/v1/slots/?sentence=Where%20is%20the%20stop%20for%20USAir%20flight%20number%2037%20from%20Philadelphia%20to%20San%20Francisco%20flying%20next%20friday HTTP/1.1[0m" 200 -
+11-Feb-20 17:23:26 - Slots compiled into groups...
+11-Feb-20 17:23:26 - 127.0.0.1 - - [11/Feb/2020 17:23:26] "[37mGET /api/v1/slots/?sentence=Where%20is%20the%20stop%20for%20USAir%20flight%20number%2037%20from%20Philadelphia%20to%20San%20Francisco%20flying%20next%20friday HTTP/1.1[0m" 200 -
+11-Feb-20 17:23:27 - 127.0.0.1 - - [11/Feb/2020 17:23:27] "[37mGET /demo HTTP/1.1[0m" 200 -
+11-Feb-20 17:23:27 - 127.0.0.1 - - [11/Feb/2020 17:23:27] "[37mGET /static/index.css HTTP/1.1[0m" 200 -
+11-Feb-20 17:23:27 - 127.0.0.1 - - [11/Feb/2020 17:23:27] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+11-Feb-20 17:23:30 - Slots compiled into groups...
+11-Feb-20 17:23:30 - 127.0.0.1 - - [11/Feb/2020 17:23:30] "[37mGET /api/v1/slots/?sentence=Where%20is%20the%20stop%20for%20USAir%20flight%20number%2037%20from%20Philadelphia%20to%20San%20Francisco%20flying%20next%20friday HTTP/1.1[0m" 200 -
+11-Feb-20 17:26:43 - 127.0.0.1 - - [11/Feb/2020 17:26:43] "[37mGET /demo HTTP/1.1[0m" 200 -
+11-Feb-20 17:26:43 - 127.0.0.1 - - [11/Feb/2020 17:26:43] "[37mGET /static/index.css HTTP/1.1[0m" 200 -
+11-Feb-20 17:26:43 - 127.0.0.1 - - [11/Feb/2020 17:26:43] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+11-Feb-20 17:26:50 - Slots compiled into groups...
+11-Feb-20 17:26:50 - 127.0.0.1 - - [11/Feb/2020 17:26:50] "[37mGET /api/v1/slots/?sentence=Where%20is%20the%20stop%20for%20USAir%20flight%20number%2037%20from%20Philadelphia%20to%20San%20Francisco%20flying%20next%20friday HTTP/1.1[0m" 200 -
+11-Feb-20 17:26:59 - 127.0.0.1 - - [11/Feb/2020 17:26:59] "[32mGET /api/v1/slots?sentence=Where%20is%20the%20stop%20for%20USAir%20flight%20number%2037%20from%20Philadelphia%20to%20washington%20flying%20next%20friday HTTP/1.1[0m" 308 -
+11-Feb-20 17:27:00 - Slots compiled into groups...
+11-Feb-20 17:27:00 - 127.0.0.1 - - [11/Feb/2020 17:27:00] "[37mGET /api/v1/slots/?sentence=Where%20is%20the%20stop%20for%20USAir%20flight%20number%2037%20from%20Philadelphia%20to%20washington%20flying%20next%20friday HTTP/1.1[0m" 200 -
+11-Feb-20 17:27:14 - 127.0.0.1 - - [11/Feb/2020 17:27:14] "[37mGET /demo HTTP/1.1[0m" 200 -
+11-Feb-20 17:27:14 - 127.0.0.1 - - [11/Feb/2020 17:27:14] "[37mGET /static/index.css HTTP/1.1[0m" 200 -
+11-Feb-20 17:27:14 - 127.0.0.1 - - [11/Feb/2020 17:27:14] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+11-Feb-20 17:27:17 - Slots compiled into groups...
+11-Feb-20 17:27:17 - 127.0.0.1 - - [11/Feb/2020 17:27:17] "[37mGET /api/v1/slots/?sentence=Where%20is%20the%20stop%20for%20USAir%20flight%20number%2037%20from%20Philadelphia%20to%20San%20Francisco%20flying%20next%20friday HTTP/1.1[0m" 200 -
+11-Feb-20 17:27:23 - Slots compiled into groups...
+11-Feb-20 17:27:23 - 127.0.0.1 - - [11/Feb/2020 17:27:23] "[37mGET /api/v1/slots/?sentence=Where%20is%20the%20stop%20for%20USAir%20flight%20number%2037%20from%20Philadelphia%20to%20washington%20flying%20next%20friday HTTP/1.1[0m" 200 -
+11-Feb-20 17:28:29 - 127.0.0.1 - - [11/Feb/2020 17:28:29] "[37mGET /demo HTTP/1.1[0m" 200 -
+11-Feb-20 17:28:29 - 127.0.0.1 - - [11/Feb/2020 17:28:29] "[37mGET /static/index.css HTTP/1.1[0m" 200 -
+11-Feb-20 17:28:29 - 127.0.0.1 - - [11/Feb/2020 17:28:29] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+11-Feb-20 17:28:33 - Slots compiled into groups...
+11-Feb-20 17:28:33 - 127.0.0.1 - - [11/Feb/2020 17:28:33] "[37mGET /api/v1/slots/?sentence=Where%20is%20the%20stop%20for%20USAir%20flight%20number%2037%20from%20Philadelphia%20to%20San%20Francisco%20flying%20next%20friday HTTP/1.1[0m" 200 -
+11-Feb-20 17:28:40 - Slots compiled into groups...
+11-Feb-20 17:28:40 - 127.0.0.1 - - [11/Feb/2020 17:28:40] "[37mGET /api/v1/slots/?sentence=Where%20is%20the%20stop%20for%20USAir%20flight%20number%2037%20from%20Philadelphia%20to%20washington%20flying%20next%20friday HTTP/1.1[0m" 200 -

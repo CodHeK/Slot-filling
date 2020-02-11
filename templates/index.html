@@ -1,0 +1,97 @@
+<html>
+    <head>  
+        <title>Demo App</title>
+        <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+        <link href="{{ url_for('static', filename='index.css') }}" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+    <head>
+    <body>
+        <div class="content">
+            <div class="input-response-output-display">
+                <div class="input">
+                    <input class="input-bar" placeholder="Enter sentence" onkeypress="getSlots(event)" />
+                </div>
+                <h5 class="title">API RESPONSE : </h5>
+                <div class="api-response">
+                
+                </div>
+            </div>
+            <div class="slots-display">
+                <h5 class="title">SLOTS : </h5>
+                <div class="slots">
+
+                </div>
+            </div>
+        <div>
+
+        <script>
+            async function request(url) {
+                let slots = {};
+                await fetch(url)
+                    .then((res) => {
+                        return res.json();
+                    })
+                    .then((data) => {
+                        slots = data;
+                    });
+
+                return slots;
+            }
+
+            function div(text, className) {
+                let elem = document.createElement('div');
+                elem.classList.add(className);
+                elem.innerHTML = text;
+                return elem;
+            }
+
+            function removeAllChildNodes(elem) {
+                if(elem.hasChildNodes()) {
+                    while (elem.firstChild) {
+                        elem.removeChild(elem.firstChild);
+                    }
+                }
+            }
+
+            function getSlots(e) {
+                if(e.which === 13) {
+                    const sentence = e.target.value;
+                    let url = 'http://localhost:9009/api/v1/slots?sentence=' + encodeURI(sentence)
+
+                    let apiResponseDiv = document.getElementsByClassName('api-response')[0];
+                    let slotsContainer = document.getElementsByClassName('slots')[0];
+
+                    removeAllChildNodes(apiResponseDiv);
+                    removeAllChildNodes(slotsContainer);
+
+                    request(url).then((data) => {
+                        let container = document.createElement('pre');
+                        container.classList.add('prettyprint');
+                        container.style.border = '0px';
+                        container.style.fontSize = '15px';
+                        container.style.padding = '1em';
+                        container.innerHTML = JSON.stringify(data, undefined, 2);
+
+                        apiResponseDiv.appendChild(container);
+
+                        let slots = data.slots;
+                        
+                        for(let key in slots) {
+                            let row = div('', 'row');
+                            let slotKey = div(key, 'key');
+                            console.log(key);
+                            for (let i in slots[key]) {
+                                console.log(slots[key][i])
+                                let slotVals = div(slots[key][i], 'value');
+                                slotKey.appendChild(slotVals)
+                            }
+                            row.appendChild(slotKey);
+
+                            slotsContainer.appendChild(row);
+                        }
+                    });   
+                }
+            }
+        </script>
+    </body>
+<html>

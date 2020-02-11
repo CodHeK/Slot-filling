@@ -1,4 +1,4 @@
-from flask import Flask, jsonify, request
+from flask import Flask, jsonify, request, render_template
 from main import test
 from model_config import Config
 import tensorflow as tf
@@ -38,7 +38,7 @@ Ex:
     Philadelphia%20to%20San%20Francisco%20flying%20next%20friday
 '''
 @app.route('/api/v1/slots/', methods=['GET'])
-def main():
+def slots():
     sentence = str(request.args.get('sentence'))
     with graph.as_default():
         response_time, slots = test(process, [sentence], read_file=False)
@@ -51,9 +51,18 @@ def main():
     return sendResponse(response)
 
 
+@app.route('/demo', methods=['GET'])
+def demo():
+    return render_template('index.html')
+
+
+
 if __name__ == '__main__':
     '''
         Loading the model only once, instead of loading it on every request
     '''
     initApp()
+    app.config.update(
+        TEMPLATES_AUTO_RELOAD=True
+    )
     app.run(debug=True, port=Config.PORT, threaded=True)
