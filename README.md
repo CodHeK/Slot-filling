@@ -148,6 +148,14 @@ GET http://localhost:9009/api/v1/slots?sentence=Where%20is%20the%20stop%20for%20
 }
 ```
 
+# 3. Demo App :
+
+```
+http://localhost:{PORT}/demo
+```
+
+![demoApp](screenshots/demoApp.png)
+
 **:warning: NOTE :**
 
 **Make sure your don't change `tensorflow==1.13.1` and `keras==2.2.5` versions, the model breaks for a different combination, but you're free to test other versions! :stuck_out_tongue:**
