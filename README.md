@@ -119,7 +119,7 @@ Go to your browser use the above example sentance:
 **EXAMPLE URL:**
 
 ```
-GET http://localhost:9009/api/v1/slots/?sentence=Where%20is%20the%20stop%20for%20USAir%20flight%20number%2037%20from%20Philadelphia%20to%20San%20Francisco%20flying%20next%20friday
+GET http://localhost:9009/api/v1/slots?sentence=Where%20is%20the%20stop%20for%20USAir%20flight%20number%2037%20from%20Philadelphia%20to%20San%20Francisco%20flying%20next%20friday
 ```
 
 **RESPONSE:**  (JSON format)
