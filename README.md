@@ -30,6 +30,52 @@ class Config:
 
 Before training your model, add the `DATA_FILE` key to your config which is your dataset file saved in the `/data` folder.  **Make sure you mention only file name NOT the path to the file.**
 
+### Custom embedding layer :
+
+To built your own custom word embeddings, use the `CustomEmbedding` class in `embeddings/custom.py`
+
+
+**Initialization**
+
+In `main.py`
+
+```
+from embeddings.custom import CustomEmbedding
+
+word_model = CustomEmbedding()
+
+OR can add your own configuration else default values used.
+
+word_model = CustomEmbedding(config={
+                              'min_count': 5,
+                              'window': 5,
+                              'sg': 0,
+                              'pre_trained': 'word2vec'/'glove'
+                              'iter': 1000
+                            })
+
+model = Sequential()
+
+model.add(word_model.EmbeddingLayer())
+
+...
+  
+```
+
+OR Can use keras in-built Embedding Layer :
+
+```
+from keras.layers.embeddings import Embedding
+
+
+model = Sequential()
+
+model.add(Embedding(n_vocab, Config.EMBEDDING_SIZE))
+
+...
+
+```
+
 ### Dataset Schema
 
 | sentance_idx | word | tag  |

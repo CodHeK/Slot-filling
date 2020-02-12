@@ -17,6 +17,25 @@ from data_loader import load
 
 class CustomEmbedding:
 	def __init__(self, config={}):
+		'''
+			from embeddings.custom import CustomEmbedding
+
+			word_model = CustomEmbedding()
+
+			# OR can add your own configuration else default values used.
+
+			word_model = CustomEmbedding(config={
+										'min_count': 5,
+										'window': 5,
+										'sg': 0,
+										'pre_trained': 'word2vec'/'glove'
+										'iter': 1000
+										})
+
+			model = Sequential()
+
+			model.add(word_model.EmbeddingLayer())
+		'''
 		self.sentences, self.words, self.tags, self.train_set, self.valid_set, self.indexes = self.parseATIS('data/' + Config.DATA_FILE)
  
 		self.min_count = config['min_count'] if 'min_count' in config else 5

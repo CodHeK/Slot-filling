@@ -6394,3 +6394,213 @@ Use tf.cast instead.
 12-Feb-20 16:16:36 - 127.0.0.1 - - [12/Feb/2020 16:16:36] "[37mGET /demo HTTP/1.1[0m" 200 -
 12-Feb-20 16:16:39 - Slots compiled into groups...
 12-Feb-20 16:16:39 - 127.0.0.1 - - [12/Feb/2020 16:16:39] "[37mGET /api/v1/slots/?sentence=Where%20is%20the%20stop%20for%20USAir%20flight%20number%2037%20from%20Philadelphia%20to%20San%20Francisco%20flying%20next%20friday HTTP/1.1[0m" 200 -
+12-Feb-20 16:29:44 -  * Detected change in '/Users/codhek/summ/Slot_Filling/embeddings/custom.py', reloading
+12-Feb-20 16:29:45 -  * Restarting with stat
+12-Feb-20 16:29:47 - Best model : trained_model_20_GRU_CRF_85.7.h5 picked for loading!
+12-Feb-20 16:29:48 - From /Users/codhek/summ/Slot_Filling/env/lib/python3.6/site-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+12-Feb-20 16:29:48 - From /Users/codhek/summ/Slot_Filling/env/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py:3733: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `rate` instead of `keep_prob`. Rate should be set to `rate = 1 - keep_prob`.
+12-Feb-20 16:29:49 - From /Users/codhek/summ/Slot_Filling/env/lib/python3.6/site-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+12-Feb-20 16:29:51 - Loaded model from disk
+12-Feb-20 16:29:51 -  * Debugger is active!
+12-Feb-20 16:29:51 -  * Debugger PIN: 110-034-516
+12-Feb-20 16:29:52 -  * Detected change in '/Users/codhek/summ/Slot_Filling/embeddings/custom.py', reloading
+12-Feb-20 16:29:52 -  * Restarting with stat
+12-Feb-20 16:29:55 - Best model : trained_model_20_GRU_CRF_85.7.h5 picked for loading!
+12-Feb-20 16:29:55 - From /Users/codhek/summ/Slot_Filling/env/lib/python3.6/site-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+12-Feb-20 16:29:55 - From /Users/codhek/summ/Slot_Filling/env/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py:3733: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `rate` instead of `keep_prob`. Rate should be set to `rate = 1 - keep_prob`.
+12-Feb-20 16:29:56 - From /Users/codhek/summ/Slot_Filling/env/lib/python3.6/site-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+12-Feb-20 16:29:58 - Loaded model from disk
+12-Feb-20 16:29:58 -  * Debugger is active!
+12-Feb-20 16:29:58 -  * Debugger PIN: 110-034-516
+12-Feb-20 16:30:00 -  * Detected change in '/Users/codhek/summ/Slot_Filling/embeddings/custom.py', reloading
+12-Feb-20 16:30:00 -  * Restarting with stat
+12-Feb-20 16:30:03 - Best model : trained_model_20_GRU_CRF_85.7.h5 picked for loading!
+12-Feb-20 16:30:03 - From /Users/codhek/summ/Slot_Filling/env/lib/python3.6/site-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+12-Feb-20 16:30:03 - From /Users/codhek/summ/Slot_Filling/env/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py:3733: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `rate` instead of `keep_prob`. Rate should be set to `rate = 1 - keep_prob`.
+12-Feb-20 16:30:04 - From /Users/codhek/summ/Slot_Filling/env/lib/python3.6/site-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+12-Feb-20 16:30:06 - Loaded model from disk
+12-Feb-20 16:30:06 -  * Debugger is active!
+12-Feb-20 16:30:06 -  * Debugger PIN: 110-034-516
+12-Feb-20 16:30:14 -  * Detected change in '/Users/codhek/summ/Slot_Filling/embeddings/custom.py', reloading
+12-Feb-20 16:30:15 -  * Restarting with stat
+12-Feb-20 16:30:17 - Best model : trained_model_20_GRU_CRF_85.7.h5 picked for loading!
+12-Feb-20 16:30:17 - From /Users/codhek/summ/Slot_Filling/env/lib/python3.6/site-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+12-Feb-20 16:30:17 - From /Users/codhek/summ/Slot_Filling/env/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py:3733: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `rate` instead of `keep_prob`. Rate should be set to `rate = 1 - keep_prob`.
+12-Feb-20 16:30:18 - From /Users/codhek/summ/Slot_Filling/env/lib/python3.6/site-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+12-Feb-20 16:30:20 - Loaded model from disk
+12-Feb-20 16:30:20 -  * Debugger is active!
+12-Feb-20 16:30:20 -  * Debugger PIN: 110-034-516
+12-Feb-20 16:30:23 -  * Detected change in '/Users/codhek/summ/Slot_Filling/embeddings/custom.py', reloading
+12-Feb-20 16:30:24 -  * Restarting with stat
+12-Feb-20 16:30:26 - Best model : trained_model_20_GRU_CRF_85.7.h5 picked for loading!
+12-Feb-20 16:30:26 - From /Users/codhek/summ/Slot_Filling/env/lib/python3.6/site-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+12-Feb-20 16:30:26 - From /Users/codhek/summ/Slot_Filling/env/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py:3733: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `rate` instead of `keep_prob`. Rate should be set to `rate = 1 - keep_prob`.
+12-Feb-20 16:30:27 - From /Users/codhek/summ/Slot_Filling/env/lib/python3.6/site-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+12-Feb-20 16:30:29 - Loaded model from disk
+12-Feb-20 16:30:29 -  * Debugger is active!
+12-Feb-20 16:30:29 -  * Debugger PIN: 110-034-516
+12-Feb-20 16:30:34 -  * Detected change in '/Users/codhek/summ/Slot_Filling/embeddings/custom.py', reloading
+12-Feb-20 16:30:35 -  * Restarting with stat
+12-Feb-20 16:30:37 - Best model : trained_model_20_GRU_CRF_85.7.h5 picked for loading!
+12-Feb-20 16:30:37 - From /Users/codhek/summ/Slot_Filling/env/lib/python3.6/site-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+12-Feb-20 16:30:37 - From /Users/codhek/summ/Slot_Filling/env/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py:3733: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `rate` instead of `keep_prob`. Rate should be set to `rate = 1 - keep_prob`.
+12-Feb-20 16:30:39 - From /Users/codhek/summ/Slot_Filling/env/lib/python3.6/site-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+12-Feb-20 16:30:40 - Loaded model from disk
+12-Feb-20 16:30:40 -  * Debugger is active!
+12-Feb-20 16:30:40 -  * Debugger PIN: 110-034-516
+12-Feb-20 16:30:42 -  * Detected change in '/Users/codhek/summ/Slot_Filling/embeddings/custom.py', reloading
+12-Feb-20 16:30:43 -  * Restarting with stat
+12-Feb-20 16:30:45 - Best model : trained_model_20_GRU_CRF_85.7.h5 picked for loading!
+12-Feb-20 16:30:45 - From /Users/codhek/summ/Slot_Filling/env/lib/python3.6/site-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+12-Feb-20 16:30:45 - From /Users/codhek/summ/Slot_Filling/env/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py:3733: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `rate` instead of `keep_prob`. Rate should be set to `rate = 1 - keep_prob`.
+12-Feb-20 16:30:46 - From /Users/codhek/summ/Slot_Filling/env/lib/python3.6/site-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+12-Feb-20 16:30:48 - Loaded model from disk
+12-Feb-20 16:30:48 -  * Debugger is active!
+12-Feb-20 16:30:48 -  * Debugger PIN: 110-034-516
+12-Feb-20 16:30:50 -  * Detected change in '/Users/codhek/summ/Slot_Filling/embeddings/custom.py', reloading
+12-Feb-20 16:30:51 -  * Restarting with stat
+12-Feb-20 16:30:53 - Best model : trained_model_20_GRU_CRF_85.7.h5 picked for loading!
+12-Feb-20 16:30:53 - From /Users/codhek/summ/Slot_Filling/env/lib/python3.6/site-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+12-Feb-20 16:30:53 - From /Users/codhek/summ/Slot_Filling/env/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py:3733: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `rate` instead of `keep_prob`. Rate should be set to `rate = 1 - keep_prob`.
+12-Feb-20 16:30:54 - From /Users/codhek/summ/Slot_Filling/env/lib/python3.6/site-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+12-Feb-20 16:30:56 - Loaded model from disk
+12-Feb-20 16:30:56 -  * Debugger is active!
+12-Feb-20 16:30:56 -  * Debugger PIN: 110-034-516
+12-Feb-20 16:31:00 -  * Detected change in '/Users/codhek/summ/Slot_Filling/embeddings/custom.py', reloading
+12-Feb-20 16:31:01 -  * Restarting with stat
+12-Feb-20 16:31:03 - Best model : trained_model_20_GRU_CRF_85.7.h5 picked for loading!
+12-Feb-20 16:31:04 - From /Users/codhek/summ/Slot_Filling/env/lib/python3.6/site-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+12-Feb-20 16:31:04 - From /Users/codhek/summ/Slot_Filling/env/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py:3733: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `rate` instead of `keep_prob`. Rate should be set to `rate = 1 - keep_prob`.
+12-Feb-20 16:31:05 - From /Users/codhek/summ/Slot_Filling/env/lib/python3.6/site-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+12-Feb-20 16:31:07 - Loaded model from disk
+12-Feb-20 16:31:07 -  * Debugger is active!
+12-Feb-20 16:31:07 -  * Debugger PIN: 110-034-516
+12-Feb-20 16:31:08 -  * Detected change in '/Users/codhek/summ/Slot_Filling/embeddings/custom.py', reloading
+12-Feb-20 16:31:08 -  * Restarting with stat
+12-Feb-20 16:31:11 - Best model : trained_model_20_GRU_CRF_85.7.h5 picked for loading!
+12-Feb-20 16:31:11 - From /Users/codhek/summ/Slot_Filling/env/lib/python3.6/site-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+12-Feb-20 16:31:11 - From /Users/codhek/summ/Slot_Filling/env/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py:3733: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `rate` instead of `keep_prob`. Rate should be set to `rate = 1 - keep_prob`.
+12-Feb-20 16:31:12 - From /Users/codhek/summ/Slot_Filling/env/lib/python3.6/site-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+12-Feb-20 16:31:14 - Loaded model from disk
+12-Feb-20 16:31:14 -  * Debugger is active!
+12-Feb-20 16:31:14 -  * Debugger PIN: 110-034-516
+12-Feb-20 16:32:07 -  * Detected change in '/Users/codhek/summ/Slot_Filling/embeddings/custom.py', reloading
+12-Feb-20 16:32:07 -  * Restarting with stat
+12-Feb-20 16:32:09 - Best model : trained_model_20_GRU_CRF_85.7.h5 picked for loading!
+12-Feb-20 16:32:09 - From /Users/codhek/summ/Slot_Filling/env/lib/python3.6/site-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+12-Feb-20 16:32:10 - From /Users/codhek/summ/Slot_Filling/env/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py:3733: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `rate` instead of `keep_prob`. Rate should be set to `rate = 1 - keep_prob`.
+12-Feb-20 16:32:11 - From /Users/codhek/summ/Slot_Filling/env/lib/python3.6/site-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+12-Feb-20 16:32:13 - Loaded model from disk
+12-Feb-20 16:32:13 -  * Debugger is active!
+12-Feb-20 16:32:13 -  * Debugger PIN: 110-034-516
+12-Feb-20 16:33:04 -  * Detected change in '/Users/codhek/summ/Slot_Filling/embeddings/custom.py', reloading
+12-Feb-20 16:33:05 -  * Restarting with stat
+12-Feb-20 16:33:07 - Best model : trained_model_20_GRU_CRF_85.7.h5 picked for loading!
+12-Feb-20 16:33:08 - From /Users/codhek/summ/Slot_Filling/env/lib/python3.6/site-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+12-Feb-20 16:33:08 - From /Users/codhek/summ/Slot_Filling/env/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py:3733: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `rate` instead of `keep_prob`. Rate should be set to `rate = 1 - keep_prob`.
+12-Feb-20 16:33:09 - From /Users/codhek/summ/Slot_Filling/env/lib/python3.6/site-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+12-Feb-20 16:33:11 - Loaded model from disk
+12-Feb-20 16:33:11 -  * Debugger is active!
+12-Feb-20 16:33:11 -  * Debugger PIN: 110-034-516
+12-Feb-20 16:33:13 -  * Detected change in '/Users/codhek/summ/Slot_Filling/embeddings/custom.py', reloading
+12-Feb-20 16:33:14 -  * Restarting with stat
+12-Feb-20 16:33:16 - Best model : trained_model_20_GRU_CRF_85.7.h5 picked for loading!
+12-Feb-20 16:33:16 - From /Users/codhek/summ/Slot_Filling/env/lib/python3.6/site-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+12-Feb-20 16:33:16 - From /Users/codhek/summ/Slot_Filling/env/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py:3733: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `rate` instead of `keep_prob`. Rate should be set to `rate = 1 - keep_prob`.
+12-Feb-20 16:33:17 - From /Users/codhek/summ/Slot_Filling/env/lib/python3.6/site-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+12-Feb-20 16:33:19 - Loaded model from disk
+12-Feb-20 16:33:19 -  * Debugger is active!
+12-Feb-20 16:33:19 -  * Debugger PIN: 110-034-516
+12-Feb-20 16:33:37 -  * Detected change in '/Users/codhek/summ/Slot_Filling/embeddings/custom.py', reloading
+12-Feb-20 16:33:37 -  * Restarting with stat
+12-Feb-20 16:33:40 - Best model : trained_model_20_GRU_CRF_85.7.h5 picked for loading!
+12-Feb-20 16:33:40 - From /Users/codhek/summ/Slot_Filling/env/lib/python3.6/site-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+12-Feb-20 16:33:40 - From /Users/codhek/summ/Slot_Filling/env/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py:3733: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `rate` instead of `keep_prob`. Rate should be set to `rate = 1 - keep_prob`.
+12-Feb-20 16:33:41 - From /Users/codhek/summ/Slot_Filling/env/lib/python3.6/site-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+12-Feb-20 16:33:43 - Loaded model from disk
+12-Feb-20 16:33:43 -  * Debugger is active!
+12-Feb-20 16:33:43 -  * Debugger PIN: 110-034-516
