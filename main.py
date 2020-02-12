@@ -105,7 +105,7 @@ def train():
 
         if metrics['f1'] > max_f1:
             max_f1 = metrics['f1']
-            process.save('trained_model_' + str(Config.N_EPOCHS) + '_' + str(Config.MODEL) + '_' + str(max_f1))
+            process.save('trained_model_' + str(Config.FILE_PATTERN) + '_' + str(max_f1))
             log("New model saved!", display=False)
 
     highlight('white', 'Best validation F1 score : ' + str(max_f1))
@@ -140,7 +140,7 @@ def test(process=None, sentences=None, read_file=True):
         # Clean loaded sentances from file - removing '\n' from each sentance
         sentences = process_sentances(sentences)
 
-    f = open('tests/slots_' + str(Config.N_EPOCHS) + '_' + str(Config.MODEL) + '.txt', 'w')
+    f = open('tests/slots_' + str(Config.FILE_PATTERN) + '.txt', 'w')
 
     arr_slots = []
     for sentence in sentences:
@@ -205,10 +205,11 @@ def model_params():
         'DROPOUT = ' + str(Config.DROPOUT) + '\n' + 
         'N_EPOCHS = ' + str(Config.N_EPOCHS) + '\n' +
         'LOSS = ' + str(Config.LOSS) + '\n' +
-        'OPTIMIZER = ' + str(Config.OPTIMIZER) + '\n'
-        'MODEL = ' + str(Config.MODEL) + '\n'
-        'DATA_FILE = ' + str(Config.DATA_FILE) + '\n'
-        'PORT = ' + str(Config.PORT) + 
+        'OPTIMIZER = ' + str(Config.OPTIMIZER) + '\n' + 
+        'MODEL = ' + str(Config.MODEL) + '\n' +
+        'DATA_FILE = ' + str(Config.DATA_FILE) + '\n' +
+        'PORT = ' + str(Config.PORT) + '\n' + 
+        'WORD_EMBEDDINGS = ' + str(Config.WORD_EMBEDDINGS) + '\n' +
         '\n\n'
         )
 

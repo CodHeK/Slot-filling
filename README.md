@@ -25,6 +25,7 @@ class Config:
     OPTIMIZER = 'rmsprop'
     MODEL = 'GRU_CRF'
     DATA_FILE = 'atis.pkl'
+    WORD_EMBEDDINGS = 'glove' # Can be 'word2vec' / 'glove' / 'None'
     PORT = '5004'
 ```
 
@@ -32,7 +33,7 @@ Before training your model, add the `DATA_FILE` key to your config which is your
 
 ### Custom embedding layer :
 
-To built your own custom word embeddings, use the `CustomEmbedding` class in `embeddings/custom.py`
+To build your own custom word embeddings from your dataset, we use the `CustomEmbedding` class in `embeddings/custom.py`
 
 
 **Initialization**
@@ -50,7 +51,7 @@ word_model = CustomEmbedding(config={
                               'min_count': 5,
                               'window': 5,
                               'sg': 0,
-                              'pre_trained': 'word2vec'/'glove'
+                              'pre_trained': True / False, # (default is False)
                               'iter': 1000
                             })
 
@@ -135,7 +136,7 @@ francisco - I-toloc.city_name
 
 **:warning: NOTE :**
 
-**This project is still in development and the results might not be very accurate at the moment.**
+The test command will use the best model based on the F1 score of each model, irrespective of configuration in `model_config.py`.
 
 ### Logs
 

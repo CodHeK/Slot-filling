@@ -25,8 +25,8 @@ class Process:
         return indexes
     
 
-    def save(self, name):
-        self.model.save('trained_model/' + name + '.h5')
+    def save(self, filename):
+        self.model.save('trained_model/' + filename + '.h5')
         
         log("Saved model to disk", display=False)
         highlight('green', 'Saved model to disk')

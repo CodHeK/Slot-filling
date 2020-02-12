@@ -18,41 +18,41 @@ def filesIn(path):
 def getBestSavedModel():
     filenames = filesIn('trained_model')
 
-    max_acc = 0
+    max_f1 = 0
     best_model_filename = None
 
     for filename in filenames:
-        acc = filename.split("_")[-1][:-3]
-        if acc[0].isdigit():
-            if float(acc) > max_acc:
-                max_acc = float(acc)
+        f1 = filename.split("_")[-1][:-3]
+        if f1[0].isdigit():
+            if float(f1) > max_f1:
+                max_f1 = float(f1)
                 best_model_filename = filename
     
     
-    return (filenames, best_model_filename, max_acc)
+    return (filenames, best_model_filename, max_f1)
 
 def clean():
-    filenames, best_filename, max_acc = getBestSavedModel()
+    filenames, best_filename, max_f1 = getBestSavedModel()
 
     for filename in filenames:
         ''' 
         Example:
 
-            filename = 'trained_model_20_GRU_CRF_84.4.h5'
+            filename = 'trained_model_20_GRU_CRF_glove_84.4.h5'
 
             prefix = 'trained_model'
 
-            res = '20_GRU_CRF' == (Config.N_EPOCHS + Config.MODEL)
+            res = '20_GRU_CRF_glove' == (Config.N_EPOCHS + Config.MODEL + Config.WORD_EMBEDDINGS) = Config.FILE_PATTERN
 
             suffix = '84.4.h5'
 
-            acc = '84.4'
+            f1 = '84.4'
         '''
         prefix = 'trained_model'
         suffix = filename.split("_")[-1]
         filename_len = len(filename)
-        res = filename[len(prefix)+1:(filename_len - len(suffix) - 1)] # Ex: 20_GRU_CRF
-        acc = suffix[:-3]
+        res = filename[len(prefix)+1:(filename_len - len(suffix) - 1)] # Ex: 20_GRU_CRF_glove
+        f1 = suffix[:-3]
 
-        if res == (str(Config.N_EPOCHS) + '_' + str(Config.MODEL)) and str(acc) != str(max_acc):
+        if res == (str(Config.FILE_PATTERN)) and str(f1) != str(max_f1):
             os.system('cd trained_model/ && rm %s' % filename)

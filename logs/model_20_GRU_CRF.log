@@ -6604,3 +6604,71 @@ Use tf.cast instead.
 12-Feb-20 16:33:43 - Loaded model from disk
 12-Feb-20 16:33:43 -  * Debugger is active!
 12-Feb-20 16:33:43 -  * Debugger PIN: 110-034-516
+12-Feb-20 16:38:09 -  * Detected change in '/Users/codhek/summ/Slot_Filling/embeddings/custom.py', reloading
+12-Feb-20 16:38:09 -  * Restarting with stat
+12-Feb-20 16:38:12 - Best model : trained_model_20_GRU_CRF_85.7.h5 picked for loading!
+12-Feb-20 16:38:12 - From /Users/codhek/summ/Slot_Filling/env/lib/python3.6/site-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+12-Feb-20 16:38:12 - From /Users/codhek/summ/Slot_Filling/env/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py:3733: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `rate` instead of `keep_prob`. Rate should be set to `rate = 1 - keep_prob`.
+12-Feb-20 16:38:13 - From /Users/codhek/summ/Slot_Filling/env/lib/python3.6/site-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+12-Feb-20 16:38:15 - Loaded model from disk
+12-Feb-20 16:38:15 -  * Debugger is active!
+12-Feb-20 16:38:15 -  * Debugger PIN: 110-034-516
+12-Feb-20 16:38:27 -  * Detected change in '/Users/codhek/summ/Slot_Filling/embeddings/custom.py', reloading
+12-Feb-20 16:38:28 -  * Restarting with stat
+12-Feb-20 17:10:53 - *** TRAINING ***
+
+12-Feb-20 17:10:53 - 
+
+MODEL PARAMETERS :
+
+EMBEDDING_SIZE = 100
+DROPOUT = 0.25
+N_EPOCHS = 20
+LOSS = <function crf_loss at 0x12c5b81e0>
+OPTIMIZER = rmsprop
+MODEL = GRU_CRF
+DATA_FILE = atis.pkl
+PORT = 9009WORD_EMBEDDINGS = glove
+
+
+12-Feb-20 17:10:53 - None
+12-Feb-20 17:10:53 - Word Indexes saved at (embeddings/word_indexes.json)...
+12-Feb-20 17:16:50 - *** TRAINING ***
+
+12-Feb-20 17:16:50 - 
+
+MODEL PARAMETERS :
+
+EMBEDDING_SIZE = 100
+DROPOUT = 0.25
+N_EPOCHS = 20
+LOSS = <function crf_loss at 0x12c4c41e0>
+OPTIMIZER = rmsprop
+MODEL = GRU_CRF
+DATA_FILE = atis.pkl
+PORT = 9009WORD_EMBEDDINGS = glove
+
+
+12-Feb-20 17:16:50 - None
+12-Feb-20 17:16:50 - Word Indexes saved at (embeddings/word_indexes.json)...
+12-Feb-20 17:16:51 - Loading pre-trained True model...
+12-Feb-20 17:16:51 - Word Embeddings already exists...using exsiting file.
+12-Feb-20 17:16:51 - Processing word indexes... 
+12-Feb-20 17:16:51 - Done processing word indexes!
+12-Feb-20 17:16:51 - From /Users/codhek/summ/Slot_Filling/env/lib/python3.6/site-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+12-Feb-20 17:16:51 - From /Users/codhek/summ/Slot_Filling/env/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py:3733: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `rate` instead of `keep_prob`. Rate should be set to `rate = 1 - keep_prob`.
+12-Feb-20 17:16:52 - Epoch 1
+12-Feb-20 17:16:52 - Training 
+12-Feb-20 17:16:52 - From /Users/codhek/summ/Slot_Filling/env/lib/python3.6/site-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.

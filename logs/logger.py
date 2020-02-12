@@ -10,7 +10,7 @@ def log(message, display=True):
     if display:
         print(message)
     LOG_FORMAT = '%(asctime)s - %(message)s'
-    logging.basicConfig(filename='logs/model_' + str(Config.N_EPOCHS) + '_' + str(Config.MODEL) + '.log', 
+    logging.basicConfig(filename='logs/model_' + str(Config.FILE_PATTERN) + '.log', 
                         filemode='a',
                         level=logging.INFO,
                         format=LOG_FORMAT,

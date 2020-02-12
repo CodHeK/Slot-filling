@@ -8,4 +8,7 @@ class Config:
     OPTIMIZER = 'rmsprop'
     MODEL = 'GRU_CRF'
     DATA_FILE = 'atis.pkl'
+    WORD_EMBEDDINGS = 'glove'
     PORT = '9009'
+    # Dont change the line below ...
+    FILE_PATTERN = str(N_EPOCHS) + '_' + str(MODEL) + '_' + str(WORD_EMBEDDINGS)

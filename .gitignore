@@ -2,3 +2,6 @@ env
 venv
 __pycache__
 GoogleNews-vectors-negative300.bin
+glove.6B.100d.txt
+glove.6B.100d.txt.word2vec
+atis.pkl_glove_embeddings.txt
