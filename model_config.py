@@ -8,5 +8,4 @@ class Config:
     OPTIMIZER = 'rmsprop'
     MODEL = 'GRU_CRF'
     DATA_FILE = 'atis.pkl'
-    INDEXES_FILE = 'word_indexes.json'
     PORT = '9009'

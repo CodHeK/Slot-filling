@@ -25,11 +25,10 @@ class Config:
     OPTIMIZER = 'rmsprop'
     MODEL = 'GRU_CRF'
     DATA_FILE = 'atis.pkl'
-    EMBEDDINGS_FILE = 'word_embeddings.json'
     PORT = '5004'
 ```
 
-`DATA_FILE` is to be saved in the `/data` folder and `EMBEDDINGS_FILE` gets automatically saved as per the name mentioned in the `Config` in the `/embeddings` folder. **In both cases,  make sure you mention only file name NOT the path to the file.**
+Before training your model, add the `DATA_FILE` key to your config which is your dataset file saved in the `/data` folder.  **Make sure you mention only file name NOT the path to the file.**
 
 ### Dataset Schema
 

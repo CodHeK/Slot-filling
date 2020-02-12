@@ -19,7 +19,7 @@ class Process:
     
 
     def getIndexes(self):
-        with open('embeddings/' + Config.INDEXES_FILE, 'r') as f:
+        with open('embeddings/word_indexes.json', 'r') as f:
             indexes = json.load(f)
         
         return indexes

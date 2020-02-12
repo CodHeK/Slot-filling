@@ -208,7 +208,6 @@ def model_params():
         'OPTIMIZER = ' + str(Config.OPTIMIZER) + '\n'
         'MODEL = ' + str(Config.MODEL) + '\n'
         'DATA_FILE = ' + str(Config.DATA_FILE) + '\n'
-        'INDEXES_FILE = ' + str(Config.INDEXES_FILE) + '\n'
         'PORT = ' + str(Config.PORT) + 
         '\n\n'
         )
