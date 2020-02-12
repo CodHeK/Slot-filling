@@ -1,7 +1,7 @@
 from os import walk
 import os, sys
 
-APP_PATH = str(os.path.dirname(os.path.realpath('../../files.py')))
+APP_PATH = str(os.path.dirname(os.path.realpath('../../' + __file__)))
 sys.path.append(APP_PATH)
 
 from model_config import Config

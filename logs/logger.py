@@ -1,7 +1,7 @@
 import logging
 import sys, os
 
-APP_PATH = str(os.path.dirname(os.path.realpath('../../logger.py')))
+APP_PATH = str(os.path.dirname(os.path.realpath('../../' + __file__)))
 sys.path.append(APP_PATH)
 
 from model_config import Config

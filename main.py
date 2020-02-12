@@ -18,12 +18,16 @@ from utils.files import getBestSavedModel, clean
 from metrics.accuracy import conlleval
 from process import Process
 from logs.logger import log
-from embeddings.generate_embs import CreateEmbeddingsAndSets
+from embeddings.custom import CustomEmbedding
 
 
-def train(train_set, valid_set, embeddings):
-    w2idx, la2idx = embeddings['w2idx'], embeddings['la2idx']
-    idx2w, idx2la = embeddings['idx2w'], embeddings['idx2la'] 
+def train():
+    word_model = CustomEmbedding()
+
+    train_set, valid_set, indexes = word_model.train_set, word_model.valid_set, word_model.indexes
+
+    w2idx, la2idx = indexes['w2idx'], indexes['la2idx']
+    idx2w, idx2la = indexes['idx2w'], indexes['idx2la'] 
 
     n_classes = len(idx2la)
     n_vocab = len(idx2w)
@@ -31,19 +35,20 @@ def train(train_set, valid_set, embeddings):
     train_x, train_label = train_set
     valid_x, valid_label = valid_set
 
-    log("Processing word embeddings... ")
+    log("Processing word indexes... ")
 
     words_val = [ list(map(lambda x: idx2w[x], w)) for w in valid_x]
     groundtruth_val = [ list(map(lambda x: idx2la[x], y)) for y in valid_label]
 
-    log("Done processing word embeddings!")
+    log("Done processing word indexes!")
     
     ###############################################################
     '''
         MODEL 
     '''
     model = Sequential()
-    model.add(Embedding(n_vocab, Config.EMBEDDING_SIZE))
+
+    model.add(word_model.EmbeddingLayer())
 
     model.add(Conv1D(128, 5, padding="same", activation='relu'))
 
@@ -111,43 +116,6 @@ def train(train_set, valid_set, embeddings):
     log('Removed all other saved models, kept the best model only!')
 
 
-def loadEmbeddingsATIS():
-    train_set, valid_set, dicts = load('atis.pkl') # load() from data_loader.py
-    w2idx, la2idx = dicts['words2idx'], dicts['labels2idx']
-
-    idx2w  = { w2idx[k]:k for k in w2idx }
-    idx2la = { la2idx[k]:k for k in la2idx }
-
-    embeddings = {
-        "idx2w" : idx2w,
-        "idx2la" : idx2la,
-        "w2idx" : w2idx,
-        "la2idx" : la2idx 
-    }
-
-    with open('embeddings/word_embeddings.json', 'w') as f:
-        json.dump(embeddings, f)
-    
-    log("Word Embeddings Loaded ...")
-
-    train_set = (train_set[0], train_set[2]) # packing only train_x and train_label
-    valid_set = (valid_set[0], valid_set[2])
-
-    return (train_set, valid_set, embeddings)
-
-
-def loadEmbeddings():
-    train_set, valid_set, embeddings = CreateEmbeddingsAndSets()
-
-    # Used in process.py for loading embeddings
-    with open('embeddings/' + Config.EMBEDDINGS_FILE, 'w') as f:
-        json.dump(embeddings, f)
-    
-    log("Word Embeddings Dumped to JSON ...")
-
-    return (train_set, valid_set, embeddings)
-
-
 def process_sentances(sentances):
     sentances = [ sentance.strip('\n') for sentance in sentances ]
 
@@ -157,7 +125,7 @@ def process_sentances(sentances):
 
 def test(process=None, sentences=None, read_file=True):
     start = time.time()
-    best_model_filename = getBestSavedModel()
+    _, best_model_filename, _ = getBestSavedModel()
 
     if read_file:
         process = Process()
@@ -240,7 +208,7 @@ def model_params():
         'OPTIMIZER = ' + str(Config.OPTIMIZER) + '\n'
         'MODEL = ' + str(Config.MODEL) + '\n'
         'DATA_FILE = ' + str(Config.DATA_FILE) + '\n'
-        'EMBEDDINGS_FILE = ' + str(Config.EMBEDDINGS_FILE) + '\n'
+        'INDEXES_FILE = ' + str(Config.INDEXES_FILE) + '\n'
         'PORT = ' + str(Config.PORT) + 
         '\n\n'
         )
@@ -257,22 +225,10 @@ if __name__ == '__main__':
 
     if args.train:
         log('*** TRAINING ***' + '\n')
-
-        ''' 
-            Use this function if your dataset has the schema of type :
-
-            sentance_idx | word | tag (See Ex: '/data/ner_dataset.csv')
-        '''
-        # train_set, valid_set, embeddings = loadEmbeddings()
-
-        '''
-            Else
-        '''
-        train_set, valid_set, embeddings = loadEmbeddingsATIS()
-
         log(model_params())
         highlight('violet', 'Please open `logs/model.log` for all the logging information about the model')
-        train(train_set, valid_set, embeddings)
+
+        train()
     
     if args.test:
         log('*** TESTING ***' + '\n')
