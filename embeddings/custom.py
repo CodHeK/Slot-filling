@@ -40,7 +40,7 @@ class CustomEmbedding:
 
 		self.embeddings_filename = str(Config.DATA_FILE) + '_' + str(Config.WORD_EMBEDDINGS) + '_embeddings.txt'
 		
-		if Config.WORD_EMBEDDINGS != None:
+		if Config.WORD_EMBEDDINGS != 'None':
 			self.min_count = config['min_count'] if 'min_count' in config else 5
 			self.window = config['window'] if 'window' in config else 5
 			self.sg = config['sg'] if 'sg' in config else 0

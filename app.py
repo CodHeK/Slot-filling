@@ -3,17 +3,17 @@ from main import test
 from model_config import Config
 import tensorflow as tf
 from process import Process
-from utils.files import getBestSavedModel
+from utils.files import getBestSavedModelToTest
 from logs.logger import log
 
 app = Flask(__name__)
 
 def initApp():
-    global process, graph
+    global process, graph, best_model_filename
 
     process = Process()
 
-    _, best_model_filename, _ = getBestSavedModel()
+    best_model_filename = getBestSavedModelToTest()
 
     log('Best model : ' + str(best_model_filename) + ' picked for loading!')
 
@@ -46,8 +46,10 @@ def slots():
     response = {
         'sentence': sentence,
         'slots': slots,
-        'response_time': str(response_time)[:4] + 's'
+        'response_time': str(response_time)[:4] + 's',
+        'model': str(best_model_filename)
     }
+    
     return sendResponse(response)
 
 

@@ -5,7 +5,7 @@ class Config:
     DROPOUT = 0.25
     N_EPOCHS = 20
     LOSS = crf_loss
-    OPTIMIZER = 'rmsprop'
+    OPTIMIZER = 'adam'
     MODEL = 'GRU_CRF'
     DATA_FILE = 'atis.pkl'
     WORD_EMBEDDINGS = 'glove'

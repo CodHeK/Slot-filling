@@ -148,3 +148,221 @@ Use tf.cast instead.
 12-Feb-20 19:24:59 - Best validation F1 score : 84.84
 12-Feb-20 19:24:59 - Cleaning /trained_model folder...
 12-Feb-20 19:24:59 - Removed all other saved models, kept the best model only!
+13-Feb-20 10:02:32 - *** TRAINING ***
+
+13-Feb-20 10:02:32 - 
+
+MODEL PARAMETERS :
+
+EMBEDDING_SIZE = 100
+DROPOUT = 0.25
+N_EPOCHS = 20
+LOSS = <function crf_loss at 0x12c5ce1e0>
+OPTIMIZER = rmsprop
+MODEL = GRU_CRF
+DATA_FILE = atis.pkl
+PORT = 9009
+WORD_EMBEDDINGS = glove
+
+
+
+13-Feb-20 10:02:32 - None
+13-Feb-20 10:02:32 - Word Indexes saved at (embeddings/word_indexes.json)...
+13-Feb-20 10:02:33 - Loading pre-trained glove model...
+13-Feb-20 10:02:33 - Word Embeddings already exists...using exsiting file.
+13-Feb-20 10:02:33 - Processing word indexes... 
+13-Feb-20 10:02:33 - Done processing word indexes!
+13-Feb-20 10:02:47 - From /Users/codhek/summ/Slot_Filling/env/lib/python3.6/site-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+13-Feb-20 10:02:48 - From /Users/codhek/summ/Slot_Filling/env/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py:3733: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `rate` instead of `keep_prob`. Rate should be set to `rate = 1 - keep_prob`.
+13-Feb-20 10:02:49 - Epoch 1
+13-Feb-20 10:02:49 - Training 
+13-Feb-20 10:02:49 - From /Users/codhek/summ/Slot_Filling/env/lib/python3.6/site-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+13-Feb-20 10:08:08 - Validating 
+13-Feb-20 10:08:36 - Precision = 37.92, Recall = 3.6, F1 = 6.57
+13-Feb-20 10:08:37 - Saved model to disk
+13-Feb-20 10:08:37 - New model saved!
+13-Feb-20 10:08:37 - Epoch 2
+13-Feb-20 10:08:37 - Training 
+13-Feb-20 10:14:04 - Validating 
+13-Feb-20 10:14:33 - Precision = 47.49, Recall = 39.76, F1 = 43.28
+13-Feb-20 10:14:33 - Saved model to disk
+13-Feb-20 10:14:33 - New model saved!
+13-Feb-20 10:14:33 - Epoch 3
+13-Feb-20 10:14:33 - Training 
+13-Feb-20 10:19:43 - Validating 
+13-Feb-20 10:20:12 - Precision = 72.72, Recall = 63.8, F1 = 67.97
+13-Feb-20 10:20:12 - Saved model to disk
+13-Feb-20 10:20:12 - New model saved!
+13-Feb-20 10:20:12 - Epoch 4
+13-Feb-20 10:20:12 - Training 
+13-Feb-20 10:25:43 - Validating 
+13-Feb-20 10:26:12 - Precision = 75.86, Recall = 66.48, F1 = 70.86
+13-Feb-20 10:26:12 - Saved model to disk
+13-Feb-20 10:26:12 - New model saved!
+13-Feb-20 10:26:12 - Epoch 5
+13-Feb-20 10:26:12 - Training 
+13-Feb-20 10:31:00 - Validating 
+13-Feb-20 10:31:26 - Precision = 81.34, Recall = 68.7, F1 = 74.49
+13-Feb-20 10:31:26 - Saved model to disk
+13-Feb-20 10:31:26 - New model saved!
+13-Feb-20 10:31:26 - Epoch 6
+13-Feb-20 10:31:26 - Training 
+13-Feb-20 10:36:39 - Validating 
+13-Feb-20 10:37:06 - Precision = 82.26, Recall = 70.43, F1 = 75.88
+13-Feb-20 10:37:06 - Saved model to disk
+13-Feb-20 10:37:06 - New model saved!
+13-Feb-20 10:37:06 - Epoch 7
+13-Feb-20 10:37:06 - Training 
+13-Feb-20 10:42:23 - Validating 
+13-Feb-20 10:42:49 - Precision = 81.37, Recall = 72.65, F1 = 76.76
+13-Feb-20 10:42:49 - Saved model to disk
+13-Feb-20 10:42:49 - New model saved!
+13-Feb-20 10:42:49 - Epoch 8
+13-Feb-20 10:42:49 - Training 
+13-Feb-20 10:47:51 - Validating 
+13-Feb-20 10:48:18 - Precision = 81.15, Recall = 73.0, F1 = 76.86
+13-Feb-20 10:48:18 - Saved model to disk
+13-Feb-20 10:48:18 - New model saved!
+13-Feb-20 10:48:18 - Epoch 9
+13-Feb-20 10:48:18 - Training 
+13-Feb-20 10:53:24 - Validating 
+13-Feb-20 10:53:49 - Precision = 81.43, Recall = 75.71, F1 = 78.47
+13-Feb-20 10:53:49 - Saved model to disk
+13-Feb-20 10:53:49 - New model saved!
+13-Feb-20 10:53:49 - Epoch 10
+13-Feb-20 10:53:49 - Training 
+13-Feb-20 10:58:41 - Validating 
+13-Feb-20 10:59:07 - Precision = 82.22, Recall = 75.64, F1 = 78.8
+13-Feb-20 10:59:07 - Saved model to disk
+13-Feb-20 10:59:07 - New model saved!
+13-Feb-20 10:59:07 - Epoch 11
+13-Feb-20 10:59:07 - Training 
+13-Feb-20 11:04:13 - Validating 
+13-Feb-20 11:04:39 - Precision = 82.05, Recall = 75.75, F1 = 78.78
+13-Feb-20 11:04:39 - Epoch 12
+13-Feb-20 11:04:39 - Training 
+13-Feb-20 11:09:27 - Validating 
+13-Feb-20 11:09:53 - Precision = 83.97, Recall = 75.33, F1 = 79.41
+13-Feb-20 11:09:53 - Saved model to disk
+13-Feb-20 11:09:53 - New model saved!
+13-Feb-20 11:09:53 - Epoch 13
+13-Feb-20 11:09:53 - Training 
+13-Feb-20 11:15:25 - Validating 
+13-Feb-20 11:15:57 - Precision = 83.88, Recall = 76.88, F1 = 80.23
+13-Feb-20 11:15:57 - Saved model to disk
+13-Feb-20 11:15:57 - New model saved!
+13-Feb-20 11:15:57 - Epoch 14
+13-Feb-20 11:15:57 - Training 
+13-Feb-20 11:21:04 - Validating 
+13-Feb-20 11:21:29 - Precision = 84.97, Recall = 79.91, F1 = 82.36
+13-Feb-20 11:21:29 - Saved model to disk
+13-Feb-20 11:21:29 - New model saved!
+13-Feb-20 11:21:29 - Epoch 15
+13-Feb-20 11:21:29 - Training 
+13-Feb-20 11:26:11 - Validating 
+13-Feb-20 11:26:37 - Precision = 83.69, Recall = 79.94, F1 = 81.77
+13-Feb-20 11:26:37 - Epoch 16
+13-Feb-20 11:26:37 - Training 
+13-Feb-20 11:31:20 - Validating 
+13-Feb-20 11:31:45 - Precision = 85.31, Recall = 80.86, F1 = 83.03
+13-Feb-20 11:31:45 - Saved model to disk
+13-Feb-20 11:31:45 - New model saved!
+13-Feb-20 11:31:45 - Epoch 17
+13-Feb-20 11:31:45 - Training 
+13-Feb-20 11:37:02 - Validating 
+13-Feb-20 11:37:30 - Precision = 86.96, Recall = 78.75, F1 = 82.65
+13-Feb-20 11:37:30 - Epoch 18
+13-Feb-20 11:37:30 - Training 
+13-Feb-20 11:42:53 - Validating 
+13-Feb-20 11:43:21 - Precision = 86.68, Recall = 80.54, F1 = 83.5
+13-Feb-20 11:43:21 - Saved model to disk
+13-Feb-20 11:43:21 - New model saved!
+13-Feb-20 11:43:21 - Epoch 19
+13-Feb-20 11:43:21 - Training 
+13-Feb-20 11:48:55 - Validating 
+13-Feb-20 11:49:24 - Precision = 87.04, Recall = 81.18, F1 = 84.01
+13-Feb-20 11:49:24 - Saved model to disk
+13-Feb-20 11:49:24 - New model saved!
+13-Feb-20 11:49:24 - Epoch 20
+13-Feb-20 11:49:24 - Training 
+13-Feb-20 11:54:56 - Validating 
+13-Feb-20 11:55:26 - Precision = 86.4, Recall = 80.86, F1 = 83.54
+13-Feb-20 11:55:26 - Best validation F1 score : 84.01
+13-Feb-20 11:55:26 - Cleaning /trained_model folder...
+13-Feb-20 11:55:26 - Removed all other saved models, kept the best model only!
+13-Feb-20 12:05:20 - *** TESTING ***
+
+13-Feb-20 12:05:21 - From /Users/codhek/summ/Slot_Filling/env/lib/python3.6/site-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+13-Feb-20 12:05:21 - From /Users/codhek/summ/Slot_Filling/env/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py:3733: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `rate` instead of `keep_prob`. Rate should be set to `rate = 1 - keep_prob`.
+13-Feb-20 12:05:22 - From /Users/codhek/summ/Slot_Filling/env/lib/python3.6/site-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+13-Feb-20 12:05:23 - Loaded model from disk
+13-Feb-20 12:05:25 - Slots compiled into groups...
+13-Feb-20 15:06:31 - *** RE-TRAINING ***
+
+13-Feb-20 15:06:31 - From /Users/codhek/summ/Slot_Filling/env/lib/python3.6/site-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+13-Feb-20 15:06:31 - From /Users/codhek/summ/Slot_Filling/env/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py:3733: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `rate` instead of `keep_prob`. Rate should be set to `rate = 1 - keep_prob`.
+13-Feb-20 15:06:32 - From /Users/codhek/summ/Slot_Filling/env/lib/python3.6/site-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+13-Feb-20 15:06:34 - Loaded model from disk
+13-Feb-20 15:06:34 - Word Indexes saved at (embeddings/word_indexes.json)...
+13-Feb-20 15:06:34 - Loading pre-trained glove model...
+13-Feb-20 15:06:34 - Word Embeddings already exists...using exsiting file.
+13-Feb-20 15:06:34 - Processing word indexes... 
+13-Feb-20 15:06:35 - Done processing word indexes!
+13-Feb-20 15:06:35 - Epoch 1
+13-Feb-20 15:06:35 - Training 
+13-Feb-20 15:11:36 - Validating 
+13-Feb-20 15:12:01 - Precision = 85.81, Recall = 80.58, F1 = 83.11
+13-Feb-20 15:12:01 - Saved model to disk
+13-Feb-20 15:12:01 - New model saved!
+13-Feb-20 15:12:01 - Epoch 2
+13-Feb-20 15:12:01 - Training 
+13-Feb-20 15:17:00 - Validating 
+13-Feb-20 15:17:27 - Precision = 86.42, Recall = 81.85, F1 = 84.07
+13-Feb-20 15:17:27 - Saved model to disk
+13-Feb-20 15:17:27 - New model saved!
+13-Feb-20 15:17:27 - Epoch 3
+13-Feb-20 15:17:27 - Training 
+13-Feb-20 15:22:16 - Validating 
+13-Feb-20 15:22:41 - Precision = 85.53, Recall = 80.65, F1 = 83.02
+13-Feb-20 15:22:41 - Epoch 4
+13-Feb-20 15:22:41 - Training 
+13-Feb-20 15:29:18 - *** RE-TRAINING ***
+
+13-Feb-20 15:29:18 - From /Users/codhek/summ/Slot_Filling/env/lib/python3.6/site-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+13-Feb-20 15:29:18 - From /Users/codhek/summ/Slot_Filling/env/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py:3733: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `rate` instead of `keep_prob`. Rate should be set to `rate = 1 - keep_prob`.
+13-Feb-20 15:29:20 - From /Users/codhek/summ/Slot_Filling/env/lib/python3.6/site-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+13-Feb-20 15:29:21 - Loaded model from disk
+13-Feb-20 15:29:21 - Word Indexes saved at (embeddings/word_indexes.json)...
+13-Feb-20 15:29:22 - Loading pre-trained glove model...
+13-Feb-20 15:29:22 - Word Embeddings already exists...using exsiting file.
+13-Feb-20 15:29:22 - Processing word indexes... 
+13-Feb-20 15:29:22 - Done processing word indexes!
+13-Feb-20 15:29:22 - Epoch 1
+13-Feb-20 15:29:22 - Training 
+13-Feb-20 15:29:53 - Training interrupted with ctrl + c ...
+13-Feb-20 15:29:53 - Cleaning /trained_model folder...
+13-Feb-20 15:29:53 - Removed all other saved models, kept the best model only!

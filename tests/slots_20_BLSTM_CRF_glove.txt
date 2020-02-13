@@ -1,0 +1,9 @@
+Where is the stop for USAir flight number 37 from Philadelphia to San Francisco flying next friday
+
+37 - B-flight_number
+philadelphia - B-fromloc.city_name
+san - B-toloc.city_name
+francisco - I-toloc.city_name
+next - B-depart_date.date_relative
+friday - B-depart_date.day_name
+----------------------------------------------------------------------------------------------------

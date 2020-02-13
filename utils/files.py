@@ -4,9 +4,9 @@ import os, sys
 APP_PATH = str(os.path.dirname(os.path.realpath('../../' + __file__)))
 sys.path.append(APP_PATH)
 
-from Slot_Filling.model_config import Config
+from model_config import Config
 
-def filesIn(path):
+def getFilesIn(path):
     files = []
 
     for _,_, filenames in walk(path):
@@ -33,13 +33,13 @@ def nameUtil(filename):
     suffix = filename.split("_")[-1]
     filename_len = len(filename)
 
-    res = filename[len(prefix)+1:(filename_len - len(suffix) - 1)] # Ex: 20_GRU_CRF_glove
+    pattern = filename[len(prefix)+1:(filename_len - len(suffix) - 1)] # Ex: 20_GRU_CRF_glove
     f1 = suffix[:-3]
 
-    return (res, f1)
+    return (pattern, f1)
 
 def getBestSavedModelToTest():
-    filenames = filesIn('trained_model')
+    filenames = getFilesIn('trained_model')
 
     max_f1 = 0.0
     best_model_filename = None
@@ -54,7 +54,7 @@ def getBestSavedModelToTest():
     return best_model_filename
 
 def getCurrentConfigBestModel():
-    filenames = filesIn('trained_model')
+    filenames = getFilesIn('trained_model')
 
     max_f1 = 0.0
     best_model_filename = None
