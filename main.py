@@ -21,8 +21,8 @@ from logs.logger import log
 from embeddings.custom import CustomEmbedding
 
 
-def train(model=None):
-    word_model = CustomEmbedding()
+def train(model=None, re_train=False):
+    word_model = CustomEmbedding(re_train=re_train) # To prevent creating embeddings if re_train is True
 
     train_set, valid_set, indexes = word_model.train_set, word_model.valid_set, word_model.indexes
 
@@ -42,7 +42,7 @@ def train(model=None):
 
     log("Done processing word indexes!")
 
-    if model == None:
+    if re_train == False:
         '''
             DEFINE MODEL 
         '''
@@ -109,7 +109,7 @@ def train(model=None):
         log('Removed all other saved models, kept the best model only!')
 
     except KeyboardInterrupt: # If in case ctrl + c pressed, needs to clean up and exit
-        log("\n Training interrupted with ctrl + c ...")
+        log("\nTraining interrupted with ctrl + c ...")
         log('Cleaning /trained_model folder...')
         clean()
         log('Removed all other saved models, kept the best model only!')
@@ -284,13 +284,13 @@ if __name__ == '__main__':
     # Re-training already saved models
     if args.retrain:
         log('*** RE-TRAINING ***' + '\n')
-        model_to_retrain = 'trained_model_20_GRU_CRF_glove_84.01.h5'
+        model_to_retrain = 'trained_model_20_BLSTM_LSTM_CRF_None_77.94.h5'
 
         process = Process()
 
         model = process.load(model_to_retrain)
 
-        train(model)
+        train(model, re_train=True)
             
             
 
