@@ -1,0 +1,78 @@
+28-Nov-20 17:34:59 - *** TRAINING ***
+
+28-Nov-20 17:34:59 - 
+
+MODEL PARAMETERS :
+
+EMBEDDING_SIZE = 100
+DROPOUT = 0.25
+N_EPOCHS = 20
+LOSS = <function crf_loss at 0x7fbe908f0280>
+OPTIMIZER = adam
+MODEL = BILSTM_CRF
+DATA_FILE = atis.pkl
+PORT = 9009
+WORD_EMBEDDINGS = glove
+
+
+
+28-Nov-20 17:34:59 - None
+28-Nov-20 17:34:59 - Word Indexes saved at (embeddings/word_indexes.json)...
+28-Nov-20 17:35:00 - Loading pre-trained glove model...
+28-Nov-20 17:38:10 - *** TRAINING ***
+
+28-Nov-20 17:38:10 - 
+
+MODEL PARAMETERS :
+
+EMBEDDING_SIZE = 100
+DROPOUT = 0.25
+N_EPOCHS = 20
+LOSS = <function crf_loss at 0x7f83188f0280>
+OPTIMIZER = adam
+MODEL = BILSTM_CRF
+DATA_FILE = atis.pkl
+PORT = 9009
+WORD_EMBEDDINGS = glove
+
+
+
+28-Nov-20 17:38:10 - None
+28-Nov-20 17:38:10 - Word Indexes saved at (embeddings/word_indexes.json)...
+28-Nov-20 17:38:10 - Loading pre-trained glove model...
+28-Nov-20 17:38:11 - converting 400000 vectors from embeddings/glove.6B.100d.txt to embeddings/glove.6B.100d.txt.word2vec
+28-Nov-20 17:38:12 - loading projection weights from embeddings/glove.6B.100d.txt.word2vec
+28-Nov-20 17:38:54 - loaded (400000, 100) matrix from embeddings/glove.6B.100d.txt.word2vec
+28-Nov-20 17:38:54 - storing 400000x100 projection weights into embeddings/atis.pkl_glove_embeddings.txt
+28-Nov-20 17:39:17 - Saved trained word embeddings at (embeddings/atis.pkl_glove_embeddings.txt)
+28-Nov-20 17:39:17 - Processing word indexes... 
+28-Nov-20 17:39:18 - Done processing word indexes!
+28-Nov-20 17:39:31 - Epoch 1
+28-Nov-20 17:39:31 - Training 
+28-Nov-20 17:42:00 - *** TRAINING ***
+
+28-Nov-20 17:42:00 - Word Indexes saved at (embeddings/word_indexes.json)...
+28-Nov-20 17:42:00 - Loading pre-trained glove model...
+28-Nov-20 17:42:00 - Word Embeddings already exists...using exsiting file.
+28-Nov-20 17:42:00 - Processing word indexes... 
+28-Nov-20 17:42:00 - Done processing word indexes!
+28-Nov-20 17:42:14 - Epoch 1
+28-Nov-20 17:42:14 - Training 
+28-Nov-20 17:42:48 - *** TRAINING ***
+
+28-Nov-20 17:42:48 - Word Indexes saved at (embeddings/word_indexes.json)...
+28-Nov-20 17:42:48 - Loading pre-trained glove model...
+28-Nov-20 17:42:48 - Word Embeddings already exists...using exsiting file.
+28-Nov-20 17:42:48 - Processing word indexes... 
+28-Nov-20 17:42:49 - Done processing word indexes!
+28-Nov-20 17:43:02 - Epoch 1
+28-Nov-20 17:43:02 - Training 
+28-Nov-20 17:43:43 - *** TRAINING ***
+
+28-Nov-20 17:43:43 - Word Indexes saved at (embeddings/word_indexes.json)...
+28-Nov-20 17:43:43 - Loading pre-trained glove model...
+28-Nov-20 17:43:43 - Word Embeddings already exists...using exsiting file.
+28-Nov-20 17:43:43 - Processing word indexes... 
+28-Nov-20 17:43:43 - Done processing word indexes!
+28-Nov-20 17:43:56 - Epoch 1
+28-Nov-20 17:43:56 - Training 

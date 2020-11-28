@@ -19,6 +19,7 @@ from metrics.accuracy import conlleval
 from process import Process
 from logs.logger import log
 from embeddings.custom import CustomEmbedding
+from keras_self_attention import SeqSelfAttention
 
 
 def train(model=None, re_train=False):
@@ -59,6 +60,8 @@ def train(model=None, re_train=False):
                                     recurrent_dropout=Config.DROPOUT,
                                     kernel_initializer=he_normal(),  
                                     return_sequences=True)))
+        
+        model.add(SeqSelfAttention(attention_activation='softmax'))
 
         # model.add(GRU(units=Config.EMBEDDING_SIZE, 
         #               dropout=Config.DROPOUT, 
@@ -264,7 +267,6 @@ if __name__ == '__main__':
 
     if args.train:
         log('*** TRAINING ***' + '\n')
-        log(model_params())
         highlight('violet', 'Please open `logs/model.log` for all the logging information about the model')
 
         train()

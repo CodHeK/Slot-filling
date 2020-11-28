@@ -19,4 +19,5 @@ pip3 install git+https://www.github.com/keras-team/keras-contrib.git
 
 echo "Downloading spaCy english module..."
 
+pip3 install spacy
 python3 -m spacy download en_core_web_sm

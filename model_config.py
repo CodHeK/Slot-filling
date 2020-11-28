@@ -6,7 +6,7 @@ class Config:
     N_EPOCHS = 20
     LOSS = crf_loss
     OPTIMIZER = 'adam'
-    MODEL = 'GRU_CRF'
+    MODEL = 'BILSTM_CRF'
     DATA_FILE = 'atis.pkl'
     WORD_EMBEDDINGS = 'glove'
     PORT = '9009'
