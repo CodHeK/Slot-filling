@@ -61,7 +61,7 @@ def train(model=None, re_train=False):
                                     kernel_initializer=he_normal(),  
                                     return_sequences=True)))
         
-        model.add(SeqSelfAttention(attention_activation='softmax'))
+        model.add(SeqSelfAttention(attention_activation='sigmoid'))
 
         # model.add(GRU(units=Config.EMBEDDING_SIZE, 
         #               dropout=Config.DROPOUT, 
